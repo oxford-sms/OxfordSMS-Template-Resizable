@@ -21,6 +21,7 @@ This template has postMessage mechanism to send the document height to parent wi
 	<position>top-menu</position>
         <position>left-bar</position>
 	<position>right-bar</position>
+	<position>footer</position>
 	</positions>
 	<languages folder="language">
 	</languages>

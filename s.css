@@ -1,0 +1,11 @@
+.breadcrumb-none li{
+	list-style:none;
+}
+
+.breadcrumb-none li:before{
+	content: "/";
+}
+
+.breadcrumb-none li:first-child {
+    display:none;
+}
