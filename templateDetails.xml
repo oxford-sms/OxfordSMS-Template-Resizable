@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/2.5/template-install.dtd">
+<extension version="3.5" type="template" method="upgrade">
+	<name>OxfordSMS</name>
+	<creationDate>26 June 2020</creationDate>
+	<author>Ivan Komlev</author>
+	<copyright>Copyright © 2020 Ivan Komlev</copyright>
+	<authorEmail>ivankomlev@oxford.edu.pa</authorEmail>
+	<authorUrl>https://oxfordsms.com</authorUrl>
+	<version>Stable 1.0.0</version>
+	<description><![CDATA[Frameless resizable 3-column template to use the website inside a iFrame.
+This template has postMessage mechanism to send the document height to parent window for hight adjustments.]]></description>
+	<files>
+		<folder>css</folder>
+		<folder>js</folder>
+		<filename>index.php</filename>
+		<filename>templateDetails.xml</filename>
+	</files>
+
+	<positions>
+	<position>top-menu</position>
+        <position>left-bar</position>
+	<position>right-bar</position>
+	</positions>
+	<languages folder="language">
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="advanced">
+			</fieldset>
+		</fields>
+	</config>
+</extension>
