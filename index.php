@@ -917,6 +917,10 @@ defined('_JEXEC') or die;
 </a>  </h2>
     <input type="text" class="form-control input-block mt-2 mb-3 js-filterable-field js-your-repositories-search" id="org-repos-filter-xl" placeholder="Find a repository&hellip;" aria-label="Find a repository&hellip;" data-url="https://github.com/orgs/oxford-sms/dashboard" data-query-name="q" value="" autocomplete="off">
     
+	
+	<div id="oxfordSMSDashboardTabs"></div>
+	
+	<?php /*
 <ul class="list-style-none" data-filterable-for="org-repos-filter-xl" data-filterable-type="substring">
     <li class="private source">
       <a href="/oxford-sms/Grading"
@@ -1074,7 +1078,7 @@ defined('_JEXEC') or die;
     </li>
 </ul>
 
-
+*/ ?>
 </div>
 
       </div>
