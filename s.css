@@ -9,3 +9,51 @@
 .breadcrumb-none li:first-child {
     display:none;
 }
+
+.dashboardmenusimple a
+{
+	display: none;
+
+}
+
+#oxfordSMSDashboardMenu{
+	margin-top:24px;
+}
+
+#oxfordSMSDashboardMenu button{
+	
+	height:35px;
+	padding:2px 5px 2px 5px;
+	margin-right:10px;
+	text-align:left;
+}
+
+#oxfordSMSDashboardMenu img
+{
+	width:16px;
+	height:16px;
+	margin-right:10px;
+}
+
+.dashboardmenuitembox{
+	display: inline-block;
+	margin:20px;
+	
+}
+
+.dashboardmenuitembox button{
+	
+	width:150px;
+	height:150px;
+	
+}
+.dashboardmenuitembox p{
+font-size:18px !important;
+width:120px;
+white-space:normal;
+}
+
+.dashboardmenuitembox img{
+	width:64px;
+	height:64px;
+}

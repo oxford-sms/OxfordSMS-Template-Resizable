@@ -32,7 +32,30 @@ defined('_JEXEC') or die;
     <link crossorigin="anonymous" media="all" integrity="sha512-qP/wSs83gQ2Jsrm94mfqU27K5YQ4xKUtKbbl+eMuqODXJdZ/C/K5YajXR6yHDWZ7O4E0Z3FMG8OAOvIJHKvtGA==" rel="stylesheet" href="https://github.githubassets.com/assets/github-next-a8fff04acf37810d89b2b9bde267ea53.css" />
     
     
+	<script src="/templates/oxfordsms/index.js"></script>
     
+	<script>
+	/*
+	if(window.attachEvent) {
+    window.attachEvent('onload', MoveTopMenu);
+} else {
+    if(window.onload) {
+        var curronload = window.onload;
+        var newonload = function(evt) {
+            curronload(evt);
+            MoveTopMenu(evt);
+        };
+        window.onload = newonload;
+    } else {
+        window.onload = MoveTopMenu;
+    }
+}
+*/
+document.addEventListener("DOMContentLoaded", function(){
+	
+    MoveTopMenu();
+});
+	</script>
     
 
 
@@ -823,7 +846,7 @@ defined('_JEXEC') or die;
   <div class="d-flex flex-wrap bg-gray" style="min-height: 100vh;">
     <aside class="team-left-column col-12 col-md-4 col-lg-3 bg-white border-right border-bottom hide-md hide-sm" aria-label="Account">
           <div class="dashboard-sidebar js-repos-container px-3 px-md-4 px-lg-4 js-sticky overflow-auto top-0" id="org_your_repos" data-pjax-container>
-
+<?php /*
       <div class="border-bottom py-3 mt-3 mb-4">
         
 <details
@@ -906,16 +929,27 @@ defined('_JEXEC') or die;
 
 
       </div>
+	  */ ?>
+	  
+	 <!-- <div class="border-bottom py-3 mt-3 mb-4"></div>-->
+	  
+	<div id="oxfordSMSDashboardMenu"></div>  
+	  
+	  <?php /*
       <a class="btn btn-outline f6 width-full mb-3" data-ga-click="Dashboard, click, Nav menu - item:org-profile context:organization" data-hydro-click="{&quot;event_type&quot;:&quot;dashboard.click&quot;,&quot;payload&quot;:{&quot;event_context&quot;:&quot;REPOSITORIES&quot;,&quot;dashboard_context&quot;:&quot;organization&quot;,&quot;dashboard_version&quot;:2,&quot;target&quot;:&quot;ORG_PROFILE&quot;,&quot;user_id&quot;:8064340,&quot;originating_url&quot;:&quot;https://github.com/orgs/oxford-sms/dashboard&quot;}}" data-hydro-click-hmac="f14cef9c97485e65a1195310e4a7d416ac2f3d0ad6561ee9e852292137bfd275" href="https://github.com/oxford-sms">View organization</a>
+	  
+	  */ ?>
+	  
       <div class="mb-3" data-repository-hovercards-enabled>
         
 <div>
+<?php /*
   <h2 class="f4 hide-sm hide-md f5 mb-1 d-flex flex-justify-between flex-items-center">
     Repositories
       <a class="btn btn-sm btn-primary text-white" data-hydro-click="{&quot;event_type&quot;:&quot;dashboard.click&quot;,&quot;payload&quot;:{&quot;event_context&quot;:&quot;REPOSITORIES&quot;,&quot;target&quot;:&quot;NEW_REPOSITORY_BUTTON&quot;,&quot;dashboard_context&quot;:&quot;organization&quot;,&quot;dashboard_version&quot;:2,&quot;user_id&quot;:8064340,&quot;originating_url&quot;:&quot;https://github.com/orgs/oxford-sms/dashboard&quot;}}" data-hydro-click-hmac="949c7a362d5f405be5509916e3a9b79e343cd8e6f0e8587fb0365939390f56d1" data-ga-click="Dashboard, click, Sidebar header new repo button - context:organization" href="/organizations/oxford-sms/repositories/new">
         <svg class="octicon octicon-repo" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M2 2.5A2.5 2.5 0 014.5 0h8.75a.75.75 0 01.75.75v12.5a.75.75 0 01-.75.75h-2.5a.75.75 0 110-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.75.75 0 01-1.072 1.05A2.495 2.495 0 012 11.5v-9zm10.5-1V9h-8c-.356 0-.694.074-1 .208V2.5a1 1 0 011-1h8zM5 12.25v3.25a.25.25 0 00.4.2l1.45-1.087a.25.25 0 01.3 0L8.6 15.7a.25.25 0 00.4-.2v-3.25a.25.25 0 00-.25-.25h-3.5a.25.25 0 00-.25.25z"></path></svg> New
 </a>  </h2>
-    <input type="text" class="form-control input-block mt-2 mb-3 js-filterable-field js-your-repositories-search" id="org-repos-filter-xl" placeholder="Find a repository&hellip;" aria-label="Find a repository&hellip;" data-url="https://github.com/orgs/oxford-sms/dashboard" data-query-name="q" value="" autocomplete="off">
+    <input type="text" class="form-control input-block mt-2 mb-3 js-filterable-field js-your-repositories-search" id="org-repos-filter-xl" placeholder="Find a repository&hellip;" aria-label="Find a repository&hellip;" data-url="https://github.com/orgs/oxford-sms/dashboard" data-query-name="q" value="" autocomplete="off"> */ ?>
     
 	
 	<div id="oxfordSMSDashboardTabs"></div>
