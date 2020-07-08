@@ -53,6 +53,13 @@ width:120px;
 white-space:normal;
 }
 
+.dashboardblock .dashboardmenuitembox span{
+font-size:18px !important;
+width:120px;
+white-space:normal;
+display: block;
+}
+
 .dashboardmenuitembox img{
 	width:64px;
 	height:64px;
