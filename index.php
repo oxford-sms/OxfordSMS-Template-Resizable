@@ -1,8 +1,30 @@
 <?php
 
-
 // No direct access.
 defined('_JEXEC') or die;
+
+
+$app = JFactory::getApplication();
+$doc = JFactory::getDocument();
+$this->language = $doc->language;
+$this->direction = $doc->direction;
+
+// Detecting Active Variables
+$option   = $app->input->getCmd('option', '');
+$view     = $app->input->getCmd('view', '');
+$layout   = $app->input->getCmd('layout', '');
+$task     = $app->input->getCmd('task', '');
+$itemid   = $app->input->getCmd('Itemid', '');
+$sitename = $app->getCfg('sitename');
+
+if($task == "edit" || $layout == "form" )
+{
+	$fullWidth = 1;
+}
+else
+{
+	$fullWidth = 0;
+}
 
 /** @var JDocumentHtml $this */
 
@@ -15,23 +37,7 @@ defined('_JEXEC') or die;
 <html lang="en">
   <head>
     <meta charset="utf-8">
-	<!--
-  <link rel="dns-prefetch" href="https://github.githubassets.com">
-  <link rel="dns-prefetch" href="https://avatars0.githubusercontent.com">
-  <link rel="dns-prefetch" href="https://avatars1.githubusercontent.com">
-  <link rel="dns-prefetch" href="https://avatars2.githubusercontent.com">
-  <link rel="dns-prefetch" href="https://avatars3.githubusercontent.com">
-  <link rel="dns-prefetch" href="https://github-cloud.s3.amazonaws.com">
-  <link rel="dns-prefetch" href="https://user-images.githubusercontent.com/">
-  -->
-
-<link href="/templates/oxfordsms/s.css" rel="stylesheet" type="text/css" />
-
-  <link crossorigin="anonymous" media="all" integrity="sha512-aZYk5AYsRiFiFG04Si6FnQoHFwAugnodzKJXgafKqPWsrgrjoWRsapCn//vFuWqjSzr72ucZfPq8/ZbduuSeQg==" rel="stylesheet" href="https://github.githubassets.com/assets/frameworks-next-699624e4062c462162146d384a2e859d.css" />
-  
-    <link crossorigin="anonymous" media="all" integrity="sha512-qP/wSs83gQ2Jsrm94mfqU27K5YQ4xKUtKbbl+eMuqODXJdZ/C/K5YajXR6yHDWZ7O4E0Z3FMG8OAOvIJHKvtGA==" rel="stylesheet" href="https://github.githubassets.com/assets/github-next-a8fff04acf37810d89b2b9bde267ea53.css" />
-    
-    
+		
 	<script src="/templates/oxfordsms/index.js"></script>
     
 	<script>
@@ -61,109 +67,51 @@ document.addEventListener("DOMContentLoaded", function(){
 
   <meta name="viewport" content="width=device-width">
   
-  <title>Dashboard</title>
-    <meta name="description" content="GitHub is where people build software. More than 50 million people use GitHub to discover, fork, and contribute to over 100 million projects.">
-    <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="GitHub">
-  <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub">
-  <meta property="fb:app_id" content="1401488693436528">
-  <meta name="apple-itunes-app" content="app-id=1477376905">
+  <?php /*<link rel="mask-icon" href="https://github.githubassets.com/pinned-octocat.svg" color="#000000">*/ ?>
+  <?php /*<link rel="alternate icon" class="js-site-favicon" type="image/png" href="https://github.githubassets.com/favicons/favicon.png">*/ ?>
+<?php /*  <link rel="icon" class="js-site-favicon" type="image/svg+xml" href="https://github.githubassets.com/favicons/favicon.svg"> */ ?>
 
-    <meta property="og:url" content="https://github.com">
-    <meta property="og:site_name" content="GitHub">
-    <meta property="og:title" content="Build software better, together">
-    <meta property="og:description" content="GitHub is where people build software. More than 50 million people use GitHub to discover, fork, and contribute to over 100 million projects.">
-    <meta property="og:image" content="https://github.githubassets.com/images/modules/open_graph/github-logo.png">
-    <meta property="og:image:type" content="image/png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="1200">
-    <meta property="og:image" content="https://github.githubassets.com/images/modules/open_graph/github-mark.png">
-    <meta property="og:image:type" content="image/png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="620">
-    <meta property="og:image" content="https://github.githubassets.com/images/modules/open_graph/github-octocat.png">
-    <meta property="og:image:type" content="image/png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="620">
+<?php /*<meta name="theme-color" content="#1e2327">*/?>
 
-    <meta property="twitter:site" content="github">
-    <meta property="twitter:site:id" content="13334762">
-    <meta property="twitter:creator" content="github">
-    <meta property="twitter:creator:id" content="13334762">
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:title" content="GitHub">
-    <meta property="twitter:description" content="GitHub is where people build software. More than 50 million people use GitHub to discover, fork, and contribute to over 100 million projects.">
-    <meta property="twitter:image:src" content="https://github.githubassets.com/images/modules/open_graph/github-logo.png">
-    <meta property="twitter:image:width" content="1200">
-    <meta property="twitter:image:height" content="1200">
-
-  <link rel="assets" href="https://github.githubassets.com/">
-      <link rel="shared-web-socket" href="wss://live.github.com/_luau/eyJ2IjoiVjMiLCJ1Ijo4MDY0MzQwLCJzIjo1MzQ5OTg5NTAsImMiOjE0ODg1NTczNTcsInQiOjE1OTMxOTE0MDl9--5e7e5f2779582cc7938ad62899ce6aac542d7a287706aac7a74e0d5814ea6b08" data-refresh-url="/_ws">
-  <link rel="sudo-modal" href="/sessions/sudo_modal">
-
-  <meta name="request-id" content="DF3C:3687:92C1E2:DB2E43:5EF62BB8" data-pjax-transient="true" /><meta name="html-safe-nonce" content="d02f9303b83100375a9612afd6ea41d672bee938" data-pjax-transient="true" /><meta name="visitor-payload" content="eyJyZWZlcnJlciI6Imh0dHBzOi8vZ2l0aHViLmNvbS90cm94bGVyL2F3ZXNvbWUtY3NzLWZyYW1ld29ya3MiLCJyZXF1ZXN0X2lkIjoiREYzQzozNjg3OjkyQzFFMjpEQjJFNDM6NUVGNjJCQjgiLCJ2aXNpdG9yX2lkIjoiNDU3MDI1Mzc1NjA3ODcwNDE3IiwicmVnaW9uX2VkZ2UiOiJpYWQiLCJyZWdpb25fcmVuZGVyIjoiaWFkIn0=" data-pjax-transient="true" /><meta name="visitor-hmac" content="45f9647aee31ebb231869aa2e93c2df0351793f48380bfad153d10f7a006224e" data-pjax-transient="true" />
-
-
-
-  <meta name="github-keyboard-shortcuts" content="" data-pjax-transient="true" />
-
-  
-
-  <meta name="selected-link" value="/" data-pjax-transient>
-
-    <meta name="google-site-verification" content="c1kuD-K2HIVF635lypcsWPoD4kilo5-jA_wBFyT4uMY">
-  <meta name="google-site-verification" content="KT5gs8h0wvaagLKAVWq8bbeNwnZZK1r1XQysX3xurLU">
-  <meta name="google-site-verification" content="ZzhVyEFwb7w3e0-uOTltm8Jsck2F5StVihD0exw2fsA">
-  <meta name="google-site-verification" content="GXs5KoUUkNCoaAZn7wPN-t01Pywp9M3sEjnt_3_ZWPc">
-
-<meta name="octolytics-host" content="collector.githubapp.com" /><meta name="octolytics-app-id" content="github" /><meta name="octolytics-event-url" content="https://collector.githubapp.com/github-external/browser_event" /><meta name="octolytics-dimension-ga_id" content="" class="js-octo-ga-id" /><meta name="octolytics-actor-id" content="8064340" /><meta name="octolytics-actor-login" content="joomlaboat" /><meta name="octolytics-actor-hash" content="63d8e32404cb73f5267b592511834f131eacad9ec467cbeb7042b179d3e3288a" />
-<meta name="analytics-location" content="/orgs/&lt;org-login&gt;/dashboard" data-pjax-transient="true" />
-
-
-
-    <meta name="google-analytics" content="UA-3769691-2">
-
-  <meta class="js-ga-set" name="userId" content="241e54b4a9ba4db02ad637624e81e9b5">
-
-<meta class="js-ga-set" name="dimension10" content="Responsive" data-pjax-transient>
-
-<meta class="js-ga-set" name="dimension1" content="Logged In">
-
-
-
-  
-
-      <meta name="hostname" content="github.com">
-    <meta name="user-login" content="joomlaboat">
-
-
-      <meta name="expected-hostname" content="github.com">
-
-      <meta name="js-proxy-site-detection-payload" content="OWQwY2JjMDFiZDY0ZDc1NWI2MGVlMjQ5NThiZDE5MDA1Yjk3ZWQwNDZmOWE1MTA3OGYyZjAyZTk3NWU1OWQ0NHx7InJlbW90ZV9hZGRyZXNzIjoiMTg2Ljc1LjE1MC4yNTAiLCJyZXF1ZXN0X2lkIjoiREYzQzozNjg3OjkyQzFFMjpEQjJFNDM6NUVGNjJCQjgiLCJ0aW1lc3RhbXAiOjE1OTMxOTE0MDksImhvc3QiOiJnaXRodWIuY29tIn0=">
-
-    <meta name="enabled-features" content="MARKETPLACE_PENDING_INSTALLATIONS,PAGE_STALE_CHECK,PRIMER_NEXT">
-
-  <!--<meta http-equiv="x-pjax-version" content="1836eefff0b515e95c782070eeaa878e">-->
-  
-
-<!--      <link rel="alternate" type="application/atom+xml" title="ATOM" href="/organizations/oxford-sms/joomlaboat.private.atom?token=AB5Q2VERB46YEMEDO4ZV3KV5AIGPC" />-->
-
-
-
-<!--
-  <meta name="browser-stats-url" content="https://api.github.com/_private/browser/stats">
-
-  <meta name="browser-errors-url" content="https://api.github.com/_private/browser/errors">
-  -->
-
-  <link rel="mask-icon" href="https://github.githubassets.com/pinned-octocat.svg" color="#000000">
-  <link rel="alternate icon" class="js-site-favicon" type="image/png" href="https://github.githubassets.com/favicons/favicon.png">
-  <link rel="icon" class="js-site-favicon" type="image/svg+xml" href="https://github.githubassets.com/favicons/favicon.svg">
-
-<meta name="theme-color" content="#1e2327">
-
+<link href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
 
   <!--<link rel="manifest" href="/manifest.json" crossOrigin="use-credentials">-->
 <jdoc:include type="head" />
+
+	<!--<link href="/media/jui/css/bootstrap.css" rel="stylesheet" type="text/css" />-->
+	
+
+<link href="/media/jui/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+
+<style>
+
+.btn{
+	all: unset;
+}
+
+.dropdown-menu{
+	all: unset;
+}
+</style>
+<link href="/templates/oxfordsms/s.css" rel="stylesheet" type="text/css" />
+<link crossorigin="anonymous" media="all" integrity="sha512-aZYk5AYsRiFiFG04Si6FnQoHFwAugnodzKJXgafKqPWsrgrjoWRsapCn//vFuWqjSzr72ucZfPq8/ZbduuSeQg==" rel="stylesheet" href="https://github.githubassets.com/assets/frameworks-next-699624e4062c462162146d384a2e859d.css" /> 
+
+  
+    <link crossorigin="anonymous" media="all" integrity="sha512-qP/wSs83gQ2Jsrm94mfqU27K5YQ4xKUtKbbl+eMuqODXJdZ/C/K5YajXR6yHDWZ7O4E0Z3FMG8OAOvIJHKvtGA==" rel="stylesheet" href="https://github.githubassets.com/assets/github-next-a8fff04acf37810d89b2b9bde267ea53.css" />
+
+<!--	
+
+
+	<link href="/media/jui/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<link href="/media/jui/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css" />
+	<link href="/media/jui/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	-->
+	
+	<!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+	-->
+	
+	
+
   </head>
 
   <body class="logged-in env-production page-responsive full-width">
@@ -185,21 +133,11 @@ document.addEventListener("DOMContentLoaded", function(){
   
   
   
-  
-    <!--<a class="Header-link" href="https://github.com/orgs/oxford-sms/dashboard" data-hotkey="g d"
-  aria-label="Homepage " data-ga-click="Header, go to dashboard, icon:logo">
-  <svg class="octicon octicon-mark-github v-align-middle" height="32" viewBox="0 0 16 16" version="1.1" width="32" aria-hidden="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg>
-</a>-->
+
 
   </div>
   
-<!--
-  <div class="Header-item d-lg-none">
-    <button class="Header-link btn-link js-details-target" type="button" aria-label="Toggle navigation" aria-expanded="false">
-      <svg height="24" class="octicon octicon-three-bars" viewBox="0 0 16 16" version="1.1" width="24" aria-hidden="true"><path fill-rule="evenodd" d="M1 2.75A.75.75 0 011.75 2h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 2.75zm0 5A.75.75 0 011.75 7h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 7.75zM1.75 12a.75.75 0 100 1.5h12.5a.75.75 0 100-1.5H1.75z"></path></svg>
-    </button>
-  </div>
-  -->
+
 
   <div class="Header-item Header-item--full flex-column flex-lg-row width-full flex-order-2 flex-lg-order-none mr-0 mr-lg-3 mt-3 mt-lg-0 Details-content--hidden">
         <div class="header-search header-search-current js-header-search-current  flex-self-stretch flex-lg-self-auto mr-0 mr-lg-3 mb-3 mb-lg-0 scoped-search site-scoped-search js-site-search position-relative js-jump-to js-header-search-current-jump-to"
@@ -209,8 +147,8 @@ document.addEventListener("DOMContentLoaded", function(){
   aria-haspopup="listbox"
   aria-expanded="false"
 >
-<?php $config = JFactory::getConfig(); echo $config->get( 'sitename' );  ?>
-
+<a class="Header-link border-top border-lg-top-0 border-white-fade-15" href="/dashboard"><?php $config = JFactory::getConfig(); echo $config->get( 'sitename' );  ?></a>
+<!--js-selected-navigation-item  py-lg-3  mr-0 mr-lg-3 py-2 -->
 <!--
   <div class="position-relative">-->
     <!-- '"` --><!-- </textarea></xmp> </option></form>-->
@@ -358,20 +296,58 @@ document.addEventListener("DOMContentLoaded", function(){
 -->
 
     <nav class="d-flex flex-column flex-lg-row flex-self-stretch flex-lg-self-auto" aria-label="Global">
-    <a class="Header-link py-lg-3 d-block d-lg-none py-2 border-top border-lg-top-0 border-white-fade-15" data-ga-click="Header, click, Nav menu - item:dashboard:user" aria-label="Dashboard" href="/dashboard">
+    
+	<?php /* <a class="Header-link py-lg-3 d-block d-lg-none py-2 border-top border-lg-top-0 border-white-fade-15" data-ga-click="Header, click, Nav menu - item:dashboard:user" aria-label="Dashboard" href="/dashboard">
       Dashboard
+	  <!-- Header-link py-lg-3 d-block d-lg-none py-2 border-top border-lg-top-0 border-white-fade-15 -->
 </a>
-
+*/ ?>
 <!-- 
  data-hotkey="g p" data-ga-click="Header, click, Nav menu - item:pulls context:user" aria-label="Pull requests you created" data-selected-links="/pulls /pulls/assigned /pulls/mentioned /pulls"
 -->
-<a class="js-selected-navigation-item Header-link py-lg-3  mr-0 mr-lg-3 py-2 border-top border-lg-top-0 border-white-fade-15" href="/dashboard">
+<?php /* <div class="NavBreadcrumbs">
+<ul class="breadcrumb-none js-selected-navigation-item Header-link py-lg-3  mr-0 mr-lg-3 py-2 border-top border-lg-top-0 border-white-fade-15">
+					
+						<li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem" class="active">
+						
+<a class=" Header-link js-selected-navigation-item Header-link py-lg-3  mr-0 mr-lg-3 py-2 border-top border-lg-top-0 border-white-fade-15" href="/dashboard">
+<!---none js-selected-navigation-item Header-link py-lg-3  mr-0 mr-lg-3 py-2 border-top border-lg-top-0 border-white-fade-15
+js-selected-navigation-item Header-link border-top border-lg-top-0 border-white-fade-15
+ py-lg-3  mr-0 mr-lg-3 py-2 
+py-lg-3  mr-0 mr-lg-3 py-2  -->
     Dashboard
 </a>
+</li></ul>
 
-<!--<div id="breadcrumbs">-->
+
+py-lg-3  mr-0 mr-lg-3 py-2
+ py-lg-3 mr-0
+ 
+ 
+ 
+ py-2
+ 
+ 
+ mr-lg-3
+</div> */ ?>
+<div class="NavBreadcrumbs">
+						<div aria-label="Breadcrumbs " role="navigation">
+	<ul itemscope itemtype="https://schema.org/BreadcrumbList" class="js-selected-navigation-item Header-link border-top border-lg-top-0 border-white-fade-15 py-lg-3  mr-0 py-2">
+					
+						<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="active">
+					<a class=" Header-link js-selected-navigation-item Header-link  border-top border-lg-top-0 border-white-fade-15  py-2" href="/dashboard">
+						Dashboard
+					</a>
+				</li>
+				</ul>
+</div>
+
+					</div>
+
+
+<div class="NavBreadcrumbs">
 						<jdoc:include type="modules" name="top-menu" />
-<!--					</div>-->
+					</div>
 
 
 <!--
@@ -393,8 +369,11 @@ document.addEventListener("DOMContentLoaded", function(){
 
 -->
     <a class="Header-link d-block d-lg-none mr-0 mr-lg-3 py-2 py-lg-3 border-top border-lg-top-0 border-white-fade-15" href="/joomlaboat">
-      <img class="avatar avatar-user" src="https://avatars1.githubusercontent.com/u/8064340?s=40&amp;v=4" width="20" height="20" alt="@joomlaboat" />
+      
+	  
+  <img class="avatar avatar-user" src="https://avatars1.githubusercontent.com/u/8064340?s=40&amp;v=4" width="20" height="20" alt="@joomlaboat" />
       joomlaboat
+	  
 </a>
     <!-- '"` --><!-- </textarea></xmp> --></option></form><form action="/logout" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="wxO8sK2YbbSFywL0eGhom9YsKLQBrcxbi8f9GywKTjEYhzzD8D3/orAP76gK0LCAascJCwKUV87EoQ5pOZYb+w==" />
       <button type="submit" class="Header-link mr-0 mr-lg-3 py-2 py-lg-3 border-top border-lg-top-0 border-white-fade-15 d-lg-none btn-link d-block width-full text-left" data-ga-click="Header, sign out, icon:logout" style="padding-left: 2px;">
@@ -422,65 +401,48 @@ document.addEventListener("DOMContentLoaded", function(){
   </div>
 
 
-  <div class="Header-item position-relative d-none d-lg-flex">
-    <details class="details-overlay details-reset">
-  <summary class="Header-link"
-      aria-label="Create new…"
-      data-ga-click="Header, create new, icon:add">
-    <svg class="octicon octicon-plus" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 2a.75.75 0 01.75.75v4.5h4.5a.75.75 0 010 1.5h-4.5v4.5a.75.75 0 01-1.5 0v-4.5h-4.5a.75.75 0 010-1.5h4.5v-4.5A.75.75 0 018 2z"></path></svg> <span class="dropdown-caret"></span>
-  </summary>
-  <details-menu class="dropdown-menu dropdown-menu-sw mt-n2">
-    
-<a role="menuitem" class="dropdown-item" href="/new" data-ga-click="Header, create new repository">
-  New repository
-</a>
 
-  <a role="menuitem" class="dropdown-item" href="/new/import" data-ga-click="Header, import a repository">
-    Import repository
-  </a>
-
-<a role="menuitem" class="dropdown-item" href="https://gist.github.com/" data-ga-click="Header, create new gist">
-  New gist
-</a>
-
-  <a role="menuitem" class="dropdown-item" href="/organizations/new" data-ga-click="Header, create new organization">
-    New organization
-  </a>
+    <?php //include('_addnew.php'); ?>
 
 
-
-
-  </details-menu>
-</details>
-
-  </div>
 
   <div class="Header-item position-relative mr-0 d-none d-lg-flex">
     
-  <details class="details-overlay details-reset js-feature-preview-indicator-container" data-feature-preview-indicator-src="/users/joomlaboat/feature_preview/indicator_check">
+  <details style="z-index:4000" class="details-overlay details-reset js-feature-preview-indicator-container" data-feature-preview-indicator-src="/users/joomlaboat/feature_preview/indicator_check">
 
-  <summary class="Header-link"
+  <summary class="Header-link" style="z-index:3000"
     aria-label="View profile and more"
     data-ga-click="Header, show menu, icon:avatar">
-    <img
-  alt="@joomlaboat"
+	<div id="OxfordSMSAvatar">AAA
+	<?php /*<img
+  
   width="20"
   height="20"
-  src="https://avatars2.githubusercontent.com/u/8064340?s=60&amp;v=4"
-  class="avatar avatar-user " />
+  src="https://avatars2.githubusercontent.com/u/8064340?s=60&amp;v=4" class="avatar avatar-user " /> */ ?>
+  </div>
+    
 
       <span class="feature-preview-indicator js-feature-preview-indicator" style="top: 10px;" hidden></span>
     <span class="dropdown-caret"></span>
   </summary>
   <details-menu class="dropdown-menu dropdown-menu-sw mt-n2" style="width: 180px" >
-    <div class="header-nav-current-user css-truncate"><a role="menuitem" class="no-underline user-profile-link px-3 pt-2 pb-2 mb-n2 mt-n1 d-block" href="/joomlaboat" data-ga-click="Header, go to profile, text:Signed in as">Signed in as <strong class="css-truncate-target">joomlaboat</strong></a></div>
-    <div role="none" class="dropdown-divider"></div>
+  
+    <div class="header-nav-current-user css-truncate">
+	<!--<a role="menuitem" class="no-underline user-profile-link px-3 pt-2 pb-2 mb-n2 mt-n1 d-block" href="/joomlaboat" data-ga-click="Header, go to profile, text:Signed in as">-->
+	<?php
+	
+	$user = JFactory::getUser();
+	echo '<span class="no-underline user-profile-link px-3 pt-2 pb-2 mb-n2 mt-n1 d-block">Signed in as <strong class="css-truncate-target">'.$user->username.'</strong></span></div>';
+	
+	?>
+	
+    
 
-      <div class="pl-3 pr-3 f6 user-status-container js-user-status-context lh-condensed" data-url="/users/status?compact=1&amp;link_mentions=0&amp;truncate=1">
-        
+      
+     <?php /*   <div role="none" class="dropdown-divider"></div><div class="pl-3 pr-3 f6 user-status-container js-user-status-context lh-condensed" data-url="/users/status?compact=1&amp;link_mentions=0&amp;truncate=1">
 <div class="js-user-status-container rounded-1 px-2 py-1 mt-2 border"
   data-team-hovercards-enabled>
-  <details class="js-user-status-details details-reset details-overlay details-overlay-dark">
+  <!--<details class="js-user-status-details details-reset details-overlay details-overlay-dark">
     <summary class="btn-link btn-block link-gray no-underline js-toggle-user-status-edit toggle-user-status-edit "
       role="menuitem" >
       <div class="d-flex flex-items-center flex-items-stretch">
@@ -488,181 +450,30 @@ document.addEventListener("DOMContentLoaded", function(){
           <div class="user-status-emoji-container flex-shrink-0 mr-2 d-flex flex-items-center flex-justify-center lh-condensed-ultra v-align-bottom">
             <div><g-emoji class="g-emoji" alias="house" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f3e0.png">??</g-emoji></div>
           </div>
-        </div>
+        </div>-->
+		
         <div class="
           
            user-status-message-wrapper f6 min-width-0"
            style="line-height: 20px;" >
           <div class="css-truncate css-truncate-target width-fit text-gray-dark text-left">
-                <span>Working from home</span>
+                <span>Dashboard</span>
           </div>
         </div>
-      </div>
+		
+     <!-- </div>
     </summary>
-    <details-dialog class="details-dialog rounded-1 anim-fade-in fast Box Box--overlay" role="dialog" tabindex="-1">
-      <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="position-relative flex-auto js-user-status-form" action="/users/status?circle=0&amp;compact=1&amp;link_mentions=0&amp;truncate=1" accept-charset="UTF-8" method="post"><input type="hidden" name="_method" value="put" /><input type="hidden" name="authenticity_token" value="7VuQicTJAB1cCGtBEJPvQmGKPbaQuM7P3UY0WkdJA1sw6a6qwNS49x6PVRMus+YsBAAzq119la8uAqBg/z9HCw==" />
-        <div class="Box-header bg-gray border-bottom p-3">
-          <button class="Box-btn-octicon js-toggle-user-status-edit btn-octicon float-right" type="reset" aria-label="Close dialog" data-close-dialog>
-            <svg class="octicon octicon-x" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M3.72 3.72a.75.75 0 011.06 0L8 6.94l3.22-3.22a.75.75 0 111.06 1.06L9.06 8l3.22 3.22a.75.75 0 11-1.06 1.06L8 9.06l-3.22 3.22a.75.75 0 01-1.06-1.06L6.94 8 3.72 4.78a.75.75 0 010-1.06z"></path></svg>
-          </button>
-          <h3 class="Box-title f5 text-bold text-gray-dark">Edit status</h3>
-        </div>
-        <input type="hidden" name="emoji" class="js-user-status-emoji-field" value=":house:">
-        <input type="hidden" name="organization_id" class="js-user-status-org-id-field" value="">
-        <div class="px-3 py-2 text-gray-dark">
-          <div class="js-characters-remaining-container position-relative mt-2">
-            <div class="input-group d-table form-group my-0 js-user-status-form-group">
-              <span class="input-group-button d-table-cell v-align-middle" style="width: 1%">
-                <button type="button" aria-label="Choose an emoji" class="btn-outline btn js-toggle-user-status-emoji-picker btn-open-emoji-picker p-0">
-                  <span class="js-user-status-original-emoji" hidden><div><g-emoji class="g-emoji" alias="house" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f3e0.png">??</g-emoji></div></span>
-                  <span class="js-user-status-custom-emoji"><div><g-emoji class="g-emoji" alias="house" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f3e0.png">??</g-emoji></div></span>
-                  <span class="js-user-status-no-emoji-icon" hidden>
-                    <svg class="octicon octicon-smiley" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0zM8 0a8 8 0 100 16A8 8 0 008 0zM5 8a1 1 0 100-2 1 1 0 000 2zm7-1a1 1 0 11-2 0 1 1 0 012 0zM5.32 9.636a.75.75 0 011.038.175l.007.009c.103.118.22.222.35.31.264.178.683.37 1.285.37.602 0 1.02-.192 1.285-.371.13-.088.247-.192.35-.31l.007-.008a.75.75 0 111.222.87l-.614-.431c.614.43.614.431.613.431v.001l-.001.002-.002.003-.005.007-.014.019a1.984 1.984 0 01-.184.213c-.16.166-.338.316-.53.445-.63.418-1.37.638-2.127.629-.946 0-1.652-.308-2.126-.63a3.32 3.32 0 01-.715-.657l-.014-.02-.005-.006-.002-.003v-.002h-.001l.613-.432-.614.43a.75.75 0 01.183-1.044h.001z"></path></svg>
-                  </span>
-                </button>
-              </span>
-              <text-expander keys=": @" data-mention-url="/autocomplete/user-suggestions" data-emoji-url="/autocomplete/emoji">
-                <input
-                  type="text"
-                  autocomplete="off"
-                  data-no-org-url="/autocomplete/user-suggestions"
-                  data-org-url="/suggestions?mention_suggester=1"
-                  data-maxlength="80"
-                  class="d-table-cell width-full form-control js-user-status-message-field js-characters-remaining-field"
-                  placeholder="What's happening?"
-                  name="message"
-                  value="Working from home"
-                  aria-label="What is your current status?">
-              </text-expander>
-              <div class="error">Could not update your status, please try again.</div>
-            </div>
-            <div style="margin-left: 53px" class="my-1 text-small label-characters-remaining js-characters-remaining" data-suffix="remaining" hidden>
-              80 remaining
-            </div>
-          </div>
-          <include-fragment class="js-user-status-emoji-picker" data-url="/users/status/emoji"></include-fragment>
-          <div class="overflow-auto ml-n3 mr-n3 px-3 border-bottom" style="max-height: 33vh">
-            <div class="user-status-suggestions js-user-status-suggestions collapsed overflow-hidden">
-              <h4 class="f6 text-normal my-3">Suggestions:</h4>
-              <div class="mx-3 mt-2 clearfix">
-                  <div class="float-left col-6">
-                      <button type="button" value=":palm_tree:" class="d-flex flex-items-baseline flex-items-stretch lh-condensed f6 btn-link link-gray no-underline js-predefined-user-status mb-1">
-                        <div class="emoji-status-width mr-2 v-align-middle js-predefined-user-status-emoji">
-                          <g-emoji alias="palm_tree" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f334.png">??</g-emoji>
-                        </div>
-                        <div class="d-flex flex-items-center no-underline js-predefined-user-status-message ws-normal text-left" style="border-left: 1px solid transparent">
-                          On vacation
-                        </div>
-                      </button>
-                      <button type="button" value=":face_with_thermometer:" class="d-flex flex-items-baseline flex-items-stretch lh-condensed f6 btn-link link-gray no-underline js-predefined-user-status mb-1">
-                        <div class="emoji-status-width mr-2 v-align-middle js-predefined-user-status-emoji">
-                          <g-emoji alias="face_with_thermometer" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f912.png">??</g-emoji>
-                        </div>
-                        <div class="d-flex flex-items-center no-underline js-predefined-user-status-message ws-normal text-left" style="border-left: 1px solid transparent">
-                          Out sick
-                        </div>
-                      </button>
-                  </div>
-                  <div class="float-left col-6">
-                      <button type="button" value=":house:" class="d-flex flex-items-baseline flex-items-stretch lh-condensed f6 btn-link link-gray no-underline js-predefined-user-status mb-1">
-                        <div class="emoji-status-width mr-2 v-align-middle js-predefined-user-status-emoji">
-                          <g-emoji alias="house" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f3e0.png">??</g-emoji>
-                        </div>
-                        <div class="d-flex flex-items-center no-underline js-predefined-user-status-message ws-normal text-left" style="border-left: 1px solid transparent">
-                          Working from home
-                        </div>
-                      </button>
-                      <button type="button" value=":dart:" class="d-flex flex-items-baseline flex-items-stretch lh-condensed f6 btn-link link-gray no-underline js-predefined-user-status mb-1">
-                        <div class="emoji-status-width mr-2 v-align-middle js-predefined-user-status-emoji">
-                          <g-emoji alias="dart" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f3af.png">??</g-emoji>
-                        </div>
-                        <div class="d-flex flex-items-center no-underline js-predefined-user-status-message ws-normal text-left" style="border-left: 1px solid transparent">
-                          Focusing
-                        </div>
-                      </button>
-                  </div>
-              </div>
-            </div>
-            <div class="user-status-limited-availability-container">
-              <div class="form-checkbox my-0">
-                <input type="checkbox" name="limited_availability" value="1" class="js-user-status-limited-availability-checkbox" data-default-message="I may be slow to respond." aria-describedby="limited-availability-help-text-truncate-true-compact-true" id="limited-availability-truncate-true-compact-true">
-                <label class="d-block f5 text-gray-dark mb-1" for="limited-availability-truncate-true-compact-true">
-                  Busy
-                </label>
-                <p class="note" id="limited-availability-help-text-truncate-true-compact-true">
-                  When others mention you, assign you, or request your review,
-                  GitHub will let them know that you have limited availability.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="d-inline-block f5 mr-2 pt-3 pb-2" >
-  <div class="d-inline-block mr-1">
-    Clear status
-  </div>
-
-  <details class="js-user-status-expire-drop-down f6 dropdown details-reset details-overlay d-inline-block mr-2">
-    <summary class="f5 btn-link link-gray-dark border px-2 py-1 rounded-1" aria-haspopup="true">
-      <div class="js-user-status-expiration-interval-selected d-inline-block v-align-baseline">
-        Never
-      </div>
-      <div class="dropdown-caret"></div>
-    </summary>
-
-    <ul class="dropdown-menu dropdown-menu-se pl-0 overflow-auto" style="width: 220px; max-height: 15.5em">
-      <li>
-        <button type="button" class="btn-link dropdown-item js-user-status-expire-button ws-normal" title="Never">
-          <span class="d-inline-block text-bold mb-1">Never</span>
-          <div class="f6 lh-condensed">Keep this status until you clear your status or edit your status.</div>
-        </button>
-      </li>
-      <li class="dropdown-divider" role="none"></li>
-        <li>
-          <button type="button" class="btn-link dropdown-item ws-normal js-user-status-expire-button" title="in 30 minutes" value="2020-06-26T12:40:09-05:00">
-            in 30 minutes
-          </button>
-        </li>
-        <li>
-          <button type="button" class="btn-link dropdown-item ws-normal js-user-status-expire-button" title="in 1 hour" value="2020-06-26T13:10:09-05:00">
-            in 1 hour
-          </button>
-        </li>
-        <li>
-          <button type="button" class="btn-link dropdown-item ws-normal js-user-status-expire-button" title="in 4 hours" value="2020-06-26T16:10:09-05:00">
-            in 4 hours
-          </button>
-        </li>
-        <li>
-          <button type="button" class="btn-link dropdown-item ws-normal js-user-status-expire-button" title="today" value="2020-06-26T23:59:59-05:00">
-            today
-          </button>
-        </li>
-        <li>
-          <button type="button" class="btn-link dropdown-item ws-normal js-user-status-expire-button" title="this week" value="2020-06-28T23:59:59-05:00">
-            this week
-          </button>
-        </li>
-    </ul>
-  </details>
-  <input class="js-user-status-expiration-date-input" type="hidden" name="expires_at" value="">
+	</details>-->
+  
+  <?php //include('_status.php'); ?>
 </div>
-
-          <include-fragment class="js-user-status-org-picker" data-url="/users/status/organizations"></include-fragment>
-        </div>
-        <div class="d-flex flex-items-center flex-justify-between p-3 border-top">
-          <button type="submit"  class="width-full btn btn-primary mr-2 js-user-status-submit">
-            Set status
-          </button>
-          <button type="button"  class="width-full js-clear-user-status-button btn ml-2 js-user-status-exists">
-            Clear status
-          </button>
-        </div>
-</form>    </details-dialog>
-  </details>
 </div>
-
-      </div>
+*/ ?>
+      
       <div role="none" class="dropdown-divider"></div>
+	  
+	  <?php  if($this->countModules('profilemenu-1')) : ?><jdoc:include type="modules" name="profilemenu-1" style="none" /><?php  endif; ?>
+	  <?php /*
 
     <a role="menuitem" class="dropdown-item" href="/joomlaboat" data-ga-click="Header, go to profile, text:your profile" data-hydro-click="{&quot;event_type&quot;:&quot;global_header.user_menu_dropdown.click&quot;,&quot;payload&quot;:{&quot;request_url&quot;:&quot;https://github.com/orgs/oxford-sms/dashboard&quot;,&quot;target&quot;:&quot;YOUR_PROFILE&quot;,&quot;originating_url&quot;:&quot;https://github.com/orgs/oxford-sms/dashboard&quot;,&quot;user_id&quot;:8064340}}" data-hydro-click-hmac="51798cfaf1133c636398709a3ddd77dfe17870f704b796894cc441bf4221622f" >Your profile</a>
 
@@ -681,39 +492,14 @@ document.addEventListener("DOMContentLoaded", function(){
     <a role="menuitem" class="dropdown-item" href="/joomlaboat?tab=stars" data-ga-click="Header, go to starred repos, text:your stars" data-hydro-click="{&quot;event_type&quot;:&quot;global_header.user_menu_dropdown.click&quot;,&quot;payload&quot;:{&quot;request_url&quot;:&quot;https://github.com/orgs/oxford-sms/dashboard&quot;,&quot;target&quot;:&quot;YOUR_STARS&quot;,&quot;originating_url&quot;:&quot;https://github.com/orgs/oxford-sms/dashboard&quot;,&quot;user_id&quot;:8064340}}" data-hydro-click-hmac="fe346f09fa8ce2ecc2e893285606563e9ee68ca81bcc47dc5f365543af5d571f" >Your stars</a>
       <a role="menuitem" class="dropdown-item" href="https://gist.github.com/mine" data-ga-click="Header, your gists, text:your gists" data-hydro-click="{&quot;event_type&quot;:&quot;global_header.user_menu_dropdown.click&quot;,&quot;payload&quot;:{&quot;request_url&quot;:&quot;https://github.com/orgs/oxford-sms/dashboard&quot;,&quot;target&quot;:&quot;YOUR_GISTS&quot;,&quot;originating_url&quot;:&quot;https://github.com/orgs/oxford-sms/dashboard&quot;,&quot;user_id&quot;:8064340}}" data-hydro-click-hmac="07e640f531a2984e875e748272b06abcc5480024c6d5e6a957dd905c8e780f3d" >Your gists</a>
 
+<div role="none" class="dropdown-divider"></div>
+*/ ?>
+
+<?
+
+   
 
 
-
-
-    <div role="none" class="dropdown-divider"></div>
-      <a role="menuitem" class="dropdown-item" href="/settings/billing" data-ga-click="Header, go to billing, text:upgrade" data-hydro-click="{&quot;event_type&quot;:&quot;global_header.user_menu_dropdown.click&quot;,&quot;payload&quot;:{&quot;request_url&quot;:&quot;https://github.com/orgs/oxford-sms/dashboard&quot;,&quot;target&quot;:&quot;UPGRADE&quot;,&quot;originating_url&quot;:&quot;https://github.com/orgs/oxford-sms/dashboard&quot;,&quot;user_id&quot;:8064340}}" data-hydro-click-hmac="fe6713a07c7c96b476eb101a1fdff4e32fe6800881b91833e840ca2c8fe965a3" >Upgrade</a>
-      
-<div id="feature-enrollment-toggle" class="hide-sm hide-md feature-preview-details position-relative">
-  <button
-    type="button"
-    class="dropdown-item btn-link"
-    role="menuitem"
-    data-feature-preview-trigger-url="/users/joomlaboat/feature_previews"
-    data-feature-preview-close-details="{&quot;event_type&quot;:&quot;feature_preview.clicks.close_modal&quot;,&quot;payload&quot;:{&quot;originating_url&quot;:&quot;https://github.com/orgs/oxford-sms/dashboard&quot;,&quot;user_id&quot;:8064340}}"
-    data-feature-preview-close-hmac="c601c6249f015b27693b95027d24d465025307766d3e04fb0af859f71e37b27f"
-    data-hydro-click="{&quot;event_type&quot;:&quot;feature_preview.clicks.open_modal&quot;,&quot;payload&quot;:{&quot;link_location&quot;:&quot;user_dropdown&quot;,&quot;originating_url&quot;:&quot;https://github.com/orgs/oxford-sms/dashboard&quot;,&quot;user_id&quot;:8064340}}"
-    data-hydro-click-hmac="cfbaa02f8f19a84ddc05ae5e16f0737dab98e8f27cd0fe557cde6619500309e4"
-  >
-    Feature preview
-  </button>
-    <span class="feature-preview-indicator js-feature-preview-indicator" hidden></span>
-</div>
-
-    <a role="menuitem" class="dropdown-item" href="https://help.github.com" data-ga-click="Header, go to help, text:help" data-hydro-click="{&quot;event_type&quot;:&quot;global_header.user_menu_dropdown.click&quot;,&quot;payload&quot;:{&quot;request_url&quot;:&quot;https://github.com/orgs/oxford-sms/dashboard&quot;,&quot;target&quot;:&quot;HELP&quot;,&quot;originating_url&quot;:&quot;https://github.com/orgs/oxford-sms/dashboard&quot;,&quot;user_id&quot;:8064340}}" data-hydro-click-hmac="6823d566899d00e2012f59fc65596d24e686db3c77503c87f088ee861c061f9d" >Help</a>
-    <a role="menuitem" class="dropdown-item" href="/settings/profile" data-ga-click="Header, go to settings, icon:settings" data-hydro-click="{&quot;event_type&quot;:&quot;global_header.user_menu_dropdown.click&quot;,&quot;payload&quot;:{&quot;request_url&quot;:&quot;https://github.com/orgs/oxford-sms/dashboard&quot;,&quot;target&quot;:&quot;SETTINGS&quot;,&quot;originating_url&quot;:&quot;https://github.com/orgs/oxford-sms/dashboard&quot;,&quot;user_id&quot;:8064340}}" data-hydro-click-hmac="fdbb9bcd933876eb438e2f598af3e8b59372490f86225ca893c14ef141d3340e" >Settings</a>
-    <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="logout-form" action="/logout" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="msvoGuppAunplqVKppenI3JXG2t9kmyHbkOwFruBkYlBX2hpt8yQ/9xSSBbUL384zrw61H6r9xIhJUNkrh3EQw==" />
-      
-      <button type="submit" class="dropdown-item dropdown-signout" data-ga-click="Header, sign out, icon:logout" data-hydro-click="{&quot;event_type&quot;:&quot;global_header.user_menu_dropdown.click&quot;,&quot;payload&quot;:{&quot;request_url&quot;:&quot;https://github.com/orgs/oxford-sms/dashboard&quot;,&quot;target&quot;:&quot;SIGN_OUT&quot;,&quot;originating_url&quot;:&quot;https://github.com/orgs/oxford-sms/dashboard&quot;,&quot;user_id&quot;:8064340}}" data-hydro-click-hmac="e6722b2bca9848128dd3bdb66e031b92a24b4fcf803fc6c49500ebf84bae0fcd"  role="menuitem">
-        Sign out
-      </button>
-      <input type="text" name="required_field_f916" hidden="hidden" class="form-control" /><input type="hidden" name="timestamp" value="1593191409437" class="form-control" /><input type="hidden" name="timestamp_secret" value="b87322bcfb0cff5f2ce640d73ea2a414399b4811d754d7b3622c91566d2e96dd" class="form-control" />
-</form>  </details-menu>
-</details>
 
   </div>
 
@@ -1326,7 +1112,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
     <h2 class="f4 text-normal d-none js-all-activity-header">All activity</h2>
 <div class="js-dashboard-deferred" data-src="/orgs/oxford-sms/news-feed" data-priority="0">
-  <div class="Box text-center p-3 mb-4 mt-2 js-loader">
+  <div class="Box p-3 mb-4 mt-2 js-loader"><!--  text-center -->
     <!--<div class="loading-message">
       <img alt="" src="https://github.githubassets.com/images/spinners/octocat-spinner-64.gif" width="32" height="32" />
       <p class="text-gray my-2 mb-0">Loading activity...</p>
@@ -1337,8 +1123,8 @@ document.addEventListener("DOMContentLoaded", function(){
 	-->
 	
 	<jdoc:include type="component" />
-	
-  </div>
+	</div>
+  
 </div>
 
 <!--
@@ -1355,13 +1141,11 @@ document.addEventListener("DOMContentLoaded", function(){
   <div class="col-lg-4 list-style-none mr-lg-5">
     <a title="Home page" class="d-none d-lg-flex footer-octicon footer-octicon no-underline" href="https://github.com">
       <div>
-        <svg height="24" class="octicon octicon-mark-github d-block mr-2 float-left" viewBox="0 0 16 16" version="1.1" width="24" aria-hidden="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg>
+		<img src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/images/oxfordsms-24.png" />
       </div>
 
       <div>
-        <span class="f6 text-gray-light">
-          &copy; 2020 OxfordSMS,S.A.
-        </span>
+        <span class="f6 text-gray-light" style="margin-left:5px;">          &copy; 2020 OxfordSMS,S.A.        </span>
 
       </div>
 </a>  </div>

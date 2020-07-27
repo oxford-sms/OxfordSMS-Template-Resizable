@@ -77,6 +77,7 @@ else
 	?>
 	<link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/css/template.css" type="text/css" />
 
+
 	<?php
 		$debug = JFactory::getConfig()->get('debug_lang');
 		if ((defined('JDEBUG') && JDEBUG) || $debug)

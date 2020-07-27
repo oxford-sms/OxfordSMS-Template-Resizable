@@ -1,8 +1,95 @@
+.componentheading, h2{
+	font-size:2em;
+	font-weight:bold;
+}
+
+#selectorBox{
+	margin-bottom:10px;
+}
+
+
+#selectorBox h3 select{
+	font-size:18px;
+}
+.pagination{
+	text-align:center;
+}
+
+select, textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
+	
+	height:32px;
+}
+.btn, .btn-outline{
+	all: unset;
+	box-sizing: border-box;
+}
+
+.dropdown-menu{
+	all: unset;
+}
+
+.well2{
+	all: unset;
+}
+
+.dashboard ul{
+	margin-left:0;
+}
+
+.dashboard li{
+	list-style:none;
+}
+
+.control-label, .control-label label{
+	display: inline-block;
+	text-align:left; /* to overwrite bootstrat 3.2 */
+}
+
+
+
+.controls2{
+	display: inline-block;
+}
+
+Header{
+	background-color: #103157 !important;
+}
+
+.menu-profilemenu span{
+	vertical-align:middle;
+}
+
+.menu-profilemenu img{
+	width:16px;
+	height:16px;
+	vertical-align:middle;
+	margin-right:5px;
+}
+
+.NavBreadcrumbs{
+	margin-left:0px;
+	display:inline-block;
+}
+.NavBreadcrumbs div{
+	display:inline-block;
+	margin-right:0;
+}
+.NavBreadcrumbs ul{
+	margin-right:0;
+	margin-left:0;
+}
+
+.NavBreadcrumbs li{
+list-style:none;
+}
+
 .breadcrumb-none li{
 	list-style:none;
 }
 
 .breadcrumb-none li:before{
+	margin-left:10px;
+	margin-right:6px;
 	content: "/";
 }
 
@@ -38,6 +125,13 @@
 .dashboardmenuitembox{
 	display: inline-block;
 	margin:15px;
+	text-align:center;
+	
+}
+
+.dashboardmenuitembox img{
+
+	text-align:center;
 	
 }
 
@@ -45,12 +139,18 @@
 	
 	width:150px;
 	height:150px;
+	text-align:center;
 	
 }
 .dashboardmenuitembox p{
 font-size:18px !important;
 width:120px;
 white-space:normal;
+text-align:center;
+}
+
+.dashboardblock{
+	text-align: center;
 }
 
 .dashboardblock .dashboardmenuitembox span{
