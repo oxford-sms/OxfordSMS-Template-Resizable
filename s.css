@@ -1,3 +1,7 @@
+.avatar{
+	width:20px;
+	height:20px;
+}
 .componentheading, h2{
 	font-size:2em;
 	font-weight:bold;
