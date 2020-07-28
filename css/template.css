@@ -1,3 +1,11 @@
+.OxfordSMS-ctCatalogRecordCount
+{
+}
+
+#oxfordSMSPageHeader{
+	margin-top:15px;
+}
+
 .avatar{
 	width:20px;
 	height:20px;
@@ -107,23 +115,32 @@ list-style:none;
 
 }
 
-#oxfordSMSDashboardMenu{
+#oxfordSMSDashboardMenu, #oxfordSMSDashboardCTToolBar{
 	margin-top:24px;
 }
 
-#oxfordSMSDashboardMenu button{
+#oxfordSMSDashboardMenu button, #oxfordSMSDashboardCTToolBar button{
 	
-	height:35px;
+	min-height:35px;
 	padding:2px 5px 2px 5px;
 	margin-right:10px;
 	text-align:left;
+	word-wrap: break-word;
+	white-space: normal;
+	overflow-wrap: break-word;
+	overflow: hidden;
 }
 
-#oxfordSMSDashboardMenu img
+#oxfordSMSDashboardMenu img, #oxfordSMSDashboardCTToolBar img
 {
 	width:16px;
 	height:16px;
 	margin-right:10px;
+}
+
+#oxfordSMSDashboardCTSearchBoxes select, #oxfordSMSDashboardCTSearchBoxes input{
+	width:100%;
+	margin-bottom:15px;
 }
 
 .dashboardmenuitembox{
@@ -167,4 +184,11 @@ display: block;
 .dashboardmenuitembox img{
 	width:64px;
 	height:64px;
+}
+
+
+.leftSideFooter{
+	position: absolute;
+	bottom:10px;
+	left:10px;
 }

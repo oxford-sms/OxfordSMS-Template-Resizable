@@ -1,8 +1,15 @@
-
-
 <?php
-   // No direct access.
-   defined('_JEXEC') or die;
+/**
+* OxfordSMS - Themplate
+* @author    Ivan Komlev
+* @copyright Copyright (C) 2020 Ivan Komlev. All rights reserved.
+* @license	 GNU/GPL
+*/
+
+//This loader also prevents douple queries
+
+// no direct access
+defined( '_JEXEC' ) or die( 'Restricted access' );
    
    
    $app = JFactory::getApplication();
@@ -39,10 +46,10 @@
 <!DOCTYPE html>
 <html lang="en">
    <head>
-      <?php include('_head.php'); ?>
+      <?php include('includes'.DIRECTORY_SEPARATOR.'_head.php'); ?>
    </head>
    <body class="logged-in env-production page-responsive full-width">
-      <?php include('_header.php'); ?>
+      <?php include('includes'.DIRECTORY_SEPARATOR.'_header.php'); ?>
       <div id="start-of-content" class="show-on-focus"></div>
       <div id="js-flash-container">
          <template class="js-flash-template">
@@ -64,13 +71,17 @@
          data-discussion-hovercards-enabled
          data-issue-and-pr-hovercards-enabled
          >
-         <?php include('_aside1.php'); ?>
-         <div class="d-flex flex-wrap bg-gray" style="min-height: 100vh;">
-            <?php include('_aside2.php'); ?>
+         <?php include('includes'.DIRECTORY_SEPARATOR.'_aside1.php'); ?>
+         <div class="d-flex flex-wrap bg-gray" style="min-height: 100vh;position:relative;">
+            <?php include('includes'.DIRECTORY_SEPARATOR.'_aside2.php'); ?>
+			
+			
+			
+			
             <div class="col-12 col-md-8 col-lg-6 p-responsive mt-3 border-bottom d-flex flex-auto">
                <div class="mx-auto d-flex flex-auto flex-column" style="max-width: 1400px">
-                  <?php include('_main.php'); ?>
-                  <?php include('_footer.php'); ?>
+                  <?php include('includes'.DIRECTORY_SEPARATOR.'_main.php'); ?>
+                  <?php //include('includes'.DIRECTORY_SEPARATOR.'_footer.php'); ?>
                </div>
             </div>
             <aside class="team-left-column col-12 col-md-3 col-lg-3 pr-3 mt-5 hide-lg hide-md hide-sm border-bottom" aria-label="Explore">

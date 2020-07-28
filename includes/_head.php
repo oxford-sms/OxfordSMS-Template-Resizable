@@ -23,7 +23,7 @@
 */
 document.addEventListener("DOMContentLoaded", function(){
 	
-    MoveTopMenu();
+    adaptLayout();
 });
 	</script>
     
@@ -39,7 +39,8 @@ document.addEventListener("DOMContentLoaded", function(){
 
 <link href="/media/jui/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
 
-<link href="/templates/oxfordsms/s.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/css/template.css" type="text/css" />
+
 <link crossorigin="anonymous" media="all" integrity="sha512-aZYk5AYsRiFiFG04Si6FnQoHFwAugnodzKJXgafKqPWsrgrjoWRsapCn//vFuWqjSzr72ucZfPq8/ZbduuSeQg==" rel="stylesheet" href="https://github.githubassets.com/assets/frameworks-next-699624e4062c462162146d384a2e859d.css" /> 
 
   
