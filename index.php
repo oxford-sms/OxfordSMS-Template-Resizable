@@ -27,6 +27,15 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
    
    require('loader/loader.php');
    $oxfordsms = new OxfordSMSLoader();
+	$avatar_image='/components/com_oxfordsms/images/no-photo.png';
+	if(isset($oxfordsms->variables->employee) and isset($oxfordsms->variables->employee['es_photo']))
+	{
+		$photo=$oxfordsms->variables->employee['es_photo'];
+		if($photo!=0)
+			$avatar_image='/images/esimages/id_'.$photo.'.jpg';
+	}
+
+
    
    if($task == "edit" || $layout == "form" )
    {
@@ -50,6 +59,7 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
    </head>
    <body class="logged-in env-production page-responsive full-width">
       <?php include('includes'.DIRECTORY_SEPARATOR.'_header.php'); ?>
+	  <?php /**/?>
       <div id="start-of-content" class="show-on-focus"></div>
       <div id="js-flash-container">
          <template class="js-flash-template">
@@ -65,6 +75,7 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
             </div>
          </template>
       </div>
+	  
       <div
          class="application-main "
          data-commit-hovercards-enabled
@@ -84,19 +95,30 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
                   <?php //include('includes'.DIRECTORY_SEPARATOR.'_footer.php'); ?>
                </div>
             </div>
+			
+            <?php  if($this->countModules('right-bar')) : ?>
+			<!-- right side bar -->
             <aside class="team-left-column col-12 col-md-3 col-lg-3 pr-3 mt-5 hide-lg hide-md hide-sm border-bottom" aria-label="Explore">
-               <div data-team-hovercards-enabled>
-                  <?php  if($this->countModules('right-bar')) : ?>
+				<div data-team-hovercards-enabled>
                   <jdoc:include type="modules" name="right-bar" style="none" />
-                  <?php  endif; ?>
-               </div>
+				</div>
             </aside>
+            <?php  endif; ?>
+               
          </div>
       </div>
+	  <?php /* */?>
+	  <!-- popups -->
       <div class="Popover js-hovercard-content position-absolute" style="display: none; outline: none;" tabindex="0">
          <div class="Popover-message Popover-message--bottom-left Popover-message--large Box box-shadow-large" style="width:360px;">
          </div>
       </div>
+	  
+	  
+	<script crossorigin="anonymous" async="async" type="application/javascript" src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/environment-bootstrap-a544e728.js"></script>
+	<script crossorigin="anonymous" async="async" type="application/javascript" src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/vendor-35c9bc10.js"></script>
+    <script crossorigin="anonymous" async="async" type="application/javascript" src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/frameworks-4f69d005.js"></script>
+	
    </body>
 </html>
 

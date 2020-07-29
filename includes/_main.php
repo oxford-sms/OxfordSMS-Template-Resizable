@@ -6,7 +6,7 @@
 ?>
 <main class="flex-auto">
 
-<?php if($option!='com_customtables' and $view!='catalog') : ?>
+
    <div id="dashboard" class="dashboard">
       <div class="news">
 	  
@@ -20,18 +20,20 @@
             </div>
          </div>
 		 */ ?>
-         <?php //include('_news.php'); ?>
+         <?php include('_news.php'); ?>
          <!--<h2 class="f4 text-normal d-none js-all-activity-header">All activity</h2>-->
          <div class="js-dashboard-deferred" data-src="/orgs/oxford-sms/news-feed" data-priority="0">
+		 <?php if($option!='com_customtables' and $view!='catalog') : ?>
             <div class="Box p-3 mb-4 mt-2 js-loader">
 				<?php endif; ?>
                <!--  text-center -->
                <jdoc:include type="component" />
 			   <?php if($option!='com_customtables' and $view!='catalog') : ?>
             </div>
+			<?php endif; ?>
          </div>
       </div>
    </div>
-   <?php endif; ?>
+   
 </main>
 

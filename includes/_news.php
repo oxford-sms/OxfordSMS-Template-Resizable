@@ -2,9 +2,21 @@
 
 <div class="d-block d-md-none">
    <div class="mt-2 mb-4 Details js-repos-container" id="dashboard-org-repos-box" data-pjax-container role="navigation">
-      <h2 class="f4 mb-1 text-normal d-flex flex-justify-between flex-items-center">Repositories</h2>
+      <h2 class="f4 mb-1 text-normal d-flex flex-justify-between flex-items-center"><div id="oxfordSMSPageHeader_Mobile"></div></h2>
       <div class="Box px-2 py-1 mb-3 pb-2">
          <div>
+		 
+		 
+		 	<div id="oxfordSMSPageHeader_Mobile"></div>
+	
+	<div id="oxfordSMSDashboardCTToolBar_Mobile"></div>  
+	
+	<div id="oxfordSMSDashboardCTSearchBoxes_Mobile"></div>  
+	
+	
+		 
+			<?php /*
+		 
             <h2 class="f4 hide-sm hide-md f5 mb-1 d-flex flex-justify-between flex-items-center">
                Repositories
                <a class="btn btn-sm btn-primary text-white" data-hydro-click="{&quot;event_type&quot;:&quot;dashboard.click&quot;,&quot;payload&quot;:{&quot;event_context&quot;:&quot;REPOSITORIES&quot;,&quot;target&quot;:&quot;NEW_REPOSITORY_BUTTON&quot;,&quot;dashboard_context&quot;:&quot;organization&quot;,&quot;dashboard_version&quot;:2,&quot;user_id&quot;:8064340,&quot;originating_url&quot;:&quot;https://github.com/orgs/oxford-sms/dashboard&quot;}}" data-hydro-click-hmac="949c7a362d5f405be5509916e3a9b79e343cd8e6f0e8587fb0365939390f56d1" data-ga-click="Dashboard, click, Sidebar header new repo button - context:organization" href="/organizations/oxford-sms/repositories/new">
@@ -199,6 +211,8 @@
                   </a>
                </li>
             </ul>
+			
+			*/ ?>
          </div>
       </div>
    </div>

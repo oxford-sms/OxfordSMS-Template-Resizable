@@ -1,10 +1,118 @@
+.ctEditFormButton{
+	width:100% !important;
+	display: block;
+	margin-bottom:15px !important;
+}
+
+.OxfordSMSMobileMenu div{
+width:100%;
+}
+
+/* SIDE BAR */
 .OxfordSMS-ctCatalogRecordCount
 {
 }
 
-#oxfordSMSPageHeader{
+#oxfordSMSPageHeader, #oxfordSMSPageHeader_Mobile{
 	margin-top:15px;
 }
+
+
+#oxfordSMSDashboardMenu, #oxfordSMSDashboardCTToolBar, #oxfordSMSDashboardCTToolBar_Mobile{
+	margin-top:24px;
+}
+
+#oxfordSMSDashboardMenu button, #oxfordSMSDashboardMenu_Mobile button, #oxfordSMSDashboardCTToolBar button, #oxfordSMSDashboardCTToolBar_Mobile button{
+	
+	min-height:35px;
+	padding:2px 5px 2px 5px;
+	margin-right:10px;
+	text-align:left;
+	word-wrap: break-word;
+	white-space: normal;
+	overflow-wrap: break-word;
+	overflow: hidden;
+}
+
+#oxfordSMSDashboardMenu img,#oxfordSMSDashboardMenu_Mobile img,.oxfordSMSDashboardMenu_Mobile img, #oxfordSMSDashboardCTToolBar img,#oxfordSMSDashboardCTToolBar_Mobile img
+{
+	width:16px;
+	height:16px;
+	margin-right:10px;
+}
+
+#oxfordSMSDashboardCTSearchBoxes select,#oxfordSMSDashboardCTSearchBoxes_Mobile select, #oxfordSMSDashboardCTSearchBoxes input, #oxfordSMSDashboardCTSearchBoxes_Mobile input{
+	width:100%;
+	margin-bottom:15px;
+}
+
+
+/* end of the side bar */
+
+
+
+/* Unset Bootstrap conflicting classes */
+
+.btn, .btn-outline{
+	all: unset;
+	
+/*	text-align:center;
+	border-color: unset;
+	
+	box-shadow: unset;
+	transition: unset;
+
+
+	background-image: unset;
+	background-repeat: unset;	
+*/
+	box-sizing: border-box;
+
+}
+
+.btn-primary{
+
+background-color:#0366d6 !important;
+}
+
+input+.btn:hover{
+background-color:#0366d6 !important;
+}
+
+input+.btn-success{
+background-color:#92d782 !important;
+}
+
+input+.btn-success:hover{
+background-color:#25970a !important;
+}
+
+
+.dropdown-menu{
+	all: unset;
+}
+
+.well2{
+	all: unset;
+}
+
+form{
+	margin: unset;
+}
+
+label{
+	margin-bottom: unset;
+}
+
+select, textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
+	
+	padding-top: unset;
+	padding-bottom: unset;
+	margin-bottom: unset;
+}
+
+
+/* end of unset */
 
 .avatar{
 	width:20px;
@@ -29,20 +137,9 @@
 
 select, textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
 	
-	height:32px;
-}
-.btn, .btn-outline{
-	all: unset;
-	box-sizing: border-box;
+	height:30px;
 }
 
-.dropdown-menu{
-	all: unset;
-}
-
-.well2{
-	all: unset;
-}
 
 .dashboard ul{
 	margin-left:0;
@@ -56,7 +153,6 @@ select, textarea, input[type="text"], input[type="password"], input[type="dateti
 	display: inline-block;
 	text-align:left; /* to overwrite bootstrat 3.2 */
 }
-
 
 
 .controls2{
@@ -115,33 +211,6 @@ list-style:none;
 
 }
 
-#oxfordSMSDashboardMenu, #oxfordSMSDashboardCTToolBar{
-	margin-top:24px;
-}
-
-#oxfordSMSDashboardMenu button, #oxfordSMSDashboardCTToolBar button{
-	
-	min-height:35px;
-	padding:2px 5px 2px 5px;
-	margin-right:10px;
-	text-align:left;
-	word-wrap: break-word;
-	white-space: normal;
-	overflow-wrap: break-word;
-	overflow: hidden;
-}
-
-#oxfordSMSDashboardMenu img, #oxfordSMSDashboardCTToolBar img
-{
-	width:16px;
-	height:16px;
-	margin-right:10px;
-}
-
-#oxfordSMSDashboardCTSearchBoxes select, #oxfordSMSDashboardCTSearchBoxes input{
-	width:100%;
-	margin-bottom:15px;
-}
 
 .dashboardmenuitembox{
 	display: inline-block;

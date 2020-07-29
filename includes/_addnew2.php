@@ -1,5 +1,7 @@
-<div class="Header-item position-relative d-none d-md-flex">
-    <details class="details-overlay details-reset">
+<?php ?>
+<div class="Header-item position-relative d-none d-lg-flex">
+
+<details class="details-overlay details-reset">
   <summary class="Header-link"
       aria-label="Create new…"
       data-ga-click="Header, create new, icon:add">
@@ -25,11 +27,8 @@
 
 
 
-  <a role="menuitem" class="dropdown-item" href="/new/project" data-ga-click="Header, create new project">
-    New project
-  </a>
 
   </details-menu>
 </details>
 
-  </div>
+</div>
