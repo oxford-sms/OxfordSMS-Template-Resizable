@@ -2,7 +2,7 @@
 <!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/2.5/template-install.dtd">
 <extension version="3.5" type="template" method="upgrade">
 	<name>OxfordSMS</name>
-	<creationDate>26 June 2020</creationDate>
+	<creationDate>03 August 2020</creationDate>
 	<author>Ivan Komlev</author>
 	<copyright>Copyright © 2020 Ivan Komlev</copyright>
 	<authorEmail>ivankomlev@oxford.edu.pa</authorEmail>
