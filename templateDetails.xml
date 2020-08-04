@@ -7,12 +7,15 @@
 	<copyright>Copyright © 2020 Ivan Komlev</copyright>
 	<authorEmail>ivankomlev@oxford.edu.pa</authorEmail>
 	<authorUrl>https://oxfordsms.com</authorUrl>
-	<version>Stable 1.0.0</version>
+	<version>1.0.0</version>
 	<description><![CDATA[Frameless resizable 3-column template to use the website inside a iFrame.
 This template has postMessage mechanism to send the document height to parent window for hight adjustments.]]></description>
 	<files>
 		<folder>css</folder>
 		<folder>js</folder>
+		<folder>images</folder>
+		<folder>loader</folder>
+		<folder>includes</folder>
 		<filename>index.php</filename>
 		<filename>templateDetails.xml</filename>
 	</files>

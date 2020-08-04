@@ -24,9 +24,11 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
    $task     = $app->input->getCmd('task', '');
    $itemid   = $app->input->getCmd('Itemid', '');
    $sitename = $app->getCfg('sitename');
-   
+
    require('loader/loader.php');
    $oxfordsms = new OxfordSMSLoader();
+   $app->oxfordsms=$oxfordsms;
+   
 	$avatar_image='/components/com_oxfordsms/images/no-photo.png';
 	if(isset($oxfordsms->variables->employee) and isset($oxfordsms->variables->employee['es_photo']))
 	{
