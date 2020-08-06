@@ -62,7 +62,12 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
    <head>
       <?php include('includes'.DIRECTORY_SEPARATOR.'_head.php'); ?>
    </head>
-   <body class="logged-in env-production page-responsive full-width">
+   <body id="bg" class="logged-in env-production page-responsive full-width">
+   
+   	<div id="loader"></div>
+	<div class="oxfordSMSContainer animate-bottom" style="display:none;" id="oxfordSMSDashboard">
+
+   
       <?php include('includes'.DIRECTORY_SEPARATOR.'_header.php'); ?>
 	  <?php /**/?>
       <div id="start-of-content" class="show-on-focus"></div>
@@ -81,7 +86,7 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
          </template>
       </div>
 	  
-      <div
+      <div id='contentArea'
          class="application-main "
          data-commit-hovercards-enabled
          data-discussion-hovercards-enabled
@@ -118,13 +123,22 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
          <div class="Popover-message Popover-message--bottom-left Popover-message--large Box box-shadow-large" style="width:360px;">
          </div>
       </div>
-	  
+	</div>  
 	  
 	<script crossorigin="anonymous" async="async" type="application/javascript" src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/environment-bootstrap-a544e728.js"></script>
 	<script crossorigin="anonymous" async="async" type="application/javascript" src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/vendor-35c9bc10.js"></script>
     <script crossorigin="anonymous" async="async" type="application/javascript" src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/frameworks-4f69d005.js"></script>
+	<script>
+	checkCookie();
+
 	
+</script>
    </body>
+
+
+
+
+
 </html>
 
 <?php
