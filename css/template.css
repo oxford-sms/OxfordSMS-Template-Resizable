@@ -1,3 +1,17 @@
+.dashboardPhoto img{
+	width:200px;
+	margin-top:10px;
+}
+
+.dashboardHouseIcon{
+	float:right;text-align:right;position:relative;
+	margin-top:10px;
+}
+
+.dashboardHouseIcon img{
+	width:50px
+}
+
 .ctEditFormButton{
 	width:100% !important;
 	display: block;
@@ -222,6 +236,8 @@ list-style:none;
 .dashboardmenuitembox img{
 
 	text-align:center;
+	width:80px;
+	height:80px;
 	
 }
 
@@ -249,12 +265,12 @@ width:120px;
 white-space:normal;
 display: block;
 }
-
+/*
 .dashboardmenuitembox img{
 	width:64px;
 	height:64px;
 }
-
+*/
 
 .leftSideFooter{
 	position: absolute;

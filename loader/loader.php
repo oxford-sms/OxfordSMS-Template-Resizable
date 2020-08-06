@@ -19,8 +19,9 @@ class OxfordSMSLoader
 	
 	function  __construct ()
 	{
-		require_once(JPATH_SITE.DIRECTORY_SEPARATOR.'components'.DIRECTORY_SEPARATOR.'com_oxfordsms'.DIRECTORY_SEPARATOR.'includes'.DIRECTORY_SEPARATOR.'misc.php');
-		$this->variables=tosMisc::getVariables('');
+		echo 'Lalaby';
+		require_once(JPATH_SITE.DIRECTORY_SEPARATOR.'components'.DIRECTORY_SEPARATOR.'com_oxfordsms'.DIRECTORY_SEPARATOR.'includes'.DIRECTORY_SEPARATOR.'oxfordsmsmisc.php');
+		$this->variables=OxfordSMSMisc::getVariables('');
 	}
 
 }

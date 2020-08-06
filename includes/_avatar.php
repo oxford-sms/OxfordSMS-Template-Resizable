@@ -15,6 +15,7 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 //if($oxfordsms->variables->real_userid!=0 and $oxfordsms->variables->employee!=0):
 
 	$image='/components/com_oxfordsms/images/no-photo.png';
+	 
 	if(isset($oxfordsms->variables->employee) and isset($oxfordsms->variables->employee['es_photo']))
 	{
 		$photo=$oxfordsms->variables->employee['es_photo'];

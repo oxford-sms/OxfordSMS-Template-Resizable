@@ -12,12 +12,12 @@ defined('_JEXEC') or die('Restricted access');
 
 $messages_file = JPATH_SITE . DIRECTORY_SEPARATOR . 'components' . DIRECTORY_SEPARATOR . 'com_oxfordsmsmessaging' . DIRECTORY_SEPARATOR . 'includes' . DIRECTORY_SEPARATOR . 'dashboard.php';
 
-if ($oxfordsms->variables->real_userid!=0 and file_exists($messages_file)):
+if ($variables->real_userid!=0 and file_exists($messages_file)):
 
 	require_once ($messages_file);
 
-	$number_of_unread_messages = OxfordSMSMessaging_GetCount($oxfordsms->variables);
-	$link = '/index.php/my-messages?userid=' . $oxfordsms->variables->real_userid;
+	$number_of_unread_messages = OxfordSMSMessaging_GetCount($variables);
+	$link = '/index.php/my-messages?userid=' . $variables->real_userid;
 
 	if($number_of_unread_messages==0)
 		$msg='You have no unread messages';

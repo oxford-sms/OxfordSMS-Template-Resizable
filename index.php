@@ -24,15 +24,18 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
    $task     = $app->input->getCmd('task', '');
    $itemid   = $app->input->getCmd('Itemid', '');
    $sitename = $app->getCfg('sitename');
+   
+   checkAuthorisation();
+	
 
-   require('loader/loader.php');
-   $oxfordsms = new OxfordSMSLoader();
-   $app->oxfordsms=$oxfordsms;
+   require_once(JPATH_SITE.DIRECTORY_SEPARATOR.'components'.DIRECTORY_SEPARATOR.'com_oxfordsms'.DIRECTORY_SEPARATOR.'includes'.DIRECTORY_SEPARATOR.'oxfordsmsmisc.php');
+	$variables=OxfordSMSMisc::getVariables('');
+	
    
 	$avatar_image='/components/com_oxfordsms/images/no-photo.png';
-	if(isset($oxfordsms->variables->employee) and isset($oxfordsms->variables->employee['es_photo']))
+	if(isset($variables->employee) and isset($variables->employee['es_photo']))
 	{
-		$photo=$oxfordsms->variables->employee['es_photo'];
+		$photo=$variables->employee['es_photo'];
 		if($photo!=0)
 			$avatar_image='/images/esimages/id_'.$photo.'.jpg';
 	}
@@ -105,7 +108,7 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
                   <jdoc:include type="modules" name="right-bar" style="none" />
 				</div>
             </aside>
-            <?php  endif; ?>
+            <?php endif; ?>
                
          </div>
       </div>
@@ -124,3 +127,39 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
    </body>
 </html>
 
+<?php
+
+function checkAuthorisation()
+{
+    $app = JFactory::getApplication();
+    $messages = $app->getMessageQueue();
+
+    /* set login flag to 0 */
+    $showlogin = 0;
+
+    /* if there is a message set... */
+    if (isset($messages[0])) {
+
+        /* loop through messages and check for the "not authorised" string */
+        foreach ($messages as $msg)
+        {
+            if ($msg["type"] == "error" && strpos($msg["message"], "not authorised") )
+                $showlogin = 1;/* if found, update login flag */
+        }
+
+
+        /* include in template body - you could redirect here instead of including login form */
+        if ($showlogin) {  echo '
+<script>
+window.top.location.href = "/";
+</script>
+';
+            die;
+            return false;
+        }
+    }
+    return true;
+}
+
+
+?>

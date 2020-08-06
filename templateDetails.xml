@@ -14,7 +14,6 @@ This template has postMessage mechanism to send the document height to parent wi
 		<folder>css</folder>
 		<folder>js</folder>
 		<folder>images</folder>
-		<folder>loader</folder>
 		<folder>includes</folder>
 		<filename>index.php</filename>
 		<filename>templateDetails.xml</filename>
