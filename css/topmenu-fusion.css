@@ -1,0 +1,94 @@
+/*! CSS Used for Oxford.Edu.pa top menu style */
+
+.fusion-menu > li.menu-item-has-children{overflow:visible;transition:opacity .2s ease-in;}
+.fusion-menu > li.menu-item-has-children > .sub-menu{border-top:0!important;border-bottom:5px solid #9f2828;padding-top:20px;padding-bottom:20px;}
+.fusion-menu a{text-decoration:none;}
+.fusion-menu > li:not(.current-menu-parent) > .fusion-bottombar-highlight{background:none;border:0;box-sizing:border-box;position:relative;vertical-align:middle;}
+.fusion-menu > li:not(.current-menu-parent) > .fusion-bottombar-highlight::before,.fusion-menu > li:not(.current-menu-parent) > .fusion-bottombar-highlight::after{box-sizing:inherit;content:'';position:absolute;width:100%;height:100%;}
+.fusion-menu > li:not(.current-menu-parent) > .fusion-bottombar-highlight::before,.fusion-menu > li:not(.current-menu-parent) > .fusion-bottombar-highlight::after{margin-top:-28px;top:0;left:0;height:100%;width:100%;transform-origin:center;}
+.fusion-menu > li:not(.current-menu-parent) > .fusion-bottombar-highlight::before{border-top:none;border-bottom:3px solid #a28f38;transform:scale3d(0,1,1);}
+.fusion-menu > li:not(.current-menu-parent) > .fusion-bottombar-highlight::after{border-left:none;border-right:none;transform:scale3d(1,0,1);}
+.fusion-menu > li:not(.current-menu-parent) > .fusion-bottombar-highlight:hover::before,.fusion-menu > li:not(.current-menu-parent) > .fusion-bottombar-highlight:hover::after{transform:scale3d(1,1,1);transition:transform 0.3s;}
+
+.fusion-main-menu{float:right;position:relative;z-index:200;overflow:hidden;}
+.fusion-header-v1 .fusion-main-menu:hover{overflow:visible;}
+.fusion-main-menu>ul>li:last-child{padding-right:0;}
+.fusion-main-menu>ul>.fusion-menu-item-button>a{border-color:transparent;}
+.fusion-main-menu ul{list-style:none;margin:0;padding:0;}
+.fusion-main-menu ul a{display:block;box-sizing:content-box;}
+.fusion-main-menu li{float:left;margin:0;padding:0;position:relative;cursor:pointer;}
+.fusion-main-menu>ul>li{padding-right:45px;}
+.fusion-main-menu>ul>li>a{display:-ms-flexbox;display:flex;-ms-flex-align:center;align-items:center;line-height:1;-webkit-font-smoothing:subpixel-antialiased;}
+.fusion-main-menu li:hover>.sub-menu{visibility:visible;opacity:1;}
+.fusion-main-menu .fusion-dropdown-menu{overflow:hidden;}
+.fusion-main-menu .sub-menu{position:absolute;left:0;visibility:hidden;opacity:0;z-index:1;transition:opacity .2s ease-in;}
+.fusion-main-menu .sub-menu ul{top:0;}
+.fusion-main-menu .sub-menu li{float:none;margin:0;padding:0;}
+.fusion-main-menu .sub-menu a{border:0;padding:7px 20px;line-height:19px;text-indent:0;height:auto;transition:color .2s ease-in-out,background-color .2s ease-in-out,border-color .2s ease-in-out,height 0s,line-height 0s;}
+.fusion-caret{margin-left:9px;}
+.fusion-caret .fusion-dropdown-indicator{vertical-align:middle;}
+.fusion-caret .fusion-dropdown-indicator:before{content:'\f107';font-family:IcoMoon;font-style:normal;}
+.sub-menu .fusion-caret{position:absolute;right:15px;margin-left:0;}
+.sub-menu .fusion-caret .fusion-dropdown-indicator:before{content:"\f105";}
+.fusion-main-menu>ul>.fusion-menu-item-button>a:hover{border-color:transparent;}
+
+
+.fusion-menu > li > a:hover{color:#9f2828;}
+.fusion-main-menu>ul>li{padding-right:40px;}
+.fusion-main-menu>ul>li>a{border-color:transparent;}
+.fusion-main-menu>ul>li>a:not(.fusion-logo-link):not(.fusion-icon-sliding-bar):hover{border-color:#a28f38;}
+.fusion-main-menu>ul>li>a:not(.fusion-logo-link):hover{color:#a28f38;}
+.fusion-main-menu .sub-menu{font-family:Montserrat;font-weight:300;width:229px;background-color:#103157;}
+.fusion-main-menu .sub-menu ul{left:229px;}
+.fusion-main-menu .sub-menu li a{font-family:Montserrat;font-weight:300;padding-top:7px;padding-bottom:7px;color:#4677b0;font-size:14px;}
+.fusion-main-menu .sub-menu li a:hover{background-color:#103157;}
+.fusion-main-menu .sub-menu .current-menu-item>a{background-color:#103157;}
+.fusion-main-menu .fusion-dropdown-menu .sub-menu li a{font-family:Montserrat;font-weight:300;padding-top:7px;padding-bottom:7px;border-bottom-color:#0e2d51;color:#4677b0;font-size:14px;}
+
+.fusion-main-menu>ul>li>a{height:88px;}
+.sub-menu .fusion-caret{top:7px;}
+.fusion-main-menu>ul>li>a{font-family:Montserrat;font-weight:500;font-size:14px;letter-spacing:0px;font-style:normal;}
+.fusion-main-menu>ul>li>a{color:#ffffff;}
+.fusion-main-menu .sub-menu,.fusion-main-menu .sub-menu li a{font-family:Montserrat;font-weight:300;letter-spacing:0px;font-style:normal;}
+
+.fusion-main-menu .sub-menu,.fusion-main-menu .sub-menu li a{line-height:1.5;}
+
+.fusion-menu-item-button .menu-text{border-color:#ffffff;}
+.fusion-menu-item-button:hover .menu-text{border-color:#ffffff;}
+.fusion-main-menu{--header_sticky_menu_color:#ffffff;--header_sticky_nav_font_size:14px;--nav_height:88px;--mobile_nav_padding:25px;--menu_text_align:center;--menu_thumbnail_size-width:26px;--menu_thumbnail_size-height:14px;}
+.fusion-main-menu{--header_sticky_nav_padding:35px;}
+
+.fusion-button{display:inline-block;position:relative;zoom:1;border:1px solid transparent;text-align:center;text-transform:uppercase;text-decoration:none;font-weight:700;cursor:pointer;-webkit-box-sizing:border-box;box-sizing:border-box;-webkit-transition:all .2s;transition:all .2s;}
+.fusion-button:after,.fusion-button:before{content:" ";display:table;}
+.fusion-button:after{clear:both;}
+.fusion-button i{-webkit-transition:all .2s;transition:all .2s;}
+
+.button-small{padding:9px 20px;line-height:14px;font-size:12px;}
+.button-small .fusion-button-text-left{display:inline-block;padding-left:25px;}
+.button-small .button-icon-divider-left{padding:0 10px;}
+.button-small .button-icon-divider-left i{top:50%;margin-top:-6px;display:block;}
+
+.button-portal{background:#9f2828;color:#ffffff;border-color:#ffffff;}
+.button-portal:active,.button-portal:focus,.button-portal:hover{background:#9f2828;color:#ffffff;border-color:#ffffff;}
+.button-portal:visited{color:#ffffff;}
+.button-portal,.fusion-button{font-family:Montserrat;font-weight:400;font-style:normal;letter-spacing:0px;border-width:0px;border-style:solid;border-radius:0px;text-transform:none;-webkit-transition:all .2s;transition:all .2s;}
+
+#menu-item-317 .button-portal{background-color:#0000;border-width:1px!important;border-color:#fff!important;border-radius:40px!important;}
+#menu-item-317 .button-small .fusion-button-text-left{padding-right:10px;padding-left:0;}
+#menu-item-317 .button-icon-divider-left{left:100px;border-right:0;}
+.fusion-main-menu .fusion-dropdown-menu .sub-menu li a{font-weight:500;}
+.fusion-main-menu .sub-menu li a:hover{color:#9f2828;}
+.fusion-main-menu > ul > li > a:not(.fusion-logo-link):hover{color:#fff;}
+#menu-item-134 a.fusion-bottombar-highlight{border-bottom-width:0!important;}
+#menu-item-133 a.fusion-bottombar-highlight{border-bottom-width:0!important;}
+#menu-item-634 a.fusion-bottombar-highlight{border-bottom-width:0!important;}
+#menu-item-324 a.fusion-bottombar-highlight{border-bottom-width:0!important;}
+
+@font-face{font-family:"icomoon";src:url('/templates/oxfordsms/css/icomoon/icomoon.eot');
+src:url('/templates/oxfordsms/css/icomoon/icomoon.eot#iefix') format('embedded-opentype'),
+url('/templates/oxfordsms/css/icomoon/icomoon.woff') format('woff'),
+url('/templates/oxfordsms/css/icomoon/icomoon.ttf') format('truetype'),
+url('/templates/oxfordsms/css/icomoon/icomoon.svg#icomoon') format('svg');font-weight:normal;font-style:normal;font-display:block;}
+
+@font-face{font-display:block;font-family:'Montserrat';font-style:normal;font-weight:500;src:local('Montserrat Medium'), local('Montserrat-Medium'), 
+url('/templates/oxfordsms/css/montserrat.ttf') format('truetype');}
