@@ -32,7 +32,7 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 	$variables=OxfordSMSMisc::getVariables('');
 	
    
-	$avatar_image='/components/com_oxfordsms/images/no-photo.png';
+	$avatar_image='/components/com_oxfordsms/images/no-photo.svg';
 	if(isset($variables->employee) and isset($variables->employee['es_photo']))
 	{
 		$photo=$variables->employee['es_photo'];
