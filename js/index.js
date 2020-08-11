@@ -1,6 +1,7 @@
 function adaptLayout()
 {
 	MovePageHeader("page-header");
+	MoveYearTermSelector();
 	MovePageHeader("componentheading");
 	MovePageCTRecordCount();
 
@@ -12,7 +13,7 @@ function adaptLayout()
 	MovePageCTRecordCount()
 	MoveTopMenu();
 	
-	MoveYearTermSelector();
+	
 	MoveSideMenu();
 }
 
@@ -330,7 +331,12 @@ function MoveYearTermSelector()
 	{
 		var content='<div id="selectorBox">'+x.innerHTML+'</div>';
 		x.innerHTML="";
-		document.getElementById("oxfordSMSDashboardCTSearchBoxes").innerHTML+=content;
-		document.getElementById("oxfordSMSDashboardCTSearchBoxes_Mobile").innerHTML+=content;
+		
+		document.getElementById("oxfordSMSDashboardYeraTermMonthBoxes").innerHTML+=content;
+		//document.getElementById("oxfordSMSPageHeader_Mobile").innerHTML+=content;
+		
+		
+		//document.getElementById("oxfordSMSDashboardCTSearchBoxes").innerHTML+=content;
+		//document.getElementById("oxfordSMSDashboardCTSearchBoxes_Mobile").innerHTML+=content;
 	}
 }

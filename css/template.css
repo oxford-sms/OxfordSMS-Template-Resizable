@@ -1,3 +1,35 @@
+#oxfordSMSDashboardYeraTermMonthBoxes select{
+	width:100% !important;
+}
+.OxfordSMSDashboard-AfterContent{
+	margin-top:30px  !important;
+}
+.OxfordSMSDashboard-AfterContent h4{
+	font-size:16px;
+}
+
+.OxfordSMSDashboard-AfterContent > .datagrid {border:none !important;}
+.OxfordSMSDashboard-AfterContent > .datagrid {background: none; !important;}
+
+.OxfordSMSDashboard-AfterContent > .datagrid table{border:none !important;}
+
+.OxfordSMSDashboard-AfterContent > .datagrid table tbody tr th {background: none;border-bottom:1px solid #e1edf9;}
+.OxfordSMSDashboard-AfterContent > .datagrid table tbody tr:nth-child(even) {background: #fafbfc;border-bottom:1px solid #e1edf9;}
+.OxfordSMSDashboard-AfterContent > .datagrid table tbody tr:nth-child(odd) {background: #e1edf9;border-bottom:1px solid #e1edf9;}
+
+.OxfordSMSDashboard-AfterContent > .datagrid table thead tr {border:none !important;}
+.OxfordSMSDashboard-AfterContent > .datagrid table thead th {border:none !important;background:none !important;}
+.OxfordSMSDashboard-AfterContent > .datagrid table tbody td {border:none !important;padding:10px;}
+.OxfordSMSDashboard-AfterContent > .datagrid table tbody tr {border:none !important;}
+
+
+
+
+
+.datagrid table{
+	width:100%;
+}
+
 .dashboardPhoto img{
 	width:200px;
 	margin-top:10px;
@@ -83,6 +115,7 @@ width:100%;
 	box-sizing: border-box;
 
 }
+
 
 .btn-primary{
 
@@ -249,7 +282,7 @@ list-style:none;
 	
 }
 .dashboardmenuitembox p{
-font-size:18px !important;
+font-size:16px !important;
 width:120px;
 white-space:normal;
 text-align:center;
@@ -260,7 +293,7 @@ text-align:center;
 }
 
 .dashboardblock .dashboardmenuitembox span{
-font-size:18px !important;
+font-size:16px !important;
 width:120px;
 white-space:normal;
 display: block;
