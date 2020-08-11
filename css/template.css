@@ -1,3 +1,33 @@
+.OxfordSMSSideBarClubs{
+vertical-align: middle;
+margin-top:10px;
+margin-bottom:10px;
+}
+.OxfordSMSSideBarClubs div{
+	vertical-align: middle;
+	display: inline-block;
+	padding:0;
+}
+
+.OxfordSMSSideBarClubs img{
+	width:78px;
+	vertical-align: middle;
+	margin:0px;
+}
+
+.OxfordSMSSideBarClubs ul{
+	list-style: none;
+}
+
+.OxfordSMSSideBarClubs li{
+	margin: 5px 0 5px 0;
+	font-size:1.1em;
+}
+
+.OxfordSMSSideBarClubs li > span{
+	font-weight: bold;
+}
+
 #oxfordSMSDashboardYeraTermMonthBoxes select{
 	width:100% !important;
 }
