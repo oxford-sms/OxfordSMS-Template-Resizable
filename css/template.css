@@ -30,14 +30,23 @@
 	width:100%;
 }
 
+.dashboardPhoto{
+	position: relative;
+	text-align:center;
+	margin-left:-10px;
+	margin-bottom:20px;
+}
+
 .dashboardPhoto img{
 	width:200px;
 	margin-top:10px;
+	
 }
 
 .dashboardHouseIcon{
-	float:right;text-align:right;position:relative;
-	margin-top:10px;
+	position:absolute;
+	bottom:0;
+	right:0;
 }
 
 .dashboardHouseIcon img{

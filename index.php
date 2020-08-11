@@ -27,8 +27,7 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
    
    checkAuthorisation();
 	
-
-   require_once(JPATH_SITE.DIRECTORY_SEPARATOR.'components'.DIRECTORY_SEPARATOR.'com_oxfordsms'.DIRECTORY_SEPARATOR.'includes'.DIRECTORY_SEPARATOR.'oxfordsmsmisc.php');
+	require_once(JPATH_SITE.DIRECTORY_SEPARATOR.'components'.DIRECTORY_SEPARATOR.'com_oxfordsms'.DIRECTORY_SEPARATOR.'includes'.DIRECTORY_SEPARATOR.'oxfordsmsmisc.php');
 	$variables=OxfordSMSMisc::getVariables('');
 	
    
@@ -36,6 +35,12 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 	if(isset($variables->employee) and isset($variables->employee['es_photo']))
 	{
 		$photo=$variables->employee['es_photo'];
+		if($photo!=0)
+			$avatar_image='/images/esimages/id_'.$photo.'.jpg';
+	}
+	elseif(isset($variables->studentid) and isset($variables->student['es_photo']))
+	{
+		$photo=$variables->student['es_photo'];
 		if($photo!=0)
 			$avatar_image='/images/esimages/id_'.$photo.'.jpg';
 	}
