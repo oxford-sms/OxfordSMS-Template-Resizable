@@ -12,6 +12,7 @@
 
 <nav class="fusion-main-menu" aria-label="Main Menu">
                            <ul id="menu-main" class="fusion-menu">
+						   <li  id="menu-item-122"  class=" unused-10234789 menu-item-type-post_type menu-item-object-page menu-item-122"  data-item-id="122"><a  href="/dashboard" class="fusion-bottombar-highlight oxford-button"><span class="menu-text oxford-center">Dashboard</span></a></li>
 						   
                               <li  id="menu-item-397"  class="unused-10234789 menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-397 fusion-dropdown-menu"  data-classes="not-active" data-item-id="397">
                                  <a  href="/about-tos-school-calendar/" class="fusion-bottombar-highlight"><span class="menu-text">About TOS</span> <span class="fusion-caret"><i class="fusion-dropdown-indicator"></i></span></a>

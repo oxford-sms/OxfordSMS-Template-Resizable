@@ -1,4 +1,4 @@
-<header class="Header py-md-0 js-details-container Details flex-wrap flex-md-nowrap px-3" role="banner">
+<header class="Header py-md-0 js-details-container Details flex-wrap flex-md-nowrap px-3" role="banner" style="background-color:<?php echo ($this->params->get('templateColor')!="" ? $this->params->get('templateColor') : '#103157') ?> !important;">
 	<!-- wide screen visible area -->
 	<div class="Header-item d-none d-md-flex">
 

@@ -14,7 +14,15 @@
    
    <nav class="d-flex flex-column flex-md-row flex-self-stretch flex-md-self-auto" aria-label="Global">
       <div class="d-none d-md-flex"><?php //include('__breadcrumbs.php'); ?></div>
-      <div class="d-none d-md-flex"><?php include('_wp_top_menu.php'); ?></div>
+      <div class="d-none d-md-flex">
+	  
+	  
+	  <div class="NavBreadcrumbs"><div aria-label="Breadcrumbs " role="navigation">
+	  <?php include('_wp_top_menu.php'); ?>
+	  </div></div>
+	  
+	  
+	  </div>
       <div class="d-block d-md-none">
          <a data-ga-click="Header, click, Nav menu - item:dashboard:user" aria-label="Dashboard" href="/dashboard">
             <div class="Header-link py-md-3  mr-0 mr-md-3 py-2 border-top border-md-top-0 border-white-fade-15">Dashboard</div>

@@ -23,11 +23,26 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
    $layout   = $app->input->getCmd('layout', '');
    $task     = $app->input->getCmd('task', '');
    $itemid   = $app->input->getCmd('Itemid', '');
-   $sitename = $app->getCfg('sitename');
+   $sitename = htmlspecialchars($app->get('sitename'), ENT_QUOTES, 'UTF-8');
+   
+   /*
+	$jinput = JFactory::getApplication()->input;
+	$user = JFactory::getUser();
+    $real_userid = $user->get('id');
+	$userid = $jinput->getInt('userid',0);
+	if($userid==0)
+	{
+		$userid=$real_userid;
+		$jinput->set('userid',$real_userid);
+		echo '$real_userid='.$real_userid;
+		die;
+	}
+   */
    
    checkAuthorisation();
 	
 	require_once(JPATH_SITE.DIRECTORY_SEPARATOR.'components'.DIRECTORY_SEPARATOR.'com_oxfordsms'.DIRECTORY_SEPARATOR.'includes'.DIRECTORY_SEPARATOR.'oxfordsmsmisc.php');
+	require_once(JPATH_SITE.DIRECTORY_SEPARATOR.'administrator'.DIRECTORY_SEPARATOR.'components'.DIRECTORY_SEPARATOR.'com_customtables'.DIRECTORY_SEPARATOR.'libraries'.DIRECTORY_SEPARATOR.'misc.php');
 	$variables=OxfordSMSMisc::getVariables('');
 	
    

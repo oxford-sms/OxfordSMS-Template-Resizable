@@ -8,13 +8,13 @@
 	<authorEmail>ivankomlev@oxford.edu.pa</authorEmail>
 	<authorUrl>https://oxfordsms.com</authorUrl>
 	<version>1.0.0</version>
-	<description><![CDATA[Frameless resizable 3-column template to use the website inside a iFrame.
-This template has postMessage mechanism to send the document height to parent window for hight adjustments.]]></description>
+	<description><![CDATA[Frameless resizable 3-column template created for the Oxford School Managment System using GitHub Primer theme.]]></description>
 	<files>
 		<folder>css</folder>
 		<folder>js</folder>
 		<folder>images</folder>
 		<folder>includes</folder>
+		<folder>language</folder>
 		<filename>index.php</filename>
 		<filename>templateDetails.xml</filename>
 	</files>
@@ -28,11 +28,33 @@ This template has postMessage mechanism to send the document height to parent wi
 	<position>right-bar</position>
 	<position>footer</position>
 	</positions>
+
 	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.tpl_oxfordsms.ini</language>
+		<language tag="en-GB">en-GB/en-GB.tpl_oxfordsms.sys.ini</language>
 	</languages>
+
 	<config>
 		<fields name="params">
 			<fieldset name="advanced">
+				<field 
+					name="templateColor" 
+					type="color" 
+					label="TPL_OXFORDSMS_COLOR_LABEL"
+					description="TPL_OXFORDSMS_COLOR_DESC" 
+					class="" 
+					default="#103157"
+				/>
+
+				<field 
+					name="logoFile" 
+					type="media" 
+					label="TPL_OXFORDSMS_LOGO_LABEL"
+					description="TPL_OXFORDSMS_LOGO_DESC" 
+					class="" 
+					default=""
+				/>
+
 			</fieldset>
 		</fields>
 	</config>

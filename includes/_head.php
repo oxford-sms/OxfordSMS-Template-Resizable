@@ -27,6 +27,8 @@ if(window.addEventListener) {
 			showPage();
 		});
 	</script>
+	
+	<title><?php echo JoomlaBasicMisc::JTextExtended($this->title); ?></title>
 
 	<meta name="viewport" content="width=device-width">
 	<link href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
