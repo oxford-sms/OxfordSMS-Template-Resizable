@@ -12,7 +12,27 @@
 
 <nav class="fusion-main-menu" aria-label="Main Menu">
                            <ul id="menu-main" class="fusion-menu">
-						   <li  id="menu-item-122"  class=" unused-10234789 menu-item-type-post_type menu-item-object-page menu-item-122"  data-item-id="122"><a  href="/dashboard" class="fusion-bottombar-highlight oxford-button"><span class="menu-text oxford-center">Dashboard</span></a></li>
+						   <!--<li  id="menu-item-122"  class=" unused-10234789 menu-item-type-post_type menu-item-object-page menu-item-122"  data-item-id="122">
+						   -->
+						   <!--<a  href="/dashboard" class="fusion-bottombar-highlight oxford-button">-->
+						   <li  id="menu-item-317"  class="unused-10234789 menu-item-type-custom menu-item-object-custom current-menu-item current-menu-ancestor fusion-menu-item-button" >
+						   
+						   <a  href="/dashboard" ><!--class="fusion-bottombar-highlight"-->
+								 
+								 <span class="menu-text fusion-button button-portal button-small"><!--<span class="button-icon-divider-left"><i class="glyphicon fa-angle-down fas"></i></span>-->
+								 
+								 <!--<span class="fusion-button-text-left">-->
+								 
+								 Dashboard
+						 
+								 <!--<span class="fusion-caret"><i class="fusion-dropdown-indicator"></i></span>-->
+								 </span>
+								 
+								 
+								 
+								 </a>
+						   
+						   <!--<span class="menu-text oxford-center">Dashboard</span></a>--></li>
 						   
                               <li  id="menu-item-397"  class="unused-10234789 menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-397 fusion-dropdown-menu"  data-classes="not-active" data-item-id="397">
                                  <a  href="/about-tos-school-calendar/" class="fusion-bottombar-highlight"><span class="menu-text">About TOS</span> <span class="fusion-caret"><i class="fusion-dropdown-indicator"></i></span></a>
@@ -51,18 +71,21 @@
                                     <li  id="menu-item-7033"  class="unused-10234789 menu-item-type-post_type menu-item-object-page menu-item-7033 fusion-dropdown-submenu" ><a  href="https://www.oxford.edu.pa/paseo-del-norte-application-form/" class="fusion-bottombar-highlight"><span>Paseo del Norte</span></a></li>
                                  </ul>
                               </li>
-                              <li  id="menu-item-317"  class="parents unused-10234789 menu-item-type-custom menu-item-object-custom current-menu-item current-menu-ancestor current-menu-parent menu-item-has-children menu-item-317 fusion-dropdown-menu fusion-menu-item-button"  data-classes="parents" data-item-id="317">
+							  
+							  <!--<li  id="menu-item-317"  class="parents unused-10234789 menu-item-type-custom menu-item-object-custom current-menu-item current-menu-ancestor current-menu-parent menu-item-has-children menu-item-317 fusion-dropdown-menu fusion-menu-item-button"  data-classes="parents" data-item-id="317">-->
+							  <li  id="menu-item-123"  class="unused-10234789 menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-123 fusion-dropdown-menu"  data-item-id="123">
                                  <a  href="/panama" class="fusion-bottombar-highlight">
+								 <span class="menu-text">Parent Portal</span> <span class="fusion-caret"><i class="fusion-dropdown-indicator"></i></span></a>
 								 
-								 <span class="menu-text fusion-button button-portal button-small"><!--<span class="button-icon-divider-left"><i class="glyphicon fa-angle-down fas"></i></span>-->
+								 <!--<span class="menu-text fusion-button button-portal button-small"><!--<span class="button-icon-divider-left"><i class="glyphicon fa-angle-down fas"></i></span>-->
 								 
 								 <!--<span class="fusion-button-text-left">-->
 								 
-								 Parent Portal
-								 
+								 <!--
+						 
 								 <span class="fusion-caret"><i class="fusion-dropdown-indicator"></i></span>
-								 <!--</span>-->
 								 </span>
+								 -->
 								 
 								 
 								 
