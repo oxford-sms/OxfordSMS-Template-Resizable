@@ -1,3 +1,11 @@
+/**
+* OxfordSMS - Template
+* @author    Ivan Komlev
+* @copyright Copyright (C) 2020 Ivan Komlev. All rights reserved.
+* @license	 GNU/GPL
+*/
+
+
 function adaptLayout()
 {
 	MovePageHeader("page-header");

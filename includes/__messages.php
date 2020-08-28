@@ -1,6 +1,6 @@
 <?php
 /**
- * OxfordSMS - Themplate - Messages
+ * OxfordSMS - Template - Messages
  * @author Ivan Komlev
  * @copyright Copyright (C) 2020 Ivan Komlev. All rights reserved.
  * @license GNU/GPL
