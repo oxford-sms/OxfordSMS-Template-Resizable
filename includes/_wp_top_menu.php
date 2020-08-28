@@ -23,7 +23,7 @@
 								 
 								 <!--<span class="fusion-button-text-left">-->
 								 
-								 Dashboard
+								 Dashboard - <?php echo $sitename_school; ?>
 						 
 								 <!--<span class="fusion-caret"><i class="fusion-dropdown-indicator"></i></span>-->
 								 </span>

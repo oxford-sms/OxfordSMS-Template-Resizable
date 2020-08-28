@@ -24,6 +24,8 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
    $task     = $app->input->getCmd('task', '');
    $itemid   = $app->input->getCmd('Itemid', '');
    $sitename = htmlspecialchars($app->get('sitename'), ENT_QUOTES, 'UTF-8');
+   $sitename_parts=explode('-',$sitename);
+   $sitename_school=trim(end($sitename_parts));
    
    /*
 	$jinput = JFactory::getApplication()->input;
