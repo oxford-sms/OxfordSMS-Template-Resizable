@@ -182,7 +182,7 @@ function MoveCTToolBarAddNew()
 	var i;
 	var items=[];
 	for (i = 0; i < x.length; i++) {
-		if(x[i].id.indexOf('ctToolBarAddNew')!=-1)
+		if(x[i].id.indexOf('ctToolBarAddNew')!=-1 || x[i].id.indexOf('ctToolBarExport2CSV')!=-1)
 		{
 			var imgElements=x[i].getElementsByTagName( 'img' );//get image
 			

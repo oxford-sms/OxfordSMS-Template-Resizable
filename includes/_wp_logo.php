@@ -15,7 +15,7 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 
 if ($this->params->get('logoFile'))
 {
-	$logo = '<img src="' . htmlspecialchars(JUri::root() . $this->params->get('logoFile'), ENT_QUOTES) . '" alt="' . $sitename . '" width="295" height="68" style="max-height:68px;height:auto;" />';
+	$logo = '<img src="' . htmlspecialchars(JUri::root() . $this->params->get('logoFile'), ENT_QUOTES) . '" title="' . $sitename . '" alt="' . $sitename . '" width="295" height="68" style="max-height:68px;height:auto;" />';
 	
 }
 else
