@@ -27,10 +27,13 @@
       <div class="header-nav-current-user css-truncate">
          <?php
             $user = JFactory::getUser();
-            echo '<span class="no-underline user-profile-link px-3 pt-2 pb-2 mb-n2 mt-n1 d-block">Signed in as <strong class="css-truncate-target">'.$user->username.'</strong></span>';
-            
+			if($user->id!=0)
+			{
+				echo '<span class="no-underline user-profile-link px-3 pt-2 pb-2 mb-n2 mt-n1 d-block">Signed in as <strong class="css-truncate-target">'.$user->username.'</strong></span>';
+				echo '<div role="none" class="dropdown-divider"></div>';
+			}
             ?>
-         <div role="none" class="dropdown-divider"></div>
+         
          <?php  if($this->countModules('profilemenu-1')) : ?>
          <div id="OxfordSMSSideMenus">
             <jdoc:include type="modules" name="profilemenu-1" style="none" />
