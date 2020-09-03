@@ -322,11 +322,9 @@ function MoveCTEditFormButtons()
 	
 		content=items.join("");
 		var o1=document.getElementById("oxfordSMSDashboardCTToolBar");
-		//if(o1.innerHTML.indexOf(content)==-1)
 		o1.innerHTML+=content;
 
 		var o2=document.getElementById("oxfordSMSDashboardCTToolBar_Mobile")
-		//if(o2.innerHTML.indexOf(content)==-1)
 		o2.innerHTML+=content;
 	}
 	
@@ -341,11 +339,6 @@ function MoveYearTermSelector()
 		x.innerHTML="";
 		
 		document.getElementById("oxfordSMSDashboardYeraTermMonthBoxes").innerHTML+=content;
-		//document.getElementById("oxfordSMSPageHeader_Mobile").innerHTML+=content;
-		
-		
-		//document.getElementById("oxfordSMSDashboardCTSearchBoxes").innerHTML+=content;
-		//document.getElementById("oxfordSMSDashboardCTSearchBoxes_Mobile").innerHTML+=content;
 	}
 }
 
@@ -353,42 +346,28 @@ function MoveYearTermSelector()
 function dashboardCountdown(id)
 {
 	var obj=document.getElementById(id);
-	var t=obj.dataset.time;
+	var countDownDate=parseInt(obj.dataset.time);
+	if(isNaN(countDownDate))
+		return;
 	
+	var currenttime=parseInt(obj.dataset.currenttime);
+	if(isNaN(currenttime))
+		return;
 	
-	var today = new Date();
-	var dd = String(today.getDate()).padStart(2, '0');
-	var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
-	var yyyy = today.getFullYear();
-
-	today = yyyy + '-' + mm + '-' + dd;
-	
-	var countDownDate = new Date(today+" "+t).getTime();
-	
-	// Set the date we're counting down to
-	//var countDownDate = new Date("Jan 5, 2021 15:37:25").getTime();
-
 	// Update the count down every 1 second
 	var x = setInterval(function() {
 
-		// Get today's date and time
-		var now = new Date().getTime();
-
 		// Find the distance between now and the count down date
-		var distance = countDownDate-now;
+		var distance = countDownDate-currenttime;//now;
+		currenttime+=1;
 
-	//alert("a:"+countDownDate);
-	//alert("b:"+now);
-	//alert("d:"+distance);
-
-		// Time calculations for days, hours, minutes and seconds
-		//var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-		var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-		var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-		var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+		var ad=Math.abs(distance);
+		var hours = Math.floor(ad / 3600) ;
+		var minutes = Math.floor((ad-(hours*3600))/60);
+		var seconds = Math.floor(ad-(hours*3600)-minutes*60);
 
 		// Display the result in the element with id="demo"
-		//obj.innerHTML = days + "d " + hours + "h "
+
 		var t_str="";
 		if(hours!=0)
 			t_str+=hours + "h ";
@@ -396,13 +375,20 @@ function dashboardCountdown(id)
 		if(minutes!=0)
 			t_str+=minutes + "m ";
 		
-		obj.innerHTML = t_str + seconds + "s";
+		obj.innerHTML =t_str + seconds + "s";
 
 		// If the count down is finished, write some text
-		if (distance < 0) {
+		
+		if (distance < 0 && distance> -2400*1000) {
+			//clearInterval(x);
+			obj.innerHTML = "In progress";
+		}
+		else if (distance < -2400) {
 			clearInterval(x);
 			obj.innerHTML = "EXPIRED";
 		}
+		
+		
 	}, 1000);
 	
 }
