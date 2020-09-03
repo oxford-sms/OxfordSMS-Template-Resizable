@@ -9,20 +9,24 @@
 function adaptLayout()
 {
 	MovePageHeader("page-header");
-	MoveYearTermSelector();
-	MovePageHeader("componentheading");
-	MovePageCTRecordCount();
+	
+	if(menuItemAlias!="application-form")
+	{
+		MoveYearTermSelector();
+		MovePageHeader("componentheading");
+		MovePageCTRecordCount();
 
-	MoveCTEditFormButtons()
+		MoveCTEditFormButtons()
 
-	MoveCTToolBarAddNew();
-	MoveCTToolBar();
-	MoveCTSearchBoxes();
-	MovePageCTRecordCount()
-	MoveTopMenu();
+		MoveCTToolBarAddNew();
+		MoveCTToolBar();
+		MoveCTSearchBoxes();
+		MovePageCTRecordCount()
+		MoveTopMenu();
 	
 	
-	MoveSideMenu();
+		MoveSideMenu();
+	}
 }
 
 function removeClassElements(className)

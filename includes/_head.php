@@ -17,6 +17,8 @@ if(window.addEventListener) {
 	<script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/index.js"></script>
 	
 	<script>
+		var menuItemAlias="<?php echo $active->alias; ?>";
+		
 		function showPage() {
 			document.getElementById("loader").style.display = "none";
 		document.getElementById("oxfordSMSDashboard").style.display = "block";

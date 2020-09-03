@@ -16,6 +16,10 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
    $doc = JFactory::getDocument();
    $this->language = $doc->language;
    $this->direction = $doc->direction;
+   $menu      = $app->getMenu(); // Load the JMenuSite Object
+
+	$active    = $menu->getActive(); // Load the Active Menu Item as an stdClass Object
+ 
    
    // Detecting Active Variables
    $option   = $app->input->getCmd('option', '');

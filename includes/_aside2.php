@@ -47,16 +47,20 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
     <div class="mb-3" data-repository-hovercards-enabled><div>
 
     
-		
+<?php if($active->alias!='application-form'): ?>
 <div class="leftSideFooter2" style="background-color:#ffffff;">
 	      <a title="Home page" class="d-none d-lg-flex footer-octicon footer-octicon no-underline" href="https://oxfordsms.com" target="_blank">
          <div>
             <img src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/images/oxfordsms-24.png" />
          </div>
          <div>
+		 
             <span class="f6 text-gray-light" style="margin-left:5px;">          &copy; 2020 OxfordSMS,S.A.        </span>
+			
          </div>
       </a>  </div>
+	  
+<?php endif; ?>
 
 </div>
 

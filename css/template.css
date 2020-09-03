@@ -4,6 +4,9 @@
 * @copyright Copyright (C) 2020 Ivan Komlev. All rights reserved.
 * @license	 GNU/GPL
 */
+.isbn{
+	text-align:right;
+}
 
 .AccountDetails h4{
 	text-align:center !important;
