@@ -389,8 +389,14 @@ function dashboardCountdown(id)
 
 		// Display the result in the element with id="demo"
 		//obj.innerHTML = days + "d " + hours + "h "
-		obj.innerHTML = hours + "h "
-			+ minutes + "m " + seconds + "s ";
+		var t_str="";
+		if(hours!=0)
+			t_str+=hours + "h ";
+		
+		if(minutes!=0)
+			t_str+=minutes + "m ";
+		
+		obj.innerHTML = t_str + seconds + "s";
 
 		// If the count down is finished, write some text
 		if (distance < 0) {
