@@ -348,3 +348,55 @@ function MoveYearTermSelector()
 		//document.getElementById("oxfordSMSDashboardCTSearchBoxes_Mobile").innerHTML+=content;
 	}
 }
+
+
+function dashboardCountdown(id)
+{
+	var obj=document.getElementById(id);
+	var t=obj.dataset.time;
+	
+	
+	var today = new Date();
+	var dd = String(today.getDate()).padStart(2, '0');
+	var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+	var yyyy = today.getFullYear();
+
+	today = yyyy + '-' + mm + '-' + dd;
+	
+	var countDownDate = new Date(today+" "+t).getTime();
+	
+	// Set the date we're counting down to
+	//var countDownDate = new Date("Jan 5, 2021 15:37:25").getTime();
+
+	// Update the count down every 1 second
+	var x = setInterval(function() {
+
+		// Get today's date and time
+		var now = new Date().getTime();
+
+		// Find the distance between now and the count down date
+		var distance = countDownDate-now;
+
+	//alert("a:"+countDownDate);
+	//alert("b:"+now);
+	//alert("d:"+distance);
+
+		// Time calculations for days, hours, minutes and seconds
+		//var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+		var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+		var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+		var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+		// Display the result in the element with id="demo"
+		//obj.innerHTML = days + "d " + hours + "h "
+		obj.innerHTML = hours + "h "
+			+ minutes + "m " + seconds + "s ";
+
+		// If the count down is finished, write some text
+		if (distance < 0) {
+			clearInterval(x);
+			obj.innerHTML = "EXPIRED";
+		}
+	}, 1000);
+	
+}
