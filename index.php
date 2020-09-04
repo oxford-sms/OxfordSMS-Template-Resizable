@@ -118,7 +118,8 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
          data-discussion-hovercards-enabled
          data-issue-and-pr-hovercards-enabled
          >
-         <?php include('includes'.DIRECTORY_SEPARATOR.'_aside1.php'); ?>
+         <?php //include('includes'.DIRECTORY_SEPARATOR.'_account_selector.php'); ?>
+		 
          <div class="d-flex flex-wrap bg-gray" style="min-height: 100vh;position:relative;">
             <?php include('includes'.DIRECTORY_SEPARATOR.'_aside2.php'); ?>
 			

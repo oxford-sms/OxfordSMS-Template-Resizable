@@ -1,5 +1,17 @@
-<?php ?>
+<?php
+/**
+* OxfordSMS - Template
+* @author    Ivan Komlev
+* @copyright Copyright (C) 2020 Ivan Komlev. All rights reserved.
+* @license	 GNU/GPL
+*/
 
+//This loader also prevents douple queries
+
+// no direct access
+defined( '_JEXEC' ) or die( 'Restricted access' );
+
+?>
 
 <aside class="hide-xl hide-lg width-full bg-white border-bottom py-3 p-responsive" aria-label="Account context">
       
