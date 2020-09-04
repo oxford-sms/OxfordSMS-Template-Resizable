@@ -64,7 +64,7 @@
                               <li  id="menu-item-123"  class="unused-10234789 menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-123 fusion-dropdown-menu"  data-item-id="123">
                                  <a  href="https://www.oxford.edu.pa/admissions/" class="fusion-bottombar-highlight"><span class="menu-text">Admissions</span> <span class="fusion-caret"><i class="fusion-dropdown-indicator"></i></span></a>
                                  <ul class="sub-menu">
-                                    <li  id="menu-item-2363"  class="unused-10234789 menu-item-type-post_type menu-item-object-page menu-item-2363 fusion-dropdown-submenu" ><a  href="https://www.oxford.edu.pa/azuero-application-form/" class="fusion-bottombar-highlight"><span>Azuero</span></a></li>
+                                    <li  id="menu-item-2363"  class="unused-10234789 menu-item-type-post_type menu-item-object-page menu-item-2363 fusion-dropdown-submenu" ><a  href="https://david.oxford.edu.pa/application-form/" class="fusion-bottombar-highlight"><span>Azuero</span></a></li>
                                     <li  id="menu-item-2393"  class="unused-10234789 menu-item-type-post_type menu-item-object-page menu-item-2393 fusion-dropdown-submenu" ><a  href="https://david.oxford.edu.pa/application-form" class="fusion-bottombar-highlight"><span>David</span></a></li>
                                     <li  id="menu-item-2193"  class="unused-10234789 menu-item-type-post_type menu-item-object-page menu-item-2193 fusion-dropdown-submenu" ><a  href="https://www.oxford.edu.pa/panama-application-form/" class="fusion-bottombar-highlight"><span>Panama</span></a></li>
 									<li  id="menu-item-7033"  class="unused-10234789 menu-item-type-post_type menu-item-object-page menu-item-7033 fusion-dropdown-submenu" ><a  href="https://pdn.oxford.edu.pa/application-form" class="fusion-bottombar-highlight"><span>Paseo del Norte</span></a></li>
@@ -91,7 +91,7 @@
 								 
 								 </a>
                                  <ul class="sub-menu">
-                                    <li  id="menu-item-319"  class="unused-10234789 menu-item-type-custom menu-item-object-custom menu-item-319 fusion-dropdown-submenu" ><a  href="https://oxford.edu.pa/azuero" class="fusion-bottombar-highlight"><span>Azuero</span></a></li>
+                                    <li  id="menu-item-319"  class="unused-10234789 menu-item-type-custom menu-item-object-custom menu-item-319 fusion-dropdown-submenu" ><a  href="https://azuero.oxford.edu.pa/" class="fusion-bottombar-highlight"><span>Azuero</span></a></li>
                                     <li  id="menu-item-320"  class="unused-10234789 menu-item-type-custom menu-item-object-custom menu-item-320 fusion-dropdown-submenu" ><a  href="https://david.oxford.edu.pa/" class="fusion-bottombar-highlight"><span>David</span></a></li>
                                     <li  id="menu-item-318"  class="unused-10234789 menu-item-type-custom menu-item-object-custom current-menu-item menu-item-318 fusion-dropdown-submenu" ><a  href="https://www.oxford.edu.pa/panama" class="fusion-bottombar-highlight"><span>Panama City</span></a></li>
                                     <li  id="menu-item-1693"  class="unused-10234789 menu-item-type-post_type menu-item-object-page menu-item-1693 fusion-dropdown-submenu" ><a  href="https://pdn.oxford.edu.pa/" class="fusion-bottombar-highlight"><span>Paseo del Norte</span></a></li>
