@@ -73,7 +73,7 @@
                               </li>
 							  
 							  <li  id="menu-item-123"  class="unused-10234789 menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-123 fusion-dropdown-menu"  data-item-id="123">
-                                 <a href="https://oxford.edu.pa/panama/" class="fusion-bottombar-highlight">
+                                 <a href="https://panama.oxford.edu.pa/" class="fusion-bottombar-highlight">
 								 <span class="menu-text">Parent Portal</span> <span class="fusion-caret"><i class="fusion-dropdown-indicator"></i></span></a>
 
                                  <ul class="sub-menu">
