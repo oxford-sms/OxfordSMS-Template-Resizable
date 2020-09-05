@@ -5,6 +5,11 @@
 * @license	 GNU/GPL
 */
 
+.dashboardmenuitembox, .dashboardmenuitembox p, .dashboardmenuitembox a{
+	color: white !important;
+	
+}
+
 #oxfordSMSDashboardYeraTermMonthBoxes_Mobile{
 	width:100%;
 }
