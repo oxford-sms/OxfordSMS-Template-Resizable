@@ -343,6 +343,16 @@ function MoveYearTermSelector()
 		x.innerHTML="";
 		
 		document.getElementById("oxfordSMSDashboardYeraTermMonthBoxes").innerHTML+=content;
+		
+		content=content.replace('id="oxfordsms_departmentselector"','id="oxfordsms_departmentselector_mobile"');
+		content=content.replace('id="oxfordsms_yearselector"','id="oxfordsms_yearselector_mobile"');
+		content=content.replace('id="oxfordsms_termselector"','id="oxfordsms_termselector_mobile"');
+		
+		//content=content.replace('selectorChanged()','selectorChanged_custom(\'_mobile\')');
+		content=content.split('selectorChanged()').join('selectorChanged_custom(\'_mobile\')');
+		
+		document.getElementById("oxfordSMSDashboardYeraTermMonthBoxes_Mobile").innerHTML+=content;
+	
 	}
 }
 

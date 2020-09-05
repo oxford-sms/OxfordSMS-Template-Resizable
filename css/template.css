@@ -4,6 +4,14 @@
 * @copyright Copyright (C) 2020 Ivan Komlev. All rights reserved.
 * @license	 GNU/GPL
 */
+
+#oxfordSMSDashboardYeraTermMonthBoxes_Mobile{
+	width:100%;
+}
+.mobileSideBar select{
+	width:100% !important;
+}
+
 .isbn{
 	text-align:right;
 }

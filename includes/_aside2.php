@@ -19,7 +19,6 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 
 	
 	<div id="oxfordSMSPageHeader"></div>
-	
 	<div id="oxfordSMSDashboardYeraTermMonthBoxes"></div>  
 	
 	<?php  if($this->countModules('left-bar')) : ?>
