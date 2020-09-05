@@ -14,7 +14,7 @@ if(window.addEventListener) {
 
 	<meta charset="utf-8" />
 		
-	<script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/index.js"></script>
+	<script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/index-101.js"></script>
 	
 	<script>
 		var menuItemAlias="<?php echo $active->alias; ?>";
@@ -38,7 +38,7 @@ if(window.addEventListener) {
 	<jdoc:include type="head" />
 
 	<link href="/media/jui/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-	<link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/css/template.css" type="text/css" />
+	<link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/css/template-101.css" type="text/css" />
  
 	<link crossorigin="anonymous" media="all" rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/css/frameworks.css" />
 	<link crossorigin="anonymous" media="all" rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/css/github.css" />
