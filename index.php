@@ -158,6 +158,15 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 	<script crossorigin="anonymous" async="async" type="application/javascript" src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/vendor-35c9bc10.js"></script>
     <script crossorigin="anonymous" async="async" type="application/javascript" src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/frameworks-4f69d005.js"></script>
 	
+	
+	<script>
+window.fwSettings={
+"widget_id":67000000400
+};
+!function(){if("function"!=typeof window.FreshworksWidget){var n=function(){n.q.push(arguments)};n.q=[],window.FreshworksWidget=n}}()
+</script>
+<script type="text/javascript" src="https://widget.freshworks.com/widgets/67000000400.js" async defer></script>
+	
    </body>
 
 </html>
@@ -184,10 +193,20 @@ function checkAuthorisation()
 
 
         /* include in template body - you could redirect here instead of including login form */
+		
+		
+		
         if ($showlogin) {  echo '
 <script>
 window.top.location.href = "/";
+
+
+
+
 </script>
+
+
+
 ';
             die;
             return false;
