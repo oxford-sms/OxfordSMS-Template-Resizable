@@ -55,6 +55,15 @@
 					default=""
 				/>
 
+				<field 
+					name="freshworksid" 
+					type="text" 
+					label="FreshWorks ID"
+					description="FreshWorks Widget ID" 
+					class="" 
+					default=""
+				/>
+
 			</fieldset>
 		</fields>
 	</config>

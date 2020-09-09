@@ -158,16 +158,19 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 	<script crossorigin="anonymous" async="async" type="application/javascript" src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/vendor-35c9bc10.js"></script>
     <script crossorigin="anonymous" async="async" type="application/javascript" src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/frameworks-4f69d005.js"></script>
 	
-	
+	<?php
+	if($variables->employee!=0 and $this->params->get('freshworksid')!=''): ?>
 	<script>
 window.fwSettings={
-"widget_id":67000000400
+"widget_id":<?php echo $this->params->get('freshworksid'); ?>
 };
 !function(){if("function"!=typeof window.FreshworksWidget){var n=function(){n.q.push(arguments)};n.q=[],window.FreshworksWidget=n}}()
 </script>
-<script type="text/javascript" src="https://widget.freshworks.com/widgets/67000000400.js" async defer></script>
+<script type="text/javascript" src="https://widget.freshworks.com/widgets/<?php echo $this->params->get('freshworksid'); ?>.js" async defer></script>
+	<?php endif; ?>
 	
    </body>
+   
 
 </html>
 
