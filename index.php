@@ -66,7 +66,9 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 			$avatar_image='/images/esimages/id_'.$photo.'.jpg';
 	}
 
-
+	$filepath_avatar_image=JPATH_SITE.str_replace('/',DIRECTORY_SEPARATOR,$avatar_image);
+	if(!file_exists($filepath_avatar_image))
+		$avatar_image='/components/com_oxfordsms/images/no-photo.svg';
    
    if($task == "edit" || $layout == "form" )
    {

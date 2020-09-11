@@ -5,6 +5,10 @@
 * @license	 GNU/GPL
 */
 
+.AccountDetails{
+overflow:hidden !important;
+}
+
 .dashboardmenuitembox, .dashboardmenuitembox p, .dashboardmenuitembox a{
 	color: white !important;
 	
@@ -123,7 +127,8 @@ margin-bottom:10px;
 }
 
 .dashboardHouseIcon img{
-	width:50px
+	height:auto !important;
+	max-width:50px;
 }
 
 .ctEditFormButton{
