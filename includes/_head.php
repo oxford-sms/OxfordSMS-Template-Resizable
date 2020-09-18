@@ -10,14 +10,21 @@ if(window.addEventListener) {
 }
 
 </script>
-*/ ?>
+
+*/ 
+
+$alias="";
+if(isset($active->alias))
+	$alias=$active->alias;
+
+?>
 
 	<meta charset="utf-8" />
 		
 	<script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/index-101.js"></script>
 	
 	<script>
-		var menuItemAlias="<?php echo $active->alias; ?>";
+		var menuItemAlias="<?php echo $alias; ?>";
 		
 		function showPage() {
 			document.getElementById("loader").style.display = "none";
