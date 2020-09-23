@@ -46,7 +46,7 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
     <div class="mb-3" data-repository-hovercards-enabled><div>
 
     
-<?php if($active->alias!='application-form'): ?>
+<?php if($alias!='application-form'): ?>
 <div class="leftSideFooter2" style="background-color:#ffffff;">
 	      <a title="Home page" class="d-none d-lg-flex footer-octicon footer-octicon no-underline" href="https://oxfordsms.com" target="_blank">
          <div>

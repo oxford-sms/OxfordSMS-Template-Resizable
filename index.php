@@ -30,6 +30,7 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
    $sitename = htmlspecialchars($app->get('sitename'), ENT_QUOTES, 'UTF-8');
    $sitename_parts=explode('-',$sitename);
    $sitename_school=trim(end($sitename_parts));
+   $alias="";
    
    /*
 	$jinput = JFactory::getApplication()->input;
@@ -148,13 +149,18 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
                
          </div>
       </div>
-	  <?php /* */?>
-	  <!-- popups -->
-      <div class="Popover js-hovercard-content position-absolute" style="display: none; outline: none;" tabindex="0">
-         <div class="Popover-message Popover-message--bottom-left Popover-message--large Box box-shadow-large" style="width:360px;">
-         </div>
-      </div>
-	</div>  
+	 
+
+
+  <!-- Modal content -->
+  <div id="ctModal" class="ctModal">
+  <div id="ctModal_box" class="ctModal_content">
+    <span id="ctModal_close" class="ctModal_close">&times;</span>
+	<div id="ctModal_content"><p>Some text in the Modal..</p></div>
+  </div>
+	</div>
+  <!-- end of the modal -->
+	  
 	  
 	<script crossorigin="anonymous" async="async" type="application/javascript" src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/environment-bootstrap-a544e728.js"></script>
 	<script crossorigin="anonymous" async="async" type="application/javascript" src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/vendor-35c9bc10.js"></script>

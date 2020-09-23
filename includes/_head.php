@@ -13,7 +13,6 @@ if(window.addEventListener) {
 
 */ 
 
-$alias="";
 if(isset($active->alias))
 	$alias=$active->alias;
 
@@ -21,7 +20,8 @@ if(isset($active->alias))
 
 	<meta charset="utf-8" />
 		
-	<script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/index-101.js"></script>
+	<script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/index-102.js"></script>
+	<script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/modal.js"></script>
 	
 	<script>
 		var menuItemAlias="<?php echo $alias; ?>";
@@ -45,7 +45,7 @@ if(isset($active->alias))
 	<jdoc:include type="head" />
 
 	<link href="/media/jui/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-	<link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/css/template-101.css" type="text/css" />
+	<link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/css/template-102.css" type="text/css" />
  
 	<link crossorigin="anonymous" media="all" rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/css/frameworks.css" />
 	<link crossorigin="anonymous" media="all" rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/css/github.css" />
