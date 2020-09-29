@@ -20,6 +20,8 @@
 	</files>
 
 	<positions>
+
+	<position>top-bar</position>
 	<position>top-menu</position>
 
 	<position>profilemenu-1</position>
@@ -38,12 +40,56 @@
 		<fields name="params">
 			<fieldset name="advanced">
 				<field 
-					name="templateColor" 
+					name="topMenuFontColor" 
 					type="color" 
-					label="TPL_OXFORDSMS_COLOR_LABEL"
-					description="TPL_OXFORDSMS_COLOR_DESC" 
+					label="TPL_OXFORDSMS_FONTCOLOR_LABEL"
+					description="TPL_OXFORDSMS_FONTCOLOR_DESC" 
+					class="" 
+					default="#FFFFFF"
+				/>
+				<field 
+					name="topMenuBGColor" 
+					type="color" 
+					label="TPL_OXFORDSMS_BGCOLOR_LABEL"
+					description="TPL_OXFORDSMS_BGCOLOR_DESC" 
 					class="" 
 					default="#103157"
+				/>
+
+				<field 
+					name="topMenuHighlightBar" 
+					type="color" 
+					label="TPL_OXFORDSMS_BARCOLOR_LABEL"
+					description="TPL_OXFORDSMS_BARCOLOR_DESC" 
+					class="" 
+					default="#a28f38"
+				/>
+
+				<field 
+					name="topMenuSubFontColor" 
+					type="color" 
+					label="TPL_OXFORDSMS_SUBFONTCOLOR_LABEL"
+					description="TPL_OXFORDSMS_SUBFONTCOLOR_DESC" 
+					class="" 
+					default="#4677b0"
+				/>
+
+				<field 
+					name="topMenuSubFontColorHover" 
+					type="color" 
+					label="TPL_OXFORDSMS_SUBFONTHOVERCOLOR_LABEL"
+					description="TPL_OXFORDSMS_SUBFONTHOVERCOLOR_DESC" 
+					class="" 
+					default="#103157"
+				/>
+
+				<field 
+					name="topMenuSubBar" 
+					type="color" 
+					label="TPL_OXFORDSMS_SUBBARCOLOR_LABEL"
+					description="TPL_OXFORDSMS_SUBBARCOLOR_DESC" 
+					class="" 
+					default="#9f2828"
 				/>
 
 				<field 

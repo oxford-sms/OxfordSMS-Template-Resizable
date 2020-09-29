@@ -6,6 +6,6 @@
 		</li>
 	</ul>
 </div></div>
-<div class="NavBreadcrumbs"><jdoc:include type="modules" name="top-menu" /></div>
+<div class="NavBreadcrumbs"><jdoc:include type="modules" name="top-bar" /></div>
 <!-- End of OxfordSMS Dashboard and tom menu links -->
 

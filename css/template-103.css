@@ -5,6 +5,11 @@
 * @license	 GNU/GPL
 */
 
+
+.fusion-main-menu{
+	width:100%;
+}
+
 /* Modal */
 
 /* The Modal (background) */
@@ -174,7 +179,7 @@ margin-bottom:10px;
 	position: relative;
 	text-align:center;
 	margin-left:-10px;
-	margin-bottom:20px;
+	margin-bottom:10px;
 }
 
 .dashboardPhoto img{
