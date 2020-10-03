@@ -14,15 +14,17 @@ $messages_file = JPATH_SITE . DIRECTORY_SEPARATOR . 'components' . DIRECTORY_SEP
 
 if ($variables->real_userid!=0 and file_exists($messages_file)):
 
-	require_once ($messages_file);
+	//require_once ($messages_file);
 
-	$number_of_unread_messages = OxfordSMSMessaging_GetCount($variables);
+	//$number_of_unread_messages = OxfordSMSMessaging_GetCount($variables);
+	//$variables->unread_messages=$number_of_unread_messages;//this is important to prevent other system messages to popup
+	
 	$link = '/index.php/my-messages?userid=' . $variables->real_userid;
 
-	if($number_of_unread_messages==0)
+	if($variables->unread_messages==0)
 		$msg='You have no unread messages';
 	else
-		$msg='You have '.$number_of_unread_messages.' unread message'.($number_of_unread_messages==1 ? '' : 's');
+		$msg='You have '.$variables->unread_messages.' unread message'.($variables->unread_messages==1 ? '' : 's');
 	
 
 ?>
