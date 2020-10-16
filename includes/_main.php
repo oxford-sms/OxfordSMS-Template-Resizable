@@ -27,6 +27,7 @@
             <div class="Box p-3 mb-4 mt-2 js-loader">
 				<?php endif; ?>
                <!--  text-center -->
+			   <jdoc:include type="message" />
                <jdoc:include type="component" />
 			<?php if(!($option=='com_customtables' and ($view=='catalog' or $view=='edititem'))) : ?>
             </div>
