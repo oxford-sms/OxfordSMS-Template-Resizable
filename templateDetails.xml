@@ -7,7 +7,7 @@
 	<copyright>Copyright © 2020 Ivan Komlev</copyright>
 	<authorEmail>ivankomlev@oxford.edu.pa</authorEmail>
 	<authorUrl>https://oxfordsms.com</authorUrl>
-	<version>1.0.4</version>
+	<version>1.0.5</version>
 	<description><![CDATA[Frameless resizable 3-column template created for the Oxford School Managment System using GitHub Primer theme.]]></description>
 	<files>
 		<folder>css</folder>

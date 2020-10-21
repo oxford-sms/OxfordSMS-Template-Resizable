@@ -284,9 +284,13 @@ width:100%;
 
 background-color:#0366d6 !important;
 }
+.btn-primary:hover{
+
+background-color:#055dc0 !important;
+}
 
 input+.btn:hover{
-background-color:#0366d6 !important;
+background-color:#055dc0 !important;
 }
 
 input+.btn-success{
@@ -426,11 +430,15 @@ list-style:none;
 }
 
 .dashboardmenuitembox img{
-
 	text-align:center;
 	width:80px;
-	height:80px;
-	
+}
+
+.dashboardmenuitemimage{border-radius:20px;	display: inline-block;	width:80px;height:80px;overflow:hidden;}
+
+.dashboardmenuitemimage img{
+	text-align:center;
+	width:80px;
 }
 
 .dashboardmenuitembox button{

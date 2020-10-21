@@ -63,7 +63,7 @@ if(isset($active->alias))
 	<link href="/media/jui/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
 	<!--<script src="/media/jui/js/bootstrap.min.js?baddb2f97e5165e2ad4048acd1cd6a7f"></script>-->
 	
-	<link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/css/template-104.css" type="text/css" />
+	<link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/css/template-105.css" type="text/css" />
  
 	<link crossorigin="anonymous" media="all" rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/css/frameworks-103.css" />
 	<link crossorigin="anonymous" media="all" rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/css/github-103.css" />
