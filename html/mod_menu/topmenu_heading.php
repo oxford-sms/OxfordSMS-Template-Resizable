@@ -9,28 +9,28 @@
 
 defined('_JEXEC') or die;
 
-$title      = $item->anchor_title ? ' title="' . $item->anchor_title . '"' : '';
-$anchor_css = $item->anchor_css ?: '';
 
-$linktype   = $item->title;
+$attributes = array();
 
-if ($item->menu_image)
+if ($item->anchor_title)
 {
-	if ($item->menu_image_css)
-	{
-		$image_attributes['class'] = $item->menu_image_css;
-		$linktype = JHtml::_('image', $item->menu_image, $item->title, $image_attributes);
-	}
-	else
-	{
-		$linktype = JHtml::_('image', $item->menu_image, $item->title);
-	}
-
-	if ($item->params->get('menu_text', 1))
-	{
-		$linktype .= '<span class="image-title">' . $item->title . '</span>';
-	}
+	$attributes['title'] = $item->anchor_title;
 }
 
+
+	$attributes['class'] = 'fusion-bottombar-highlight';// oxford-button';//$item->anchor_css;
+
+
+if ($item->anchor_rel)
+{
+	$attributes['rel'] = $item->anchor_rel;
+}
+ //oxford-center
+$linktype = '<span class="menu-text">'.$item->title.'</span>';
+
+if ($item->deeper)
+	$linktype.= ' <span class="fusion-caret"><i class="fusion-dropdown-indicator"></i></span>';
+
+
 ?>
-<span class="nav-header <?php echo $anchor_css; ?>"<?php echo $title; ?>><?php echo $linktype; ?></span>
+<?php echo '<a class="fusion-bottombar-highlight">'.$linktype.'</a>'; ?>
