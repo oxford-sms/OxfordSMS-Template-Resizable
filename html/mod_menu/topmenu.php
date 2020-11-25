@@ -28,7 +28,6 @@ if ($tagId = $params->get('tag_id', ''))
 <ul id="menu-main" class="fusion-menu">
 <?php foreach ($list as $i => &$item)
 {
-	//print_r($item);
 	$class = '';//menu-item-type-post_type menu-item-object-page menu-item-122';//'item-' . $item->id;
 	
 /*
@@ -95,14 +94,6 @@ if ($tagId = $params->get('tag_id', ''))
 		}
 	}
 	
-	//print_r($item);
-/*
-	if ($item->parent)
-	{
-		$class .= ' parent';
-	}
-	*/
-
 	echo '<li class="' . $class . '">';
 
 	switch ($item->type) :
