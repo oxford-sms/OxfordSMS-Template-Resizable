@@ -1,9 +1,3 @@
-
-
-<?php 
-
-//="/index.php?option=com_customtables&view=edititem&
-?>
 <main class="flex-auto">
 
 
