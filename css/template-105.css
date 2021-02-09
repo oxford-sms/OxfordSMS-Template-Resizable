@@ -5,6 +5,9 @@
 * @license	 GNU/GPL
 */
 
+.form-horizontal .control-label{
+	padding-top:0px;
+}
 
 .fusion-main-menu{
 	width:100%;

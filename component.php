@@ -14,7 +14,14 @@ require_once(JPATH_SITE.DIRECTORY_SEPARATOR.'administrator'.DIRECTORY_SEPARATOR.
 <!-- component view -->
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $this->language; ?>" lang="<?php echo $this->language; ?>" dir="<?php echo $this->direction; ?>">
 <head>
-<title><?php echo JoomlaBasicMisc::JTextExtended($this->title); ?></title>
+<title><?php 
+
+	if(class_exists('JoomlaBasicMisc'))
+		echo JoomlaBasicMisc::JTextExtended($this->title); 
+	else
+		echo $this->title;//JText::_();
+	
+?></title>
 <jdoc:include type="head" />
 <!--[if lt IE 9]>
 	<script src="<?php echo $this->baseurl ?>/media/jui/js/html5.js"></script>

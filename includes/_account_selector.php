@@ -36,7 +36,7 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 
   <details-menu
     class="SelectMenu"
-      src="/dashboard/ajax_context_list?current_context=oxford-sms"
+      src="<?php echo JURI::root(); ?>dashboard/ajax_context_list?current_context=oxford-sms"
       preload
       role="menu"
       aria-label="Switch dashboard context"

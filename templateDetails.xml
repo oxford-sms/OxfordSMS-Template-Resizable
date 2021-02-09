@@ -11,9 +11,10 @@
 	<description><![CDATA[Frameless resizable 3-column template created for the Oxford School Managment System using GitHub Primer theme.]]></description>
 	<files>
 		<folder>css</folder>
-		<folder>js</folder>
+		<folder>html</folder>
 		<folder>images</folder>
 		<folder>includes</folder>
+		<folder>js</folder>
 		<folder>language</folder>
 		<filename>index.php</filename>
 		<filename>templateDetails.xml</filename>
@@ -106,6 +107,14 @@
 					type="text" 
 					label="FreshWorks ID"
 					description="FreshWorks Widget ID" 
+					class="" 
+					default=""
+				/>
+
+				<field 
+					name="copyright" 
+					type="text" 
+					label="Copyright text"
 					class="" 
 					default=""
 				/>

@@ -12,7 +12,7 @@ defined('_JEXEC') or die('Restricted access');
 
 $messages_file = JPATH_SITE . DIRECTORY_SEPARATOR . 'components' . DIRECTORY_SEPARATOR . 'com_oxfordsmsmessaging' . DIRECTORY_SEPARATOR . 'includes' . DIRECTORY_SEPARATOR . 'dashboard.php';
 
-if ($variables->real_userid!=0 and file_exists($messages_file)):
+if (isset($variables->real_userid) and $variables->real_userid!=0 and file_exists($messages_file)):
 
 	$link = '/index.php/my-messages?userid=' . $variables->real_userid;
 

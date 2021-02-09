@@ -48,28 +48,36 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
    
    checkAuthorisation();
 	
-	require_once(JPATH_SITE.DIRECTORY_SEPARATOR.'components'.DIRECTORY_SEPARATOR.'com_oxfordsms'.DIRECTORY_SEPARATOR.'includes'.DIRECTORY_SEPARATOR.'oxfordsmsmisc.php');
-	require_once(JPATH_SITE.DIRECTORY_SEPARATOR.'administrator'.DIRECTORY_SEPARATOR.'components'.DIRECTORY_SEPARATOR.'com_customtables'.DIRECTORY_SEPARATOR.'libraries'.DIRECTORY_SEPARATOR.'misc.php');
-	$variables=OxfordSMSMisc::getVariables('');
+	$customtables_file=JPATH_SITE.DIRECTORY_SEPARATOR.'administrator'.DIRECTORY_SEPARATOR.'components'.DIRECTORY_SEPARATOR.'com_customtables'.DIRECTORY_SEPARATOR.'libraries'.DIRECTORY_SEPARATOR.'misc.php';
+	if(file_exists($customtables_file))
+		require_once($customtables_file);
 	
-   
-	$avatar_image='/components/com_oxfordsms/images/no-photo.svg';
+	$oxfordsms_file=JPATH_SITE.DIRECTORY_SEPARATOR.'components'.DIRECTORY_SEPARATOR.'com_oxfordsms'.DIRECTORY_SEPARATOR.'includes'.DIRECTORY_SEPARATOR.'oxfordsmsmisc.php';
+	if(file_exists($oxfordsms_file))
+	{
+		require_once($oxfordsms_file);
+		$variables=OxfordSMSMisc::getVariables('');
+	}
+	else
+		$variables=array();
+	
+	$avatar_image='templates/oxfordsms/images/no-photo.svg';
 	if(isset($variables->employee) and isset($variables->employee['es_photo']))
 	{
 		$photo=$variables->employee['es_photo'];
 		if($photo!=0)
-			$avatar_image='/images/esimages/id_'.$photo.'.jpg';
+			$avatar_image='images/esimages/id_'.$photo.'.jpg';
 	}
 	elseif(isset($variables->studentid) and isset($variables->student['es_photo']))
 	{
 		$photo=$variables->student['es_photo'];
 		if($photo!=0)
-			$avatar_image='/images/esimages/id_'.$photo.'.jpg';
+			$avatar_image='images/esimages/id_'.$photo.'.jpg';
 	}
 
 	$filepath_avatar_image=JPATH_SITE.str_replace('/',DIRECTORY_SEPARATOR,$avatar_image);
 	if(!file_exists($filepath_avatar_image))
-		$avatar_image='/components/com_oxfordsms/images/no-photo.svg';
+		$avatar_image='templates/oxfordsms/images/no-photo.svg';
    
    if($task == "edit" || $layout == "form" )
    {
@@ -139,7 +147,7 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 				<div data-team-hovercards-enabled style="">
 				<div style="width:335px;height:40px;margin-bottom:-8px;">
 				School Newsletters
-				</div><!-- background-image: url(/templates/oxfordsms/images/news.png);background-repeat: no-repeat; width:335px;heoght:33px;background-image: url(/templates/oxfordsms/news.png);background-repeat: no-repeat;-->
+				</div><!-- background-image: url(templates/oxfordsms/images/news.png);background-repeat: no-repeat; width:335px;heoght:33px;background-image: url(templates/oxfordsms/news.png);background-repeat: no-repeat;-->
 				
 				
                   <jdoc:include type="modules" name="right-bar" style="none" />
@@ -167,7 +175,7 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
     <script crossorigin="anonymous" async="async" type="application/javascript" src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/frameworks-4f69d005.js"></script>
 	
 	<?php
-	if($variables->employee!=0 and $this->params->get('freshworksid')!=''): ?>
+	if(isset($variables->employee) and $variables->employee!=0 and $this->params->get('freshworksid')!=''): ?>
 	<script>
 window.fwSettings={
 "widget_id":<?php echo $this->params->get('freshworksid'); ?>

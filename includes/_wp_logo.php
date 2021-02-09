@@ -11,7 +11,7 @@
 // no direct access
 defined( '_JEXEC' ) or die( 'Restricted access' );
 
-//<img src="<?php echo $this->baseurl >/templates/<?php echo $this->template; >/images/oxford-logo.png" 
+//<img src="<?php echo $this->baseurl >templates/<?php echo $this->template; >/images/oxford-logo.png" 
 
 if ($this->params->get('logoFile'))
 {
@@ -24,7 +24,7 @@ else
 }
 ?>
 
-<a class="Header-link" href="/dashboard">
+<a class="Header-link" href="<?php echo JURI::root(); ?>dashboard">
 <div class="fusion-logo" data-margin-top="10px" data-margin-bottom="10px" data-margin-left="0px" data-margin-right="0px">
     <?php echo $logo; ?>
 </div>

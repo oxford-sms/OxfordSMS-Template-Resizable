@@ -1,17 +1,11 @@
-<?php 
-/*
-<script>
-
-
-if(window.addEventListener) {
-    window.addEventListener('load',showPage,false); //W3C
-} else {
-    window.attachEvent('onload',showPage); //IE
-}
-
-</script>
-
-*/ 
+<?php
+/*------------------------------------------------------------------------
+# author Ivan Komlev
+# copyright Copyright © 2020 oxfordsms.com All rights reserved.
+# @license https://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
+# Website https://oxfordsms.com
+-------------------------------------------------------------------------*/
+defined('_JEXEC') or die;
 
 if(isset($active->alias))
 	$alias=$active->alias;
@@ -53,14 +47,21 @@ if(isset($active->alias))
 		});
 	</script>
 	
-	<title><?php echo JoomlaBasicMisc::JTextExtended($this->title); ?></title>
+	<title><?php 
+	
+	if(class_exists('JoomlaBasicMisc'))
+		echo JoomlaBasicMisc::JTextExtended($this->title); 
+	else
+		echo $this->title;//JText::_();
+		
+	?></title>
 
 	<meta name="viewport" content="width=device-width">
 	<link href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
 
 	<jdoc:include type="head" />
 
-	<link href="/media/jui/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<link href="<?php echo $this->baseurl ?>/media/jui/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
 	<!--<script src="/media/jui/js/bootstrap.min.js?baddb2f97e5165e2ad4048acd1cd6a7f"></script>-->
 	
 	<link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/css/template-105.css" type="text/css" />

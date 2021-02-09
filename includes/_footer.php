@@ -5,10 +5,19 @@
    <div class="col-lg-4 list-style-none mr-lg-5">
       <a title="Home page" class="d-none d-lg-flex footer-octicon footer-octicon no-underline" href="https://github.com">
          <div>
-            <img src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/images/oxfordsms-24.png" />
+            <img src="<?php echo $this->baseurl ?>templates/<?php echo $this->template; ?>/images/oxfordsms-24.png" />
          </div>
          <div>
-            <span class="f6 text-gray-light" style="margin-left:5px;">          &copy; 2020 OxfordSMS,S.A.        </span>
+            <span class="f6 text-gray-light" style="margin-left:5px;"><?php 
+
+			$copyright='&copy; 2020 OxfordSMS,S.A.';
+			if($this->params->get('copyright')!='')
+				$copyright=$this->params->get('copyright');
+				
+			echo $copyright; 
+			
+			
+			?></span>
          </div>
       </a>
    </div>

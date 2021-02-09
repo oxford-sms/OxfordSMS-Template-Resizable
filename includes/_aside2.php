@@ -54,7 +54,16 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
          </div>
          <div>
 		 
-            <span class="f6 text-gray-light" style="margin-left:5px;">          &copy; 2020 OxfordSMS,S.A.        </span>
+            <span class="f6 text-gray-light" style="margin-left:5px;"><?php 
+
+			$copyright='&copy; 2020 OxfordSMS,S.A.';
+			if($this->params->get('copyright')!='')
+				$copyright=$this->params->get('copyright');
+				
+			echo $copyright; 
+			
+			
+			?></span>
 			
          </div>
       </a>  </div>
