@@ -112,6 +112,15 @@
 				/>
 
 				<field 
+					name="smalllogo" 
+					type="media" 
+					label="TPL_OXFORDSMS_SMALL_LOGO_LABEL"
+					description="TPL_OXFORDSMS_SMALL_LOGO_DESC" 
+					class="" 
+					default="templates/oxofrdsms/images/oxfordsms-24.png"
+				/>
+
+				<field 
 					name="copyright" 
 					type="text" 
 					label="Copyright text"

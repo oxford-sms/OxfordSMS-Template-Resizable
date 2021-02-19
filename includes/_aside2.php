@@ -50,7 +50,15 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 <div class="leftSideFooter2" style="background-color:#ffffff;">
 	      <a title="Home page" class="d-none d-lg-flex footer-octicon footer-octicon no-underline" href="https://oxfordsms.com" target="_blank">
          <div>
-            <img src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/images/oxfordsms-24.png" />
+            <?php
+				
+				$smalllogo = $this->baseurl.'/templates/oxfordsms/images/oxfordsms-24.png';
+				if($this->params->get('smalllogo')!='')
+					$copyright=$this->params->get('smalllogo');
+				
+			?>
+			
+			<img src="<?php echo $copyright; ?>" style="height:24px;" />
          </div>
          <div>
 		 
