@@ -54,11 +54,11 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 				
 				$smalllogo = $this->baseurl.'/templates/oxfordsms/images/oxfordsms-24.png';
 				if($this->params->get('smalllogo')!='')
-					$copyright=$this->params->get('smalllogo');
+					$smalllogo=$this->params->get('smalllogo');
 				
 			?>
 			
-			<img src="<?php echo $copyright; ?>" style="height:24px;" />
+			<img src="<?php echo $smalllogo; ?>" style="height:24px;" />
          </div>
          <div>
 		 
