@@ -5,6 +5,17 @@
 * @license	 GNU/GPL
 */
 
+
+.dashboard-sidebar{
+	overflow:hidden;
+	
+}
+
+.OxfordSMSDashboard-AfterContent{
+	max-width:100%;
+	overflow-x: auto;
+}
+
 .form-horizontal .control-label{
 	padding-top:0px;
 }
