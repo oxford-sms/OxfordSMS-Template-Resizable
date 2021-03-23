@@ -1,11 +1,10 @@
 <?php
-/**
- * @package     Joomla.Site
- * @subpackage  mod_menu
- *
- * @copyright   Copyright (C) 2005 - 2020 Open Source Matters, Inc. All rights reserved.
- * @license     GNU General Public License version 2 or later; see LICENSE.txt
- */
+/*------------------------------------------------------------------------
+# author Ivan Komlev
+# copyright Copyright © 2020-2021 oxfordsms.com All rights reserved.
+# @license https://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
+# Website https://oxfordsms.com
+-------------------------------------------------------------------------*/
 
 defined('_JEXEC') or die;
 
@@ -16,14 +15,10 @@ if ($item->anchor_title)
 	$attributes['title'] = $item->anchor_title;
 }
 
-//if ($item->anchor_css)
-//{
-	//$attributes['class'] = $item->anchor_css;
 if($item->alias=='dashboard')
 	$attributes['class'] = 'fusion-roundborder-highlight';// oxford-button';//$item->anchor_css;
 else
 	$attributes['class'] = 'fusion-bottombar-highlight';// oxford-button';//$item->anchor_css;
-//}
 
 if ($item->anchor_rel)
 {
@@ -31,7 +26,6 @@ if ($item->anchor_rel)
 }
 
 
-//$linktype = $item->title;
 if($item->alias=='dashboard')
 {
 	$linktype = '<span class="menu-text fusion-button button-portal button-small">'.$item->title.' - '.$sitename_school.'</span>';

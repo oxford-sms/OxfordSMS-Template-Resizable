@@ -1,9 +1,19 @@
 /**
 * OxfordSMS - Template
 * @author    Ivan Komlev
-* @copyright Copyright (C) 2020 Ivan Komlev. All rights reserved.
+* @copyright Copyright (C) 2020-2021 Ivan Komlev. All rights reserved.
 * @license	 GNU/GPL
 */
+
+@media only screen and (max-width: 500px) {
+	.form-horizontal .control-label{
+		width:auto !important;
+	}
+	.form-horizontal .controls{
+		margin-left: 0 !important;
+	}
+}
+
 
 
 .dashboard-sidebar{

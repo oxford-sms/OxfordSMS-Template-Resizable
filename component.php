@@ -1,7 +1,7 @@
 <?php
 /*------------------------------------------------------------------------
 # author Ivan Komlev
-# copyright Copyright © 2020 oxfordsms.com All rights reserved.
+# copyright Copyright © 2020-2021 oxfordsms.com All rights reserved.
 # @license https://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
 # Website https://oxfordsms.com
 -------------------------------------------------------------------------*/

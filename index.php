@@ -2,7 +2,7 @@
 /**
 * OxfordSMS - Template
 * @author    Ivan Komlev
-* @copyright Copyright (C) 2020 Ivan Komlev. All rights reserved.
+* @copyright Copyright (C) 2020-2021 Ivan Komlev. All rights reserved.
 * @license	 GNU/GPL
 */
 

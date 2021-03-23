@@ -1,11 +1,10 @@
 <?php
-/**
- * @package     Joomla.Site
- * @subpackage  mod_menu
- *
- * @copyright   Copyright (C) 2005 - 2020 Open Source Matters, Inc. All rights reserved.
- * @license     GNU General Public License version 2 or later; see LICENSE.txt
- */
+/*------------------------------------------------------------------------
+# author Ivan Komlev
+# copyright Copyright © 2020-2021 oxfordsms.com All rights reserved.
+# @license https://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
+# Website https://oxfordsms.com
+-------------------------------------------------------------------------*/
 
 defined('_JEXEC') or die;
 
