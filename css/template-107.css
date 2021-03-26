@@ -5,6 +5,17 @@
 * @license	 GNU/GPL
 */
 
+.sidebar-block ul{
+	margin-left:0;
+	padding-left:0;
+}
+
+.sidebar-block li{
+	list-style:none;
+	margin-left:0;
+	padding-left:0;
+}
+
 .sidebar-block{
 	color: #24292e;
 	background-color: #fafbfc;
