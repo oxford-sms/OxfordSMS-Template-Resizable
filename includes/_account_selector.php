@@ -13,11 +13,10 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 
 ?>
 
-<aside class="hide-xl hide-lg width-full bg-white border-bottom py-3 p-responsive" aria-label="Account context">
-      
+
 <details
   class="details-reset details-overlay d-inline-block position-relative"
-  id="details-1f7db5">
+  id="details-1f7db5" data-toggle-target="details-1f7db5aaa">
         <summary
         class="no-underline btn-link text-gray-dark text-bold width-full"
         title="Switch account context"
@@ -30,7 +29,7 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
   src="https://avatars0.githubusercontent.com/u/62612355?s=60&amp;v=4"
   class="avatar " />
 
-        <span class="css-truncate css-truncate-target ml-1">oxford-sms</span>
+        <span class="css-truncate css-truncate-target ml-1">Current Student</span>
         <span class="dropdown-caret"></span>
       </summary>
 
@@ -44,7 +43,7 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
     <div class="SelectMenu-modal">
         <header class="SelectMenu-header">
             <div class="SelectMenu-title">Switch dashboard context</div>
-          <button class="SelectMenu-closeButton" type="button" aria-label="Close menu" data-toggle-for="details-1f7db5">
+          <button class="SelectMenu-closeButton" type="button" aria-label="Close menu" data-toggle-for="details-1f7db5aaa">
             <svg height="16" class="octicon octicon-x" viewBox="0 0 16 16" version="1.1" width="16" aria-hidden="true"><path fill-rule="evenodd" d="M3.72 3.72a.75.75 0 011.06 0L8 6.94l3.22-3.22a.75.75 0 111.06 1.06L9.06 8l3.22 3.22a.75.75 0 11-1.06 1.06L8 9.06l-3.22 3.22a.75.75 0 01-1.06-1.06L6.94 8 3.72 4.78a.75.75 0 010-1.06z"></path></svg>
 
           </button>
@@ -92,6 +91,3 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
     </div>
   </details-menu>
 </details>
-
-
-    </aside>

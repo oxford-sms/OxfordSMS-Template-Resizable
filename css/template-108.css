@@ -53,7 +53,7 @@
 
 
 .dashboard-sidebar{
-	overflow:hidden;
+	/*overflow:hidden;*/
 	
 }
 
@@ -132,11 +132,11 @@
 
 
 /* end of modal */
-
+/*
 .AccountDetails{
 overflow:hidden !important;
 }
-
+*/
 .dashboardmenuitembox, .dashboardmenuitembox p, .dashboardmenuitembox a{
 	color: white !important;
 	
