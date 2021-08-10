@@ -27,6 +27,12 @@ function adaptLayout()
 	
 		MoveSideMenu();
 	}
+	
+	if(window.innerWidth > 770)
+	{
+		let element = document.getElementById("org_your_repos");
+		element.classList.add("js-sticky");
+	}
 }
 
 function removeClassElements(className)
@@ -150,7 +156,7 @@ function MovePageHeader(className)
 	{
 		content=items.join("");
 		
-		document.getElementById("oxfordSMSPageHeader_Mobile").innerHTML+=content;
+		//document.getElementById("oxfordSMSPageHeader_Mobile").innerHTML+=content;
 		
 		if(content.indexOf('<h2')==-1)
 			content='<h2 itemprop="headline">'+content+'</h2>';

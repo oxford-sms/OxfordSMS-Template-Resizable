@@ -5,6 +5,11 @@
 * @license	 GNU/GPL
 */
 
+.aside_news{
+	width:92%;
+	margin: 0 auto;
+}
+
 .sidebar-block ul{
 	margin-left:0;
 	padding-left:0;
@@ -51,11 +56,10 @@
 }
 
 
-
-.dashboard-sidebar{
-	/*overflow:hidden;*/
-	
+@media only screen and (min-width: 770px) {
+.dashboard-sidebar{	overflow:auto!important;}	
 }
+
 
 .OxfordSMSDashboard-AfterContent{
 	max-width:100%;

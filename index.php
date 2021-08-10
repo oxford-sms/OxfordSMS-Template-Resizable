@@ -135,9 +135,10 @@
                </div>
                <?php  if($this->countModules('right-bar')) : ?>
                <!-- right side bar -->
-               <aside class="team-left-column col-12 col-md-3 col-lg-3 pr-3 mt-5 hide-lg hide-md hide-sm border-bottom" aria-label="Explore">
-                  <div data-team-hovercards-enabled style="">
-                     <div style="width:335px;height:40px;margin-bottom:-8px;">
+			   <!--  hide-lg hide-md hide-sm  -->
+               <aside class="team-left-column col-12 col-md-3 col-lg-3 pr-3 mt-5border-bottom" aria-label="Explore">
+                  <div data-team-hovercards-enabled class="aside_news">
+                     <div style="height:40px;margin: 30px 0 -8px 0;">
                         School News
                      </div>
                      <!-- background-image: url(templates/oxfordsms/images/news.png);background-repeat: no-repeat; width:335px;heoght:33px;background-image: url(templates/oxfordsms/news.png);background-repeat: no-repeat;-->

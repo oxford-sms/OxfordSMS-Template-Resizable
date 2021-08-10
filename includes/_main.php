@@ -16,7 +16,7 @@
 		 */ ?>
 		<div class="d-block d-md-none">
 			<div id="oxfordSMSDashboardYeraTermMonthBoxes_Mobile"></div>
-			<div id="oxfordSMSPageHeader_Mobile"></div>
+			<!--<div id="oxfordSMSPageHeader_Mobile"></div>-->
 			<div id="oxfordSMSDashboardCTToolBar_Mobile"></div>  
 			<div id="oxfordSMSDashboardCTSearchBoxes_Mobile"></div>  
 		</div>

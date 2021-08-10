@@ -13,10 +13,12 @@
    
    ?>
    
-
+ <!-- hide-md hide-sm  overflow-auto-->
    
-<aside class="team-left-column col-12 col-md-4 col-lg-3 bg-white border-right border-bottom hide-md hide-sm" aria-label="Account">
-   <div class="dashboard-sidebar js-repos-container px-3 px-md-4 px-lg-4 js-sticky overflow-auto top-0" id="org_your_repos" data-pjax-container style="height:100%;padding-top:9px;">
+<aside class="team-left-column col-12 col-md-4 col-lg-3 bg-white border-right border-bottom" aria-label="Account">
+   <div class="dashboard-sidebar js-repos-container px-3 px-md-4 px-lg-4 top-0" id="org_your_repos" data-pjax-container 
+   style="height:100%;padding-top:9px;">
+   
       <div id="oxfordSMSPageHeader"></div>
       <div id="oxfordSMSDashboardYeraTermMonthBoxes"></div>
       <?php  if($this->countModules('left-bar')) : ?>
