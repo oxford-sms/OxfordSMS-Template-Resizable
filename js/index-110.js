@@ -31,7 +31,8 @@ function adaptLayout()
 	if(window.innerWidth > 770)
 	{
 		let element = document.getElementById("org_your_repos");
-		element.classList.add("js-sticky");
+		if(element)
+			element.classList.add("js-sticky");
 	}
 }
 
@@ -187,10 +188,12 @@ function MovePageCTRecordCount()
 	{
 		content=items.join("");
 		document.getElementById("oxfordSMSPageHeader").innerHTML+=content;
-		document.getElementById("oxfordSMSPageHeader_Mobile").innerHTML+=content;
+		
+		let element = document.getElementById("oxfordSMSPageHeader_Mobile");
+		if(element)
+			document.getElementById("oxfordSMSPageHeader_Mobile").innerHTML+=content;
 	}
 }
-
 
 function MoveCTToolBarAddNew()
 {
@@ -283,7 +286,6 @@ function MoveCTToolBar()
 
 function MoveCTSearchBoxes()
 {
-	
 	var content="";
 	var x = document.getElementsByClassName("ctSearchBox");
 	
@@ -305,13 +307,10 @@ function MoveCTSearchBoxes()
 		document.getElementById("oxfordSMSDashboardCTSearchBoxes").innerHTML+=content;
 		document.getElementById("oxfordSMSDashboardCTSearchBoxes_Mobile").innerHTML+=content;
 	}
-	
 }
-
 
 function MoveCTEditFormButtons()
 {
-	
 	var content="";
 	var x = document.getElementsByClassName("ctEditFormButton");
 	
@@ -325,7 +324,6 @@ function MoveCTEditFormButtons()
 			items.push(wrap.innerHTML);
 	} 
 	
-	
 	if(items.length>0)
 	{
 		removeClassElements("ctEditFormButton");
@@ -336,16 +334,15 @@ function MoveCTEditFormButtons()
 
 		var o2=document.getElementById("oxfordSMSDashboardCTToolBar_Mobile")
 		o2.innerHTML+=content;
-	}
-	
+	}	
 }
 
 function MoveYearTermSelector()
 {
-	var x = document.getElementById("selectorBox");
+	let x = document.getElementById("selectorBox");
 	if(x)
 	{
-		var content='<div id="selectorBox">'+x.innerHTML+'</div>';
+		let content='<div id="selectorBox">'+x.innerHTML+'</div>';
 		x.innerHTML="";
 		
 		document.getElementById("oxfordSMSDashboardYeraTermMonthBoxes").innerHTML+=content;
@@ -353,42 +350,37 @@ function MoveYearTermSelector()
 		content=content.replace('id="oxfordsms_departmentselector"','id="oxfordsms_departmentselector_mobile"');
 		content=content.replace('id="oxfordsms_yearselector"','id="oxfordsms_yearselector_mobile"');
 		content=content.replace('id="oxfordsms_termselector"','id="oxfordsms_termselector_mobile"');
-		
-		//content=content.replace('selectorChanged()','selectorChanged_custom(\'_mobile\')');
 		content=content.split('selectorChanged()').join('selectorChanged_custom(\'_mobile\')');
-		
 		document.getElementById("oxfordSMSDashboardYeraTermMonthBoxes_Mobile").innerHTML+=content;
-	
 	}
 }
 
-
 function dashboardCountdown(id)
 {
-	var obj=document.getElementById(id);
-	var countDownDate=parseInt(obj.dataset.time);
+	let obj=document.getElementById(id);
+	let countDownDate=parseInt(obj.dataset.time);
 	if(isNaN(countDownDate))
 		return;
 	
-	var currenttime=parseInt(obj.dataset.currenttime);
+	let currenttime=parseInt(obj.dataset.currenttime);
 	if(isNaN(currenttime))
 		return;
 	
 	// Update the count down every 1 second
-	var x = setInterval(function() {
-
+	let x = setInterval(function()
+	{
 		// Find the distance between now and the count down date
-		var distance = countDownDate-currenttime;//now;
+		let distance = countDownDate-currenttime;//now;
 		currenttime+=1;
 
-		var ad=Math.abs(distance);
-		var hours = Math.floor(ad / 3600) ;
-		var minutes = Math.floor((ad-(hours*3600))/60);
-		var seconds = Math.floor(ad-(hours*3600)-minutes*60);
+		let ad=Math.abs(distance);
+		let hours = Math.floor(ad / 3600) ;
+		let minutes = Math.floor((ad-(hours*3600))/60);
+		let seconds = Math.floor(ad-(hours*3600)-minutes*60);
 
 		// Display the result in the element with id="demo"
 
-		var t_str="";
+		let t_str="";
 		if(hours!=0)
 			t_str+=hours + "h ";
 		
@@ -407,11 +399,5 @@ function dashboardCountdown(id)
 			clearInterval(x);
 			obj.innerHTML = "EXPIRED";
 		}
-		
-		
 	}, 1000);
-	
 }
-
-
-

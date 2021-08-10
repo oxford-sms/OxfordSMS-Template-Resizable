@@ -11,10 +11,8 @@ if(isset($active->alias))
 	$alias=$active->alias;
 
 ?>
-
 	<meta charset="utf-8" />
-		
-	<script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/index-109.js"></script>
+	<script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/index-110.js"></script>
 	<script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/modal.js"></script>
 	
 	<style>
