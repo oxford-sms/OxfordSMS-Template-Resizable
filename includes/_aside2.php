@@ -13,9 +13,9 @@
    
    ?>
    
- <!-- hide-md hide-sm  overflow-auto-->
+ <!-- hide-md hide-sm  overflow-auto bg-white-->
    
-<aside class="team-left-column col-12 col-md-4 col-lg-3 bg-white border-right border-bottom" aria-label="Account">
+<aside class="team-left-column col-12 col-md-4 col-lg-3 border-right border-bottom" aria-label="Account">
    <div class="dashboard-sidebar js-repos-container px-3 px-md-4 px-lg-4 top-0" id="org_your_repos" data-pjax-container 
    style="height:100%;padding-top:9px;">
    
@@ -32,7 +32,7 @@
       <div class="mb-3" data-repository-hovercards-enabled>
          <div>
             <?php if($alias!='application-form'): ?>
-            <div class="leftSideFooter2" style="background-color:#ffffff;">
+            <div class="leftSideFooter2">
                <a title="Home page" class="d-none d-lg-flex footer-octicon footer-octicon no-underline" href="https://oxfordsms.com" target="_blank">
                   <div>
                      <?php

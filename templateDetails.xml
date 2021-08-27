@@ -17,6 +17,7 @@
 		<folder>js</folder>
 		<folder>language</folder>
 		<filename>index.php</filename>
+		<filename>component.php</filename>
 		<filename>templateDetails.xml</filename>
 	</files>
 
@@ -40,6 +41,54 @@
 	<config>
 		<fields name="params">
 			<fieldset name="advanced">
+								
+				<field 
+					name="leftSideBG" 
+					type="color" 
+					label="TPL_OXFORDSMS_LEFTSIDEBGCOLOR_LABEL"
+					description="TPL_OXFORDSMS_LEFTSIDEBGCOLOR_DESC" 
+					class="" 
+					default="#ffffff"
+				/>
+
+				<field 
+					name="logoFile" 
+					type="media" 
+					label="TPL_OXFORDSMS_LOGO_LABEL"
+					description="TPL_OXFORDSMS_LOGO_DESC" 
+					class="" 
+					default=""
+				/>
+
+				<field 
+					name="freshworksid" 
+					type="text" 
+					label="FreshWorks ID"
+					description="FreshWorks Widget ID" 
+					class="" 
+					default=""
+				/>
+
+				<field 
+					name="smalllogo" 
+					type="media" 
+					label="TPL_OXFORDSMS_SMALL_LOGO_LABEL"
+					description="TPL_OXFORDSMS_SMALL_LOGO_DESC" 
+					class="" 
+					default="templates/oxofrdsms/images/oxfordsms-24.png"
+				/>
+
+				<field 
+					name="copyright" 
+					type="text" 
+					label="Copyright text"
+					class="" 
+					default=""
+				/>
+
+			</fieldset>
+			
+			<fieldset name="NavigationBar">
 				<field 
 					name="topMenuFontColor" 
 					type="color" 
@@ -92,42 +141,50 @@
 					class="" 
 					default="#9f2828"
 				/>
-
+				
+			</fieldset>
+			
+			<fieldset name="Buttons">
+			
 				<field 
-					name="logoFile" 
-					type="media" 
-					label="TPL_OXFORDSMS_LOGO_LABEL"
-					description="TPL_OXFORDSMS_LOGO_DESC" 
+					name="ButtonColor" 
+					type="color" 
+					label="Button Color"
 					class="" 
-					default=""
+					default="#055dc0"
 				/>
-
+				
 				<field 
-					name="freshworksid" 
-					type="text" 
-					label="FreshWorks ID"
-					description="FreshWorks Widget ID" 
+					name="primaryButtonColor" 
+					type="color" 
+					label="Primary Button Color"
 					class="" 
-					default=""
+					default="#0366d6"
 				/>
-
+				
 				<field 
-					name="smalllogo" 
-					type="media" 
-					label="TPL_OXFORDSMS_SMALL_LOGO_LABEL"
-					description="TPL_OXFORDSMS_SMALL_LOGO_DESC" 
+					name="primaryButtonHoverColor" 
+					type="color" 
+					label="Primary Button Hover Color"
 					class="" 
-					default="templates/oxofrdsms/images/oxfordsms-24.png"
+					default="#0366d6"
 				/>
-
+				
 				<field 
-					name="copyright" 
-					type="text" 
-					label="Copyright text"
+					name="successButtonColor" 
+					type="color" 
+					label="Success Button Color"
 					class="" 
-					default=""
+					default="#92d782"
 				/>
-
+				
+				<field 
+					name="successButtonHoverColor" 
+					type="color" 
+					label="Success Button Hover Color"
+					class="" 
+					default="#25970a"
+				/>
 			</fieldset>
 		</fields>
 	</config>

@@ -5,6 +5,10 @@
 * @license	 GNU/GPL
 */
 
+.dashboard-sidebar{
+	background-color: var(--leftSideBG);
+}
+
 .aside_news{
 	width:92%;
 	margin: 0 auto;
@@ -340,31 +344,14 @@ width:100%;
 	background-repeat: unset;	
 */
 	box-sizing: border-box;
-
 }
 
+input+.btn:hover{background-color:var(--ButtonColor) !important;}
 
-.btn-primary{
-
-background-color:#0366d6 !important;
-}
-.btn-primary:hover{
-
-background-color:#055dc0 !important;
-}
-
-input+.btn:hover{
-background-color:#055dc0 !important;
-}
-
-input+.btn-success{
-background-color:#92d782 !important;
-}
-
-input+.btn-success:hover{
-background-color:#25970a !important;
-}
-
+.btn-primary{background-color:var(--primaryButtonColor) !important;}
+.btn-primary:hover{background-color:var(--primaryButtonHoverColor) !important;}
+input+.btn-success{background-color:var(--successButtonColor) !important;}
+input+.btn-success:hover{background-color:var(--successButtonHverColor) !important;}
 
 .dropdown-menu{
 	all: unset;

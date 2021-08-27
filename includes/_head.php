@@ -28,6 +28,14 @@ if(isset($active->alias))
 		
 		--topMenuSubBar: <?php echo ($this->params->get('topMenuSubBar')!="" ? $this->params->get('topMenuSubBar') : '#9f2828') ?>;
 		
+		--leftSideBG: <?php echo ($this->params->get('leftSideBG')!="" ? $this->params->get('leftSideBG') : '#ffffff') ?>;
+		
+		--ButtonColor: <?php echo ($this->params->get('ButtonColor')!="" ? $this->params->get('ButtonColor') : '#0366d6') ?>;
+		--primaryButtonColor: <?php echo ($this->params->get('primaryButtonColor')!="" ? $this->params->get('primaryButtonColor') : '#0366d6') ?>;
+		--primaryButtonHoverColor: <?php echo ($this->params->get('primaryButtonHoverColor')!="" ? $this->params->get('primaryButtonHoverColor') : '#0366d6') ?>;
+		--successButtonColor: <?php echo ($this->params->get('successButtonColor')!="" ? $this->params->get('successButtonColor') : '#92d782') ?>;
+		--successButtonHoverColor: <?php echo ($this->params->get('successButtonHoverColor')!="" ? $this->params->get('successButtonHoverColor') : '#25970a') ?>;
+	
 	}
 	</style>
 	
