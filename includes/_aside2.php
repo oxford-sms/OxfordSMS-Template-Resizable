@@ -1,8 +1,8 @@
 <?php
    /**
-   * Oxford SMSm - Template - Avatar
+   * Oxford SMS - Template - Avatar
    * @author    Ivan Komlev
-   * @copyright Copyright (C) 2020 Ivan Komlev. All rights reserved.
+   * @copyright Copyright (C) 2020-2021 Ivan Komlev. All rights reserved.
    * @license	 GNU/GPL
    */
    
@@ -21,9 +21,18 @@
    
       <div id="oxfordSMSPageHeader"></div>
       <div id="oxfordSMSDashboardYeraTermMonthBoxes"></div>
-      <?php  if($this->countModules('left-bar')) : ?>
+      
+	  <?php  if($this->countModules('left-bar-loginbox') and $real_userid == 0) : ?>
+      <jdoc:include type="modules" name="left-bar-loginbox" style="none" />
+      <?php endif; ?>
+	  
+	  <?php  if($this->countModules('left-bar')) : ?>
       <jdoc:include type="modules" name="left-bar" style="none" />
       <?php endif; ?>
+	  
+	  
+	  
+	  
       <!-- <div class="border-bottom py-3 mt-3 mb-4"></div>-->
       <div id="oxfordSMSDashboardTabs"></div>
       <div id="oxfordSMSDashboardCTToolBar"></div>

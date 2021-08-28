@@ -29,6 +29,8 @@
 	<position>profilemenu-1</position>
 
         <position>left-bar</position>
+	<position>left-bar-loginbox</position>
+
 	<position>right-bar</position>
 	<position>footer</position>
 	</positions>

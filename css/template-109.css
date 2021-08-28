@@ -4,6 +4,31 @@
 * @copyright Copyright (C) 2020-2021 Ivan Komlev. All rights reserved.
 * @license	 GNU/GPL
 */
+/*
+aside ul li{
+	min-height:35px;
+	padding: 2px 5px 2px 5px;
+margin-right: 10px;
+text-align: left;
+word-wrap: break-word;
+white-space: normal;
+overflow-wrap: break-word;
+overflow: hidden;
+}
+*/
+.controls .input-prepend{
+	width:92%;
+}
+
+.controls .input-prepend .add-on{
+	width:40px;
+	height:30px;
+}
+
+.controls .input-prepend .add-on .element-invisible{
+	display:none;
+}
+
 
 .dashboard-sidebar{
 	background-color: var(--leftSideBG);
@@ -287,7 +312,7 @@ width:100%;
 }
 
 
-#oxfordSMSDashboardMenu, #oxfordSMSDashboardCTToolBar, #oxfordSMSDashboardCTToolBar_Mobile{
+.oxfordSMSDashboardMenu, #oxfordSMSDashboardMenu, #oxfordSMSDashboardCTToolBar, #oxfordSMSDashboardCTToolBar_Mobile{
 	margin-top:24px;
 }
 
@@ -403,6 +428,8 @@ select, textarea, input[type="text"], input[type="password"], input[type="dateti
 select, textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
 	
 	height:30px;
+	width:95%;
+	max-width:600px;
 }
 
 

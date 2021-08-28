@@ -31,7 +31,10 @@
       $sitename_parts=explode('-',$sitename);
       $sitename_school=trim(end($sitename_parts));
       $alias="";
-      
+    
+	$user = JFactory::getUser();
+	$real_userid = $user->get('id');
+
       /*
    	$jinput = JFactory::getApplication()->input;
    	$user = JFactory::getUser();
@@ -46,7 +49,7 @@
    	}
       */
       
-      checkAuthorisation();
+    checkAuthorisation();
    	
    	$customtables_file=JPATH_SITE.DIRECTORY_SEPARATOR.'administrator'.DIRECTORY_SEPARATOR.'components'.DIRECTORY_SEPARATOR.'com_customtables'.DIRECTORY_SEPARATOR.'libraries'.DIRECTORY_SEPARATOR.'misc.php';
    	if(file_exists($customtables_file))
