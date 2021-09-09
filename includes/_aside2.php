@@ -22,7 +22,7 @@
       <div id="oxfordSMSPageHeader"></div>
       <div id="oxfordSMSDashboardYeraTermMonthBoxes"></div>
       
-	  <?php  if($this->countModules('left-bar-loginbox') and $real_userid == 0) : ?>
+	  <?php if($this->countModules('left-bar-loginbox') and $real_userid == 0 and !($option == 'com_users' and $view == 'login')) : ?>
       <jdoc:include type="modules" name="left-bar-loginbox" style="none" />
       <?php endif; ?>
 	  

@@ -1,7 +1,7 @@
 <?php
 /*------------------------------------------------------------------------
 # author Ivan Komlev
-# copyright Copyright © 2020 oxfordsms.com All rights reserved.
+# copyright Copyright © 2020-2021 oxfordsms.com All rights reserved.
 # @license https://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
 # Website https://oxfordsms.com
 -------------------------------------------------------------------------*/
@@ -67,13 +67,20 @@ if(isset($active->alias))
 
 	<jdoc:include type="head" />
 
-	<link href="<?php echo $this->baseurl ?>/media/jui/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<!--<link href="<?php echo $this->baseurl ?>/media/jui/css/bootstrap.min.css" rel="stylesheet" type="text/css" />-->
 	<!--<script src="/media/jui/js/bootstrap.min.js?baddb2f97e5165e2ad4048acd1cd6a7f"></script>-->
 	
 	<link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/css/template-109.css" type="text/css" />
  
 	<link crossorigin="anonymous" media="all" rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/css/frameworks-109.css" />
-	<link crossorigin="anonymous" media="all" rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/css/github-109.css" />
+	<link crossorigin="anonymous" media="all" rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/css/github-111.css" />
 	
 	<!-- WP Top Menu -->
 	<link rel='stylesheet' id='avada-stylesheet-css'  href='<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/css/topmenu-fusion-109.css' type='text/css' media='all' />
+
+<?php
+if($before_head = $this->params->get('before_head')) {
+	echo $before_head . "\n";
+}
+
+?>

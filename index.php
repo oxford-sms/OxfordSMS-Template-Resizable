@@ -1,32 +1,29 @@
 <?php
-   /**
-   * OxfordSMS - Template
-   * @author    Ivan Komlev
-   * @copyright Copyright (C) 2020-2021 Ivan Komlev. All rights reserved.
-   * @license	 GNU/GPL
-   */
+/**
+* OxfordSMS - Template
+* @author    Ivan Komlev
+* @copyright Copyright (C) 2020-2021 Ivan Komlev. All rights reserved.
+* @license	 GNU/GPL
+*/
    
-   //This loader also prevents douple queries
-   
-   // no direct access
-   defined( '_JEXEC' ) or die( 'Restricted access' );
+// no direct access
+defined( '_JEXEC' ) or die( 'Restricted access' );
       
-      
-      $app = JFactory::getApplication();
-      $doc = JFactory::getDocument();
-      $this->language = $doc->language;
-      $this->direction = $doc->direction;
-      $menu      = $app->getMenu(); // Load the JMenuSite Object
+$app = JFactory::getApplication();
+$doc = JFactory::getDocument();
+$this->language = $doc->language;
+$this->direction = $doc->direction;
+$menu      = $app->getMenu(); // Load the JMenuSite Object
    
-   	$active    = $menu->getActive(); // Load the Active Menu Item as an stdClass Object
+$active    = $menu->getActive(); // Load the Active Menu Item as an stdClass Object
     
       
-      // Detecting Active Variables
-      $option   = $app->input->getCmd('option', '');
-      $view     = $app->input->getCmd('view', '');
-      $layout   = $app->input->getCmd('layout', '');
-      $task     = $app->input->getCmd('task', '');
-      $itemid   = $app->input->getCmd('Itemid', '');
+// Detecting Active Variables
+$option   = $app->input->getCmd('option', '');
+$view     = $app->input->getCmd('view', '');
+$layout   = $app->input->getCmd('layout', '');
+$task     = $app->input->getCmd('task', '');
+$itemid   = $app->input->getCmd('Itemid', '');
       $sitename = htmlspecialchars($app->get('sitename'), ENT_QUOTES, 'UTF-8');
       $sitename_parts=explode('-',$sitename);
       $sitename_school=trim(end($sitename_parts));
@@ -96,6 +93,18 @@
       /** @var JDocumentHtml $this */
       
       //JHtml::_('behavior.framework', true);
+	  
+	//Custom CSS
+	if($custom_css = $this->params->get('custom_css')) {
+		$doc->addStyledeclaration( $custom_css );
+	}
+
+	//Custom JS
+	if($custom_js = $this->params->get('custom_js')) {
+		$doc->addScriptdeclaration( $custom_js );
+	}
+
+	  
       ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -175,6 +184,13 @@
       </script>
       <script type="text/javascript" src="https://widget.freshworks.com/widgets/<?php echo $this->params->get('freshworksid'); ?>.js" async defer></script>
       <?php endif; ?>
+	  
+	<?php 
+		if($before_body = $this->params->get('before_body')) {
+			echo $before_body . "\n";
+		}
+	?>
+	  
    </body>
 </html>
 <?php
@@ -201,18 +217,13 @@
    		
    		
    		
-           if ($showlogin) {  echo '
-   <script>
-   window.top.location.href = "/";
-   
-   
-   
-   
-   </script>
-   
-   
-   
-   ';
+           if ($showlogin) {
+			echo 
+'
+	<script>
+		window.top.location.href = "/";
+	</script>
+';
                die;
                return false;
            }

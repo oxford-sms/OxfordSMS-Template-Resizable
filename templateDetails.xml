@@ -7,7 +7,7 @@
 	<copyright>Copyright © 2020-2021 Ivan Komlev</copyright>
 	<authorEmail>ivankomlev@gmail.com</authorEmail>
 	<authorUrl>https://oxfordsms.com</authorUrl>
-	<version>1.1.0</version>
+	<version>1.1.1</version>
 	<description><![CDATA[Frameless resizable 3-column template created for the Oxford School Managment System using GitHub Primer theme.]]></description>
 	<files>
 		<folder>css</folder>
@@ -36,8 +36,8 @@
 	</positions>
 
 	<languages folder="language">
-		<language tag="en-GB">en-GB/en-GB.tpl_oxfordsms.ini</language>
-		<language tag="en-GB">en-GB/en-GB.tpl_oxfordsms.sys.ini</language>
+		<language tag="en-GB">en-GB/tpl_oxfordsms.ini</language>
+		<language tag="en-GB">en-GB/tpl_oxfordsms.sys.ini</language>
 	</languages>
 
 	<config>
@@ -188,6 +188,15 @@
 					default="#25970a"
 				/>
 			</fieldset>
+
+			<!--Start Custom Code Tab-->
+			<fieldset name="custom_code">
+		                <!--<field type="group" title="TPL_OXFORDSMS_CUSTOM_CODE" />-->
+                		<field name="before_head" type="textarea" rows="5" label="TPL_OXFORDSMS_BEFORE_HEAD" description="TPL_OXFORDSMS_BEFORE_HEAD_DESC" filter="raw" />
+		                <field name="before_body" type="textarea" rows="5" label="TPL_OXFORDSMS_BEFORE_BODY" description="TPL_OXFORDSMS_BEFORE_BODY_DESC" filter="raw" />
+                		<field name="custom_css" type="textarea" rows="5" label="TPL_OXFORDSMS_CUSTOM_CSS" description="TPL_OXFORDSMS_CUSTOM_CSS_DESC" filter="raw" />
+                		<field name="custom_js" type="textarea" rows="5" label="TPL_OXFORDSMS_CUSTOM_JS" description="TPL_OXFORDSMS_CUSTOM_JS_DESC" filter="raw" />
+		        </fieldset>
 		</fields>
 	</config>
 </extension>
