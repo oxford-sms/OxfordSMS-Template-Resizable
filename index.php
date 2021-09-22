@@ -31,26 +31,8 @@ $itemid   = $app->input->getCmd('Itemid', '');
     
 	$user = JFactory::getUser();
 	$real_userid = $user->get('id');
-
-      /*
-   	$jinput = JFactory::getApplication()->input;
-   	$user = JFactory::getUser();
-       $real_userid = $user->get('id');
-   	$userid = $jinput->getInt('userid',0);
-   	if($userid==0)
-   	{
-   		$userid=$real_userid;
-   		$jinput->set('userid',$real_userid);
-   		echo '$real_userid='.$real_userid;
-   		die;
-   	}
-      */
       
     checkAuthorisation();
-   	
-   	$customtables_file=JPATH_SITE.DIRECTORY_SEPARATOR.'administrator'.DIRECTORY_SEPARATOR.'components'.DIRECTORY_SEPARATOR.'com_customtables'.DIRECTORY_SEPARATOR.'libraries'.DIRECTORY_SEPARATOR.'misc.php';
-   	if(file_exists($customtables_file))
-   		require_once($customtables_file);
    	
    	$oxfordsms_file=JPATH_SITE.DIRECTORY_SEPARATOR.'components'.DIRECTORY_SEPARATOR.'com_oxfordsms'.DIRECTORY_SEPARATOR.'includes'.DIRECTORY_SEPARATOR.'oxfordsmsmisc.php';
    	if(file_exists($oxfordsms_file))
