@@ -1,6 +1,6 @@
 <?php
    /**
-   * Oxford SMS - Template - Avatar
+   * OxfordSMS - Template - Avatar
    * @author    Ivan Komlev
    * @copyright Copyright (C) 2020-2021 Ivan Komlev. All rights reserved.
    * @license	 GNU/GPL

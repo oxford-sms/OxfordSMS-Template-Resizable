@@ -8,6 +8,11 @@
    
 // no direct access
 defined( '_JEXEC' ) or die( 'Restricted access' );
+
+use Joomla\CMS\Version;
+
+$version_object = new Version;
+$version = (int)$version_object->getShortVersion();
       
 $app = JFactory::getApplication();
 $doc = JFactory::getDocument();

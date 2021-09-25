@@ -23,7 +23,7 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
         
         data-ga-click="Dashboard, click, Opened account context switcher - context:organization">
         <img
-  alt="@oxford-sms"
+  alt="@oxfordsms"
   width="20"
   height="20"
   src="https://avatars0.githubusercontent.com/u/62612355?s=60&amp;v=4"
@@ -35,7 +35,7 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 
   <details-menu
     class="SelectMenu"
-      src="<?php echo JURI::root(); ?>dashboard/ajax_context_list?current_context=oxford-sms"
+      src="<?php echo JURI::root(); ?>dashboard/ajax_context_list?current_context=oxfordsms"
       preload
       role="menu"
       aria-label="Switch dashboard context"
