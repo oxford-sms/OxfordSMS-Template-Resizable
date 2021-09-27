@@ -67,19 +67,23 @@ if(isset($active->alias))
 
 	<jdoc:include type="head" />
 
+	<!--<script src="/media/jui/js/bootstrap.min.js?baddb2f97e5165e2ad4048acd1cd6a7f"></script>-->
 	<?php if($version < 4): ?>
 	<link href="<?php echo $this->baseurl ?>/media/jui/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-	<?php endif; ?>
-	
-	<!--<script src="/media/jui/js/bootstrap.min.js?baddb2f97e5165e2ad4048acd1cd6a7f"></script>-->
-	
 	<link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/css/template-109.css" type="text/css" />
- 
 	<link crossorigin="anonymous" media="all" rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/css/frameworks-109.css" />
-	<link crossorigin="anonymous" media="all" rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/css/github-111.css" />
-	
+	<link crossorigin="anonymous" media="all" rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/css/github-109.css" />
 	<!-- WP Top Menu -->
 	<link rel='stylesheet' id='avada-stylesheet-css'  href='<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/css/topmenu-fusion-109.css' type='text/css' media='all' />
+	<?php else: ?>
+	<link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/css/template-111.css" type="text/css" />
+	<link crossorigin="anonymous" media="all" rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/css/frameworks-111.css" />
+	<link crossorigin="anonymous" media="all" rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/css/github-111.css" />
+	<!-- WP Top Menu -->
+	<link rel='stylesheet' id='avada-stylesheet-css'  href='<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/css/topmenu-fusion-111.css' type='text/css' media='all' />
+	<?php endif; ?>
+ 	
+
 
 <?php
 if($before_head = $this->params->get('before_head')) {
