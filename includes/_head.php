@@ -67,8 +67,14 @@ if(isset($active->alias))
 
 	<jdoc:include type="head" />
 
-	<!--<script src="/media/jui/js/bootstrap.min.js?baddb2f97e5165e2ad4048acd1cd6a7f"></script>-->
-	<?php if($version < 4): ?>
+	<?php if($version < 4): 
+	
+		//DO NOT LOAD JQUESRY - JOOMLA LOADS IT
+		//$doc->addCustomTag('<script src="'.JURI::root(true).'/media/jui/js/jquery.min.js"></script>');
+		$doc->addCustomTag('<script src="'.JURI::root(true).'/media/jui/js/bootstrap.min.js"></script>');
+	
+	?>
+	
 	<link href="<?php echo $this->baseurl ?>/media/jui/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
 	<link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/css/template-109.css" type="text/css" />
 	<link crossorigin="anonymous" media="all" rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/css/frameworks-109.css" />
