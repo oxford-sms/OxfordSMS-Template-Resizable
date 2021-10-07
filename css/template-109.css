@@ -16,6 +16,24 @@ overflow-wrap: break-word;
 overflow: hidden;
 }
 */
+
+.mod-languagesLanguageSwitcher{
+	margin:-10px 0 10px -10px;
+}
+
+.mod-languagesLanguageSwitcher li{
+	border:1px solid #eeeeee;
+	padding:3px;
+	border-radius:5px;
+	display: inline-block;
+	
+}
+
+.mod-languagesLanguageSwitcher .lang-active{
+	border:2px solid #bbbbbb;
+	border-radius:5px;
+}
+
 .controls .input-prepend{
 	width:92%;
 }
