@@ -128,6 +128,11 @@ $itemid   = $app->input->getCmd('Itemid', '');
                <?php include('includes'.DIRECTORY_SEPARATOR.'_aside2.php'); ?>
                <div class="col-12 col-md-8 col-lg-6 p-responsive mt-3 border-bottom d-flex flex-auto">
                   <div class="mx-auto d-flex flex-auto flex-column" style="max-width: 1400px">
+				  
+					<?php  if($this->countModules('before-content-area')) : ?>
+					<jdoc:include type="modules" name="before-content-area" style="none" />
+					<?php endif; ?>  
+				  
                      <?php include('includes'.DIRECTORY_SEPARATOR.'_main.php'); ?>
                      <?php //include('includes'.DIRECTORY_SEPARATOR.'_footer.php'); ?>
                   </div>

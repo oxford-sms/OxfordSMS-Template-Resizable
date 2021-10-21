@@ -32,6 +32,11 @@
 				
                <!--  text-center -->
 			   <jdoc:include type="message" />
+			   
+			   <?php  if($this->countModules('before-content')) : ?>
+					<jdoc:include type="modules" name="before-content" style="none" />
+				<?php endif; ?>  
+			   
                <jdoc:include type="component" />
 			<?php if(!($option=='com_customtables' and ($view=='catalog' or $view=='edititem'))) : ?>
             </div>

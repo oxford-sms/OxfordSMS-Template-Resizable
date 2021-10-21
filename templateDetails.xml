@@ -31,6 +31,9 @@
         <position>left-bar</position>
 	<position>left-bar-loginbox</position>
 
+	<position>before-content-area</position>
+	<position>before-content</position>
+
 	<position>right-bar</position>
 	<position>footer</position>
 	</positions>
