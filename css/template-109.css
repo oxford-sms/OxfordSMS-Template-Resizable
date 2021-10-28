@@ -17,6 +17,28 @@ overflow: hidden;
 }
 */
 
+#oxfordSMSDashboardCTToolBar_Mobile{
+	display:none;
+}
+
+#oxfordSMSDashboardCTSearchBoxes_Mobile{
+	display:none;
+}
+
+@media only screen and (max-width: 766px) {
+		.leftSideBar{position:relative;}
+		
+		#oxfordSMSDashboardMenu{
+			display:none;
+		}
+		
+		
+}
+@media only screen and (min-width: 767px) {
+	.leftSideBar{	min-height: 100vh;position:relative;}
+}
+
+
 .mod-languagesLanguageSwitcher{
 	margin:-10px 0 10px -10px;
 }
@@ -520,7 +542,7 @@ list-style:none;
 
 .dashboardmenuitembox{
 	display: inline-block;
-	margin:15px;
+	margin:10px;
 	text-align:center;
 	
 }

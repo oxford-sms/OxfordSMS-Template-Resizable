@@ -96,6 +96,8 @@ function MoveTopMenu()
 	var i;
 	var items=[];
 	var items_mobile=[];
+	
+	var items_mobile_links=[];
 
 	for (i = 0; i < x.length; i++) {
 		var a=x[i].innerHTML;
@@ -122,7 +124,11 @@ function MoveTopMenu()
 
 			m+=a.title+'</div></a>';
 
-			items_mobile.push(m);
+			if(items_mobile_links.indexOf(a.href)==-1)
+			{
+				items_mobile_links.push(a.href);
+				items_mobile.push(m);
+			}
 		}
 
 

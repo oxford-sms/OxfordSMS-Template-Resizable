@@ -123,8 +123,11 @@ $itemid   = $app->input->getCmd('Itemid', '');
             data-discussion-hovercards-enabled
             data-issue-and-pr-hovercards-enabled
             >
-            <?php //include('includes'.DIRECTORY_SEPARATOR.'_account_selector.php'); ?>
-            <div class="d-flex flex-wrap bg-gray" style="min-height: 100vh;position:relative;">
+            <?php //include('includes'.DIRECTORY_SEPARATOR.'_account_selector.php'); 
+			
+			//
+			?>
+            <div class="d-flex flex-wrap bg-gray leftSideBar">
                <?php include('includes'.DIRECTORY_SEPARATOR.'_aside2.php'); ?>
                <div class="col-12 col-md-8 col-lg-6 p-responsive mt-3 border-bottom d-flex flex-auto">
                   <div class="mx-auto d-flex flex-auto flex-column" style="max-width: 1400px">
