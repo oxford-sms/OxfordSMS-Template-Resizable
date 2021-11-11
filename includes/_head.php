@@ -82,14 +82,44 @@ if(isset($active->alias))
 	<!-- WP Top Menu -->
 	<link rel='stylesheet' id='avada-stylesheet-css'  href='<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/css/topmenu-fusion-109.css' type='text/css' media='all' />
 	<?php else: ?>
+	
+	
 	<link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/css/template-111.css" type="text/css" />
+	
+	
 	<link crossorigin="anonymous" media="all" rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/css/frameworks-111.css" />
 	<link crossorigin="anonymous" media="all" rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/css/github-111.css" />
+	
+	
 	<!-- WP Top Menu -->
 	<link rel='stylesheet' id='avada-stylesheet-css'  href='<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/css/topmenu-fusion-111.css' type='text/css' media='all' />
-	<?php endif; ?>
- 	
+	
 
+	<link crossorigin="anonymous" media="all" rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/css/cassiopeia.css" />
+	
+	<link href="/oxfordsms/media/system/css/joomla-fontawesome.min.css?a82b166db64c6914e6174bb8f8084774" rel="lazy-stylesheet" /><noscript><link href="/4/media/system/css/joomla-fontawesome.min.css?a82b166db64c6914e6174bb8f8084774" rel="stylesheet" /></noscript>
+	<link href="/oxfordsms/templates/cassiopeia/css/global/colors_standard.min.css?a82b166db64c6914e6174bb8f8084774" rel="stylesheet" />
+	<!--<link href="/oxfordsms/templates/cassiopeia/css/template.min.css?a82b166db64c6914e6174bb8f8084774" rel="stylesheet" />-->
+	<link href="/oxfordsms/media/plg_system_webauthn/css/button.min.css?a82b166db64c6914e6174bb8f8084774" rel="stylesheet" />
+	<link href="/oxfordsms/templates/cassiopeia/css/vendor/joomla-custom-elements/joomla-alert.min.css?0.2.0" rel="stylesheet" />
+	
+	
+	
+	<!--<script type="application/json" class="joomla-script-options new" nonce="YWMyMTgzMTJmMmNiYjY1OWIzNTQxNDVhZmEzOTRmZmVjYmQ2M2UwZDc4YmZkYjVjMzcyNjcwNjk1YzcwMzczYWY5Yzg5MzAwNTA2MjFlNDAyMTFjYzViM2ExMzViYzY3MGEwMmFhOTI3N2E1NjQwNTkzODVjMTQ2MGM0NjcyNDU=">{"joomla.jtext":{"PLG_SYSTEM_WEBAUTHN_ERR_CANNOT_FIND_USERNAME":"Cannot find the username field in the login module. Sorry, Passwordless authentication will not work on this site unless you use a different login module.","PLG_SYSTEM_WEBAUTHN_ERR_EMPTY_USERNAME":"You need to enter your username (but NOT your password) before selecting the Web Authentication login button.","PLG_SYSTEM_WEBAUTHN_ERR_INVALID_USERNAME":"The specified username does not correspond to a user account that has enabled passwordless login on this site.","JSHOWPASSWORD":"Show Password","JHIDEPASSWORD":"Hide Password","ERROR":"Error","MESSAGE":"Message","NOTICE":"Notice","WARNING":"Warning","JCLOSE":"Close","JOK":"OK","JOPEN":"Open"},"system.paths":{"root":"\/4","rootFull":"https:\/\/joomlaboat.com\/4\/","base":"\/4","baseFull":"https:\/\/joomlaboat.com\/4\/"},"csrf.token":"944e7c7bcd35e4f3dfd389470fcadbbd","system.keepalive":{"interval":840000,"uri":"\/4\/index.php\/component\/ajax\/?format=json"}}</script>
+	-->
+	
+	<!--<script src="/oxfordsms/media/system/js/core.min.js?c47dc50c9a8b9c85d135bbac3f47a6e9b4100832"></script>-->
+	<script src="/oxfordsms/templates/cassiopeia/js/template.min.js?a82b166db64c6914e6174bb8f8084774" defer></script>
+	<script src="/oxfordsms/media/system/js/messages-es5.min.js?3cfa02e233a3320687fe9b7d1134d90c6d88e40a" nomodule defer></script>
+	<script src="/oxfordsms/media/plg_system_webauthn/js/login.min.js?a82b166db64c6914e6174bb8f8084774" defer></script>
+	<script src="/oxfordsms/media/system/js/keepalive.min.js?68fd980eeacffe8a5b7e1b5559d1ee4ca1315f6e" defer></script>
+	
+	<!-- <script src="/oxfordsms/media/system/js/fields/passwordview.min.js?bae2911b22f836c780af199d956a1b22c8604694" defer></script>-->
+	
+	<!--<script src="/oxfordsms/media/system/js/messages.min.js?7425e8d1cb9e4f061d5e30271d6d99b085344117" type="module"></script>-->
+	<?php endif; ?>
+
+	
 
 <?php
 if($before_head = $this->params->get('before_head')) {

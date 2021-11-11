@@ -17,6 +17,10 @@ overflow: hidden;
 }
 */
 
+.card{
+	margin-bottom:20px;
+}
+
 .pagination{
 	display:inline-block;
 }
@@ -374,10 +378,10 @@ width:100%;
 
 
 /* Unset Bootstrap conflicting classes */
-
+/*
 .btn, .btn-outline{
 	all: unset;
-	
+	*/
 /*	text-align:center;
 	border-color: unset;
 	
@@ -388,10 +392,13 @@ width:100%;
 	background-image: unset;
 	background-repeat: unset;	
 */
+/*
 	box-sizing: border-box;
 }
+*/
 
-input+.btn:hover{background-color:var(--ButtonColor) !important;}
+.btn{background-color:var(--ButtonColor)}
+/*input+.btn:hover{background-color:var(--ButtonColor) !important;}*/
 
 .btn-primary{background-color:var(--primaryButtonColor) !important;}
 .btn-primary:hover{background-color:var(--primaryButtonHoverColor) !important;}
@@ -446,10 +453,11 @@ select, textarea, input[type="text"], input[type="password"], input[type="dateti
 }
 
 select, textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
-	
+	/*
 	height:30px;
 	width:95%;
 	max-width:600px;
+	*/
 }
 
 
@@ -691,7 +699,8 @@ display: block;
 .alert-block p + p {
 	margin-top: 5px;
 }
-
+/*
 .alert-heading{
 	margin-top:20px !important;
 }
+*/
