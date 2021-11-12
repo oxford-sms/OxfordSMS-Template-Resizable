@@ -23,6 +23,13 @@
       <div id="oxfordSMSDashboardYeraTermMonthBoxes"></div>
       
 
+      <!-- <div class="border-bottom py-3 mt-3 mb-4"></div>-->
+      <div id="oxfordSMSDashboardTabs"></div>
+      <div id="oxfordSMSDashboardCTToolBar"></div>
+      <div id="oxfordSMSDashboardCTSearchBoxes"></div>
+      <div id="oxfordSMSDashboardMenu"></div>
+	  
+	  
 	  
 	  <?php  if($this->countModules('left-bar')) : ?>
       <jdoc:include type="modules" name="left-bar" style="card" />
@@ -35,11 +42,6 @@
       <?php endif; ?>  
 	  
 	  
-      <!-- <div class="border-bottom py-3 mt-3 mb-4"></div>-->
-      <div id="oxfordSMSDashboardTabs"></div>
-      <div id="oxfordSMSDashboardCTToolBar"></div>
-      <div id="oxfordSMSDashboardCTSearchBoxes"></div>
-      <div id="oxfordSMSDashboardMenu"></div>
       <div class="mb-3" data-repository-hovercards-enabled>
          <div>
             <?php if($alias!='application-form'): ?>

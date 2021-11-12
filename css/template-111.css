@@ -421,12 +421,15 @@ label{
 	margin-bottom: unset;
 }
 
+/*
 select, textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
 	
 	padding-top: unset;
 	padding-bottom: unset;
 	margin-bottom: unset;
+	
 }
+*/
 
 
 /* end of unset */
@@ -451,15 +454,15 @@ select, textarea, input[type="text"], input[type="password"], input[type="dateti
 .pagination{
 	text-align:center;
 }
-
+/*
 select, textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
-	/*
+	
 	height:30px;
 	width:95%;
 	max-width:600px;
-	*/
+	
 }
-
+*/
 
 .dashboard ul{
 	margin-left:0;
