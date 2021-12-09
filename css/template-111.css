@@ -17,6 +17,11 @@ overflow: hidden;
 }
 */
 
+a{font-weight:500;text-decoration:none;
+
+color: var(--topMenuBGColor);
+}
+
 .card{
 	margin-bottom:20px;
 }
@@ -403,7 +408,11 @@ width:100%;
 .btn-primary{background-color:var(--primaryButtonColor) !important;}
 .btn-primary:hover{background-color:var(--primaryButtonHoverColor) !important;}
 input+.btn-success{background-color:var(--successButtonColor) !important;}
-input+.btn-success:hover{background-color:var(--successButtonHverColor) !important;}
+input+.btn-success:hover{background-color:var(--successButtonHoverColor) !important;}
+
+.btn:hover{
+	opacity: 0.8;
+}
 
 .dropdown-menu{
 	all: unset;

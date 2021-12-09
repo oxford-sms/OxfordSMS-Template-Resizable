@@ -5,6 +5,19 @@
  * Released under MIT license. Copyright (c) 2019 GitHub Inc.
  */.octicon{display:inline-block;vertical-align:text-top;fill:currentColor}
 
+
+.btn-link{display:inline-block;padding:0;font-size:inherit;color:#0366d6;text-decoration:none;white-space:nowrap;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;background-color:initial;border:0;-webkit-appearance:none;-moz-appearance:none;appearance:none}
+.btn-link:hover{text-decoration:underline}
+.btn-link:disabled,.btn-link:disabled:hover,
+.btn-link[aria-disabled=true],.btn-link[aria-disabled=true]:hover{color:rgba(88,96,105,.5);cursor:default}
+.btn-invisible{color:#0366d6;background-color:initial;border:0;border-radius:0;box-shadow:none}
+.btn-invisible.selected,.btn-invisible.zeroclipboard-is-active,.btn-invisible.zeroclipboard-is-hover,.btn-invisible:active,.btn-invisible:focus,.btn-invisible:hover,.btn-invisible[aria-selected=true]{color:#0366d6;background:none;outline:none;box-shadow:none}
+.btn-octicon{display:inline-block;padding:5px;margin-left:5px;line-height:1;color:#586069;vertical-align:middle;background:transparent;border:0}
+.btn-octicon:hover{color:#0366d6}
+.btn-octicon.disabled,.btn-octicon[aria-disabled=true]{color:#959da5;cursor:default}
+.btn-octicon.disabled:hover,.btn-octicon[aria-disabled=true]:hover{color:#959da5}.btn-octicon-danger:hover{color:#cb2431}
+
+
 /*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
 /*html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}*/
 
@@ -88,7 +101,9 @@ ol ol ol,ol ul ol,ul ol ol,ul ul ol{list-style-type:lower-alpha}dd{margin-left:0
 .btn-octicon{display:inline-block;padding:5px;margin-left:5px;line-height:1;color:#586069;vertical-align:middle;background:transparent;border:0}.btn-octicon:hover{color:#0366d6}.btn-octicon.disabled,.btn-octicon[aria-disabled=true]{color:#959da5;cursor:default}.btn-octicon.disabled:hover,.btn-octicon[aria-disabled=true]:hover{color:#959da5}.btn-octicon-danger:hover{color:#cb2431}
 .close-button{padding:0;background:transparent;border:0;outline:none}
 */
-.hidden-text-expander{display:block}.hidden-text-expander.inline{position:relative;top:-1px;display:inline-block;margin-left:5px;line-height:0}.ellipsis-expander,.hidden-text-expander a{display:inline-block;height:12px;padding:0 5px 5px;font-size:12px;font-weight:600;line-height:6px;color:#444d56;text-decoration:none;vertical-align:middle;background:#dfe2e5;border:0;border-radius:1px}.ellipsis-expander:hover,.hidden-text-expander a:hover{text-decoration:none;background-color:#c6cbd1}.ellipsis-expander:active,.hidden-text-expander a:active{color:#fff;background-color:#2188ff}.btn-with-count{float:left;border-top-right-radius:0;border-bottom-right-radius:0}.btn-with-count:focus{z-index:1}.social-count{position:relative;float:left;padding:3px 12px;font-size:12px;font-weight:600;line-height:20px;color:#24292e;vertical-align:middle;background-color:#fff;border:1px solid rgba(27,31,35,.15);border-left:0;border-top-right-radius:6px;border-bottom-right-radius:6px;box-shadow:0 1px 0 rgba(27,31,35,.04),inset 0 1px 0 hsla(0,0%,100%,.25)}.social-count:active,.social-count:hover{text-decoration:none}.social-count:hover{color:#0366d6;cursor:pointer}.social-count:focus{z-index:1;outline:0;box-shadow:0 0 0 3px rgba(3,102,214,.3)}.TableObject{display:table}.TableObject-item{display:table-cell;width:1%;white-space:nowrap;vertical-align:middle}.TableObject-item--primary{width:99%}fieldset{padding:0;margin:0;border:0}label{font-weight:600}
+.hidden-text-expander{display:block}.hidden-text-expander.inline{position:relative;top:-1px;display:inline-block;margin-left:5px;line-height:0}
+.ellipsis-expander,.hidden-text-expander a{display:inline-block;height:12px;padding:0 5px 5px;font-size:12px;font-weight:600;line-height:6px;color:#444d56;text-decoration:none;vertical-align:middle;background:#dfe2e5;border:0;border-radius:1px}.ellipsis-expander:hover,.hidden-text-expander a:hover{text-decoration:none;background-color:#c6cbd1}.ellipsis-expander:active,.hidden-text-expander a:active{color:#fff;background-color:#2188ff}.btn-with-count{float:left;border-top-right-radius:0;border-bottom-right-radius:0}.btn-with-count:focus{z-index:1}.social-count{position:relative;float:left;padding:3px 12px;font-size:12px;font-weight:600;line-height:20px;color:#24292e;vertical-align:middle;background-color:#fff;border:1px solid rgba(27,31,35,.15);border-left:0;border-top-right-radius:6px;border-bottom-right-radius:6px;box-shadow:0 1px 0 rgba(27,31,35,.04),inset 0 1px 0 hsla(0,0%,100%,.25)}.social-count:active,.social-count:hover{text-decoration:none}.social-count:hover{color:#0366d6;cursor:pointer}.social-count:focus{z-index:1;outline:0;box-shadow:0 0 0 3px rgba(3,102,214,.3)}.TableObject{display:table}.TableObject-item{display:table-cell;width:1%;white-space:nowrap;vertical-align:middle}.TableObject-item--primary{width:99%}fieldset{padding:0;margin:0;border:0}
+/*label{font-weight:600}*/
 
 .form-control,.form-select{padding:5px 12px;font-size:14px;line-height:20px;color:#24292e;vertical-align:middle;background-color:#fff;background-repeat:no-repeat;background-position:right 8px center;border:1px solid #e1e4e8;border-radius:6px;outline:none;box-shadow:inset 0 1px 0 rgba(225,228,232,.2)}
 .form-control.focus,.form-control:focus,.form-select.focus,.form-select:focus{border-color:#0366d6;outline:none;box-shadow:0 0 0 3px rgba(3,102,214,.3)}

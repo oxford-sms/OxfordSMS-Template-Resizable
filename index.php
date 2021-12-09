@@ -9,6 +9,7 @@
 // no direct access
 defined( '_JEXEC' ) or die( 'Restricted access' );
 
+use CustomTables\CT;
 use Joomla\CMS\Version;
 
 $version_object = new Version;
@@ -36,8 +37,9 @@ $itemid   = $app->input->getCmd('Itemid', '');
     
 	$user = JFactory::getUser();
 	$real_userid = $user->get('id');
-      
-    checkAuthorisation();
+	
+	
+	checkAuthorisation();
    	
    	$oxfordsms_file=JPATH_SITE.DIRECTORY_SEPARATOR.'components'.DIRECTORY_SEPARATOR.'com_oxfordsms'.DIRECTORY_SEPARATOR.'includes'.DIRECTORY_SEPARATOR.'oxfordsmsmisc.php';
    	if(file_exists($oxfordsms_file))
@@ -47,6 +49,20 @@ $itemid   = $app->input->getCmd('Itemid', '');
    	}
    	else
    		$variables=array();
+	
+	$is_mobile=false;
+	$path=JPATH_SITE.DIRECTORY_SEPARATOR.'components'.DIRECTORY_SEPARATOR.'com_customtables'.DIRECTORY_SEPARATOR.'libraries'.DIRECTORY_SEPARATOR.'customtables'.DIRECTORY_SEPARATOR;
+	if(file_exists($path.'loader.php'))
+	{
+		require_once($path.'loader.php');
+		CTLoader();
+		$ct = new CT;
+		
+		if($ct->Env->isMobile)
+		{
+			$is_mobile=true;
+		}
+	}
    	
    	$avatar_image='templates/oxfordsms/images/no-photo.svg';
    	if(isset($variables->employee) and isset($variables->employee['es_photo']))
@@ -128,7 +144,10 @@ $itemid   = $app->input->getCmd('Itemid', '');
 			//
 			?>
             <div class="d-flex flex-wrap bg-gray leftSideBar">
-               <?php include('includes'.DIRECTORY_SEPARATOR.'_aside2.php'); ?>
+               <?php 
+				if(!$is_mobile)
+					include('includes'.DIRECTORY_SEPARATOR.'_aside2.php'); 
+				?>
                <div class="col-12 col-md-8 col-lg-6 p-responsive mt-3 border-bottom d-flex flex-auto">
                   <div class="mx-auto d-flex flex-auto flex-column" style="max-width: 1400px">
 				  
@@ -140,6 +159,12 @@ $itemid   = $app->input->getCmd('Itemid', '');
                      <?php //include('includes'.DIRECTORY_SEPARATOR.'_footer.php'); ?>
                   </div>
                </div>
+			   
+			   <?php 
+				if($is_mobile)
+					include('includes'.DIRECTORY_SEPARATOR.'_aside2.php'); 
+				?>
+			   
                <?php  if($this->countModules('right-bar')) : ?>
                <!-- right side bar -->
 			   <!--  hide-lg hide-md hide-sm  -->

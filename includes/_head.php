@@ -77,15 +77,18 @@ if(isset($active->alias))
 	
 	<link href="<?php echo $this->baseurl ?>/media/jui/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
 	<link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/css/template-109.css" type="text/css" />
+	
+
 	<link crossorigin="anonymous" media="all" rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/css/frameworks-109.css" />
 	<link crossorigin="anonymous" media="all" rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/css/github-109.css" />
+	
 	<!-- WP Top Menu -->
 	<link rel='stylesheet' id='avada-stylesheet-css'  href='<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/css/topmenu-fusion-109.css' type='text/css' media='all' />
+	
 	<?php else: ?>
 	
-	
+	<link rel="stylesheet" href="media/system/css/joomla-fontawesome.min.css" type="text/css" />
 	<link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/css/template-111.css" type="text/css" />
-	
 	
 	<link crossorigin="anonymous" media="all" rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/css/frameworks-111.css" />
 	<link crossorigin="anonymous" media="all" rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/css/github-111.css" />
@@ -98,7 +101,7 @@ if(isset($active->alias))
 	<link crossorigin="anonymous" media="all" rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/css/cassiopeia.css" />
 	
 	<link href="/oxfordsms/media/system/css/joomla-fontawesome.min.css?a82b166db64c6914e6174bb8f8084774" rel="lazy-stylesheet" /><noscript><link href="/4/media/system/css/joomla-fontawesome.min.css?a82b166db64c6914e6174bb8f8084774" rel="stylesheet" /></noscript>
-	<link href="/oxfordsms/templates/cassiopeia/css/global/colors_standard.min.css?a82b166db64c6914e6174bb8f8084774" rel="stylesheet" />
+	<!--<link href="/oxfordsms/templates/cassiopeia/css/global/colors_standard.min.css?a82b166db64c6914e6174bb8f8084774" rel="stylesheet" />-->
 	<!--<link href="/oxfordsms/templates/cassiopeia/css/template.min.css?a82b166db64c6914e6174bb8f8084774" rel="stylesheet" />-->
 	<link href="/oxfordsms/media/plg_system_webauthn/css/button.min.css?a82b166db64c6914e6174bb8f8084774" rel="stylesheet" />
 	<link href="/oxfordsms/templates/cassiopeia/css/vendor/joomla-custom-elements/joomla-alert.min.css?0.2.0" rel="stylesheet" />

@@ -33,7 +33,6 @@
 				echo '<div role="none" class="dropdown-divider"></div>';
 			}
             ?>
-         
          <?php  if($this->countModules('profilemenu-1')) : ?>
          <div id="OxfordSMSSideMenus">
             <jdoc:include type="modules" name="profilemenu-1" style="none" />

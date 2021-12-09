@@ -5,6 +5,7 @@
  * Copyright 2011-2021 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+ /*
 :root {
   --card-bg: rgba(255, 255, 255, 0.7);
   --bluegray: #b2bfcd;
@@ -84,19 +85,21 @@
   --body-color: #22262a;
   --body-bg: white;
 }
-
+*/
+/*
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
-
+*/
 @media (prefers-reduced-motion: no-preference) {
   :root {
     scroll-behavior: smooth;
   }
 }
 
+/*
 body {
   margin: 0;
   font-family: var(--body-font-family);
@@ -109,7 +112,7 @@ body {
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
-
+*/
 hr {
   margin: 1rem 0;
   color: inherit;
@@ -3490,7 +3493,7 @@ textarea.form-control-lg {
   color: #353b41;
   background-color: transparent;
 }
-
+/*
 .btn-link {
   font-weight: 400;
   color: var(--cassiopeia-color-link);
@@ -3502,6 +3505,7 @@ textarea.form-control-lg {
 .btn-link:disabled, .btn-link.disabled {
   color: #6d757e;
 }
+*/
 
 .btn-lg, .btn-group-lg > .btn {
   padding: 0.5rem 1rem;
@@ -3575,7 +3579,7 @@ textarea.form-control-lg {
 .dropdown-toggle:empty::after {
   margin-left: 0;
 }
-
+/*
 .dropdown-menu {
   position: absolute;
   z-index: 1000;
@@ -3699,6 +3703,8 @@ textarea.form-control-lg {
     left: auto;
   }
 }
+
+*/
 .dropup .dropdown-menu[data-bs-popper] {
   top: auto;
   bottom: 100%;
@@ -3809,10 +3815,11 @@ textarea.form-control-lg {
   pointer-events: none;
   background-color: transparent;
 }
-
+/*
 .dropdown-menu.show {
   display: block;
 }
+*/
 
 .dropdown-header {
   display: block;
@@ -11413,10 +11420,11 @@ h6,
 .lead {
   font-size: clamp(1.1rem, 3vw, 1.25rem);
 }
-
+/*
 a {
   color: var(--cassiopeia-color-link);
 }
+*/
 /*
 a:not([class]) {
   text-decoration: underline;
@@ -12278,8 +12286,10 @@ iframe {
   width: 100%;
   padding: 1vw 2vw;
   margin-bottom: 1rem;
+  /*
   color: #495057;
   background-color: white;
+  */
   border: 1px solid #b2bfcd;
 }
 .options-form > legend {
