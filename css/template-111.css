@@ -17,6 +17,17 @@ overflow: hidden;
 }
 */
 
+:root {
+ --primary:#010156;
+ --secondary:#6d757e;
+ --success:#448344;
+ --info:#30638d;
+ --warning:#ad6200;
+ --danger:#a51f18;
+ --light:#f9fafb;
+ --dark:#353b41;
+}
+
 a{font-weight:500;text-decoration:none;
 
 color: var(--topMenuBGColor);
