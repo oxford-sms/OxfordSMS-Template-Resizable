@@ -49,7 +49,7 @@
                <a title="Home page" class="d-none d-lg-flex footer-octicon footer-octicon no-underline" href="https://oxfordsms.com" target="_blank">
                   <div>
                      <?php
-                        $smalllogo = $this->baseurl.'/templates/oxfordsms/images/oxfordsms-24.png';
+                        $smalllogo = $this->baseurl.'/templates'.$this->template.'/images/oxfordsms-24.png';
                         if($this->params->get('smalllogo')!='')
                         	$smalllogo=$this->params->get('smalllogo');
                         
@@ -58,7 +58,7 @@
                   </div>
                   <div>
                      <span class="f6 text-gray-light" style="margin-left:5px;"><?php 
-                        $copyright='&copy; 2020 OxfordSMS,S.A.';
+                        $copyright='&copy; 2020-2021 OxfordSMS,S.A.';
                         if($this->params->get('copyright')!='')
                         	$copyright=$this->params->get('copyright');
                         	
