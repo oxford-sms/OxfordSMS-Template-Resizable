@@ -103,8 +103,11 @@ if(isset($active->alias))
 	<link href="<?php echo $this->baseurl ?>/media/system/css/joomla-fontawesome.min.css?a82b166db64c6914e6174bb8f8084774" rel="lazy-stylesheet" /><noscript><link href="/4/media/system/css/joomla-fontawesome.min.css?a82b166db64c6914e6174bb8f8084774" rel="stylesheet" /></noscript>
 	<!--<link href="<?php echo $this->baseurl ?>/templates/cassiopeia/css/global/colors_standard.min.css?a82b166db64c6914e6174bb8f8084774" rel="stylesheet" />-->
 	<!--<link href="<?php echo $this->baseurl ?>/templates/cassiopeia/css/template.min.css?a82b166db64c6914e6174bb8f8084774" rel="stylesheet" />-->
+	
+	<!--
 	<link href="<?php echo $this->baseurl ?>/media/plg_system_webauthn/css/button.min.css?a82b166db64c6914e6174bb8f8084774" rel="stylesheet" />
 	<link href="<?php echo $this->baseurl ?>/templates/cassiopeia/css/vendor/joomla-custom-elements/joomla-alert.min.css?0.2.0" rel="stylesheet" />
+	-->
 	
 	
 	
@@ -112,7 +115,7 @@ if(isset($active->alias))
 	-->
 	
 	<!--<script src="<?php echo $this->baseurl ?>/media/system/js/core.min.js?c47dc50c9a8b9c85d135bbac3f47a6e9b4100832"></script>-->
-	<script src="<?php echo $this->baseurl ?>/templates/cassiopeia/js/template.min.js?a82b166db64c6914e6174bb8f8084774" defer></script>
+	<!--<script src="<?php echo $this->baseurl ?>/templates/cassiopeia/js/template.min.js?a82b166db64c6914e6174bb8f8084774" defer></script>-->
 	<script src="<?php echo $this->baseurl ?>/media/system/js/messages-es5.min.js?3cfa02e233a3320687fe9b7d1134d90c6d88e40a" nomodule defer></script>
 	<script src="<?php echo $this->baseurl ?>/media/plg_system_webauthn/js/login.min.js?a82b166db64c6914e6174bb8f8084774" defer></script>
 	<script src="<?php echo $this->baseurl ?>/media/system/js/keepalive.min.js?68fd980eeacffe8a5b7e1b5559d1ee4ca1315f6e" defer></script>
