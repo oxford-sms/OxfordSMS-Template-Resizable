@@ -2398,7 +2398,7 @@ textarea.form-control-lg {
   height: 1.5em;
   border-radius: 0.25rem;
 }
-
+/*
 .form-select, .custom-select {
   display: block;
   width: 100%;
@@ -2420,6 +2420,7 @@ textarea.form-control-lg {
      -moz-appearance: none;
           appearance: none;
 }
+*/
 @media (prefers-reduced-motion: reduce) {
   .form-select, .custom-select {
     transition: none;
@@ -11780,10 +11781,11 @@ meter {
 .spacer hr {
   width: 23.75rem;
 }
-
+/*
 .form-select, .custom-select {
   max-width: 100%;
 }
+*/
 
 .form-inline .form-select, .form-inline .custom-select {
   display: inline-block;
@@ -11816,10 +11818,11 @@ td .form-control {
   color: #a51f18;
   border-color: #a51f18;
 }
-
+/*
 .valid {
   border-color: #448344;
 }
+*/
 
 .form-control-feedback {
   display: block;
@@ -12980,11 +12983,13 @@ body:not(.has-sidebar-right) .site-grid .container-component {
   }
 }
 .form-select, .custom-select {
-  max-width: 100%;
+  /*
   cursor: pointer;
   background: url("../images/select-bg.svg") no-repeat right center/116rem;
   background-color: #eaedf0;
   border: solid 1px #ced4da;
+  */
+  max-width: 100%;
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075);
 }
 .form-select:focus, .custom-select:focus {
