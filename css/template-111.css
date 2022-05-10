@@ -727,3 +727,11 @@ display: block;
 	margin-top:20px !important;
 }
 */
+
+
+/* --------------------------------------------------- */
+
+#dashboard .jbDocImages img{
+	
+	box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
