@@ -383,7 +383,9 @@ width:100%;
 }
 
 
-#oxfordSMSDashboardCTSearchBoxes select,#oxfordSMSDashboardCTSearchBoxes_Mobile select, #oxfordSMSDashboardCTSearchBoxes input, #oxfordSMSDashboardCTSearchBoxes_Mobile input{
+#oxfordSMSDashboardCTSearchBoxes select,#oxfordSMSDashboardCTSearchBoxes_Mobile select, #oxfordSMSDashboardCTSearchBoxes input, #oxfordSMSDashboardCTSearchBoxes_Mobile input,
+#oxfordSMSDashboardCTSearchBoxes button,#oxfordSMSDashboardCTSearchBoxes_Mobile button
+{
 	width:100%;
 	margin-bottom:15px;
 }
