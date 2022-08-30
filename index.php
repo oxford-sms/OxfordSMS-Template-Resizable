@@ -202,7 +202,7 @@ $itemid   = $app->input->getCmd('Itemid', '');
          };
          !function(){if("function"!=typeof window.FreshworksWidget){var n=function(){n.q.push(arguments)};n.q=[],window.FreshworksWidget=n}}()
       </script>
-      <script type="text/javascript" src="https://widget.freshworks.com/widgets/<?php echo $this->params->get('freshworksid'); ?>.js" async defer></script>
+      <script src="https://widget.freshworks.com/widgets/<?php echo $this->params->get('freshworksid'); ?>.js" async defer></script>
       <?php endif; ?>
 	  
 	<?php 
