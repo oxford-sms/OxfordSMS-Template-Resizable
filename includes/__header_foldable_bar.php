@@ -1,4 +1,10 @@
+<?php
 
+$dashboardlink = '/dashboard';
+if($this->params->get('dashboardlink')!='')
+    $dashboardlink = $this->params->get('dashboardlink');
+
+?>
 
 <div class="Header-item Header-item--full flex-column flex-md-row width-full flex-order-2 flex-md-order-none mr-0 mr-md-3 mt-3 mt-md-0 Details-content--hidden-not-important d-md-flex" style="width:100%;">
    <div class="header-search header-search-current js-header-search-current flex-auto  flex-self-stretch flex-md-self-auto mr-0 mr-md-3 mb-3 mb-md-0   js-site-search position-relative js-jump-to js-header-search-current-jump-to"
@@ -36,7 +42,7 @@
 		 
 		 
          <div class="d-block d-md-none">
-            <a data-ga-click="Header, click, Nav menu - item:dashboard:user" aria-label="Dashboard" href="/dashboard">
+            <a data-ga-click="Header, click, Nav menu - item:dashboard:user" aria-label="Dashboard" href="<?php echo $dashboardlink; ?>">
                <div class="Header-link py-md-3  mr-0 mr-md-3 py-2 border-top border-md-top-0 border-white-fade-15">Dashboard</div>
             </a>
          </div>

@@ -87,8 +87,14 @@
 					name="copyright" 
 					type="text" 
 					label="Copyright text"
-					class="" 
 					default=""
+				/>
+
+				<field 
+					name="dashboardlink" 
+					type="text" 
+					label="Dashboard link"
+					default="/dashboard"
 				/>
 
 			</fieldset>

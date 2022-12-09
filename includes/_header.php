@@ -14,14 +14,20 @@
          </svg>
       </button>
    </div>
-   <?php include('__header_foldable_bar.php'); ?>
+   <?php include('__header_foldable_bar.php');
+
+   $dashboardlink = '/dashboard';
+   if($this->params->get('dashboardlink')!='')
+       $dashboardlink = $this->params->get('dashboardlink');
+       
+   ?>
    <!-- mobile screen visible area -->
    <div class="Header-item Header-item--full flex-justify-center d-md-none position-relative">
       <!-- Website Name -->
       <?php $user = JFactory::getUser();	if($user->id!=0):	?>
-      <a class="Header-link" href="/dashboard"><img class="avatar avatar-user" src="<?php echo $avatar_image; ?>" width="20" height="20" alt="<?php echo $user->username; ?>" /> <?php $config = JFactory::getConfig(); echo $config->get( 'sitename' );  ?></a>
+      <a class="Header-link" href="<?php echo $dashboardlink; ?>"><img class="avatar avatar-user" src="<?php echo $avatar_image; ?>" width="20" height="20" alt="<?php echo $user->username; ?>" /> <?php $config = JFactory::getConfig(); echo $config->get( 'sitename' );  ?></a>
       <?php else: ?>
-      <a class="Header-link" href="/dashboard"><?php $config = JFactory::getConfig(); echo $config->get( 'sitename' );  ?></a>
+      <a class="Header-link" href="<?php echo $dashboardlink; ?>"><?php $config = JFactory::getConfig(); echo $config->get( 'sitename' );  ?></a>
       <?php endif; ?>
    </div>
    <?php include('__messages.php'); ?>
