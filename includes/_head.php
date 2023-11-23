@@ -5,6 +5,9 @@
 # @license https://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
 # Website https://oxfordsms.com
 -------------------------------------------------------------------------*/
+
+use CustomTables\common;
+
 defined('_JEXEC') or die;
 
 if(isset($active->alias))
@@ -56,7 +59,7 @@ if(isset($active->alias))
 	<title><?php 
 	
 	if(class_exists('JoomlaBasicMisc'))
-		echo JoomlaBasicMisc::JTextExtended($this->title); 
+		echo common::translate($this->title);
 	else
 		echo $this->title;//JText::_();
 		

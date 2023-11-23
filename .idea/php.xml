@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PhpIncludePathManager">
+    <include_path>
+      <path value="F:/joomla" />
+      <path value="$PROJECT_DIR$/../../joomlaboat/custom-tables/site/libraries/customtables" />
+    </include_path>
+  </component>
+</project>
