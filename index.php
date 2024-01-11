@@ -55,7 +55,7 @@ $itemid   = $app->input->getCmd('Itemid', '');
 	if(file_exists($path.'loader.php'))
 	{
 		require_once($path.'loader.php');
-		CTLoader();
+		CustomTablesLoader();
 		$ct = new CT;
 		
 		if($ct->Env->isMobile)
