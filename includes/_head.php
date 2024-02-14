@@ -58,7 +58,7 @@ if(isset($active->alias))
 	
 	<title><?php 
 	
-	if(class_exists('JoomlaBasicMisc'))
+	if(class_exists('CTMiscHelper'))
 		echo common::translate($this->title);
 	else
 		echo $this->title;//JText::_();
